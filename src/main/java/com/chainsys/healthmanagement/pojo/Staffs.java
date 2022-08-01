@@ -2,40 +2,60 @@ package com.chainsys.healthmanagement.pojo;
 
 import java.util.Date;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "Staffs")
 public class Staffs {
-	private int staff_Id;
-	private String first_name;
-	private String last_name;
+	@Id
+	@Column(name = "Staff_Id")
+	private int staffId;
+	@Column(name = "First_name")
+	private String firstName;
+	@Column(name = "Last_name")
+	private String lastName;
+	@Column(name = "Gender")
 	private String gender;
-	private long Contact_no;
+	@Column(name = "Contact_No")
+	private long contactNo;
+	@Column(name = "DOB")
 	private Date dob;
+	@Column(name = "Email")
 	private String email;
+	@Column(name = "Role")
 	private String role;
+	@Column(name = "Qualification")
 	private String qualification;
+	@Column(name = "Speciality")
 	private String speciality;
+	@Column(name = "Dutytime")
+	private String dutytime;
 
-	public int getStaff_Id() {
-		return staff_Id;
+	public int getStaffId() {
+		return staffId;
 	}
 
-	public void setStaff_Id(int staff_Id) {
-		this.staff_Id = staff_Id;
+	public void setStaffId(int staffId) {
+		this.staffId = staffId;
 	}
 
-	public String getFirst_name() {
-		return first_name;
+	public String getFirstName() {
+		return firstName;
 	}
 
-	public void setFirst_name(String first_name) {
-		this.first_name = first_name;
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
 	}
 
-	public String getLast_name() {
-		return last_name;
+	public String getLastName() {
+		return lastName;
 	}
 
-	public void setLast_name(String last_name) {
-		this.last_name = last_name;
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
 
 	public String getGender() {
@@ -46,12 +66,12 @@ public class Staffs {
 		this.gender = gender;
 	}
 
-	public long getContact_no() {
-		return Contact_no;
+	public long getContactNo() {
+		return contactNo;
 	}
 
-	public void setContact_no(long contact_no) {
-		Contact_no = contact_no;
+	public void setContactNo(long contactNo) {
+		this.contactNo = contactNo;
 	}
 
 	public Date getDob() {
@@ -92,6 +112,14 @@ public class Staffs {
 
 	public void setSpeciality(String speciality) {
 		this.speciality = speciality;
+	}
+
+	public String getDutytime() {
+		return dutytime;
+	}
+
+	public void setDutytime(String dutytime) {
+		this.dutytime = dutytime;
 	}
 
 }

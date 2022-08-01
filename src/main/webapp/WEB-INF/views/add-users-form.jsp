@@ -13,15 +13,15 @@
 		<div id="form">
 			<form:form action="adduser" method="post" modelAttribute="addusers">
 				<div>
-					<label for="user_Id">User Id</label>
+					<label for="userId">User Id</label>
 					<div>
-						<form:input path="user_Id" />
+						<form:input path="userId" />
 					</div>
 				</div>
 				<div>
-					<label for="user_Type">User Type</label>
+					<label for="userType">User Type</label>
 					<div>
-						<form:input path="user_Type" />
+						<form:input path="userType" />
 					</div>
 				</div>
 				<div>
@@ -36,7 +36,7 @@
 						<form:input path="register" />
 					</div>
 				</div>
-				<form:button>Add Users</form:button>
+				<form:button>Click to add</form:button>
 			</form:form>
 		</div>
 	</div>

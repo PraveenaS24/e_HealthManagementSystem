@@ -2,39 +2,70 @@ package com.chainsys.healthmanagement.pojo;
 
 import java.util.Date;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "Patient")
 public class Patient {
-	private int patient_Id;
-	private String first_name;
-	private String last_name;
+	@Id
+	@Column(name = "Patient_Id")
+	private int patientId;
+	@Column(name = "First_name")
+	private String firstName;
+	@Column(name = "Last_name")
+	private String lastName;
+	@Column(name = "Gender")
 	private String gender;
-	private long contact_no;
+	@Column(name = "Contact_No")
+	private long contactNo;
+	@Column(name = "DOB")
 	private Date dob;
+	@Column(name = "Email")
 	private String email;
+	@Column(name = "Bloodgroup")
 	private String bloodgroup;
+	@Column(name = "Address")
 	private String address;
+	@Column(name = "Staff_Id")
+	private String staffId;
+	@Column(name = "Observation")
+	private Date observation;
+	@Column(name = "Report")
+	private String report;
+	@Column(name = "Prescription")
+	private String prescription;
+	@Column(name = "Fees")
+	private float fees;
+	@Column(name = "Foodmaintenance")
+	private String foodmaintenance;
+	@Column(name = "Revisit")
+	private String revisit;
 
-	public int getPatient_Id() {
-		return patient_Id;
+	public int getPatientId() {
+		return patientId;
 	}
 
-	public void setPatient_Id(int patient_Id) {
-		this.patient_Id = patient_Id;
+	public void setPatientId(int patientId) {
+		this.patientId = patientId;
 	}
 
-	public String getFirst_name() {
-		return first_name;
+	public String getFirstName() {
+		return firstName;
 	}
 
-	public void setFirst_name(String first_name) {
-		this.first_name = first_name;
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
 	}
 
-	public String getLast_name() {
-		return last_name;
+	public String getLastName() {
+		return lastName;
 	}
 
-	public void setLast_name(String last_name) {
-		this.last_name = last_name;
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
 
 	public String getGender() {
@@ -45,12 +76,12 @@ public class Patient {
 		this.gender = gender;
 	}
 
-	public long getContact_no() {
-		return contact_no;
+	public long getContactNo() {
+		return contactNo;
 	}
 
-	public void setContact_no(long contact_no) {
-		this.contact_no = contact_no;
+	public void setContactNo(long contactNo) {
+		this.contactNo = contactNo;
 	}
 
 	public Date getDob() {
@@ -83,6 +114,62 @@ public class Patient {
 
 	public void setAddress(String address) {
 		this.address = address;
+	}
+
+	public String getStaffId() {
+		return staffId;
+	}
+
+	public void setStaffId(String staffId) {
+		this.staffId = staffId;
+	}
+
+	public Date getObservation() {
+		return observation;
+	}
+
+	public void setObservation(Date observation) {
+		this.observation = observation;
+	}
+
+	public String getReport() {
+		return report;
+	}
+
+	public void setReport(String report) {
+		this.report = report;
+	}
+
+	public String getPrescription() {
+		return prescription;
+	}
+
+	public void setPrescription(String prescription) {
+		this.prescription = prescription;
+	}
+
+	public float getFees() {
+		return fees;
+	}
+
+	public void setFees(float fees) {
+		this.fees = fees;
+	}
+
+	public String getFoodmaintenance() {
+		return foodmaintenance;
+	}
+
+	public void setFoodmaintenance(String foodmaintenance) {
+		this.foodmaintenance = foodmaintenance;
+	}
+
+	public String getRevisit() {
+		return revisit;
+	}
+
+	public void setRevisit(String revisit) {
+		this.revisit = revisit;
 	}
 
 }

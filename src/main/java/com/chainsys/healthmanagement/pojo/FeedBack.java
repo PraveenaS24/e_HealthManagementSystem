@@ -2,68 +2,83 @@ package com.chainsys.healthmanagement.pojo;
 
 import java.util.Date;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "FeedBack")
 public class FeedBack {
-	private int patient_id;
-	private int staff_id;
-	private String staff_nature;
-	private String address_locate;
-	private String patient_comment;
-	private Date dateoffeedback;
-	private int points;
+	@Id
+	@Column(name = "Patient_Id")
+	private int patientId;
+	@Column(name = "Staff_Id")
+	private int staffId;
+	@Column(name = "Staff_nature")
+	private String staffNature;
+	@Column(name = "Address_locate")
+	private String addressLocate;
+	@Column(name = "Patient_Comment")
+	private String patientComment;
+	@Column(name = "OnRegisterFeedBack")
+	private Date onregisterfeedback;
+	@Column(name = "Points")
+	private String points;
 
-	public int getPatient_id() {
-		return patient_id;
+	public int getPatientId() {
+		return patientId;
 	}
 
-	public void setPatient_id(int patient_id) {
-		this.patient_id = patient_id;
+	public void setPatientId(int patientId) {
+		this.patientId = patientId;
 	}
 
-	public int getStaff_id() {
-		return staff_id;
+	public int getStaffId() {
+		return staffId;
 	}
 
-	public void setStaff_id(int staff_id) {
-		this.staff_id = staff_id;
+	public void setStaffId(int staffId) {
+		this.staffId = staffId;
 	}
 
-	public String getStaff_nature() {
-		return staff_nature;
+	public String getStaffNature() {
+		return staffNature;
 	}
 
-	public void setStaff_nature(String staff_nature) {
-		this.staff_nature = staff_nature;
+	public void setStaffNature(String staffNature) {
+		this.staffNature = staffNature;
 	}
 
-	public String getAddress_locate() {
-		return address_locate;
+	public String getAddressLocate() {
+		return addressLocate;
 	}
 
-	public void setAddress_locate(String address_locate) {
-		this.address_locate = address_locate;
+	public void setAddressLocate(String addressLocate) {
+		this.addressLocate = addressLocate;
 	}
 
-	public String getPatient_comment() {
-		return patient_comment;
+	public String getPatientComment() {
+		return patientComment;
 	}
 
-	public void setPatient_comment(String patient_comment) {
-		this.patient_comment = patient_comment;
+	public void setPatientComment(String patientComment) {
+		this.patientComment = patientComment;
 	}
 
-	public Date getDateoffeedback() {
-		return dateoffeedback;
+	public Date getOnregisterfeedback() {
+		return onregisterfeedback;
 	}
 
-	public void setDateoffeedback(Date dateoffeedback) {
-		this.dateoffeedback = dateoffeedback;
+	public void setOnregisterfeedback(Date onregisterfeedback) {
+		this.onregisterfeedback = onregisterfeedback;
 	}
 
-	public int getPoints() {
+	public String getPoints() {
 		return points;
 	}
 
-	public void setPoints(int points) {
+	public void setPoints(String points) {
 		this.points = points;
 	}
 

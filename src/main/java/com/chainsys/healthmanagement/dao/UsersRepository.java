@@ -7,6 +7,6 @@ import com.chainsys.healthmanagement.pojo.Users;
 
 @Repository
 public interface UsersRepository extends JpaRepository<Users, Integer> {
-	Users save(Users us);
+	Users save(Users user);
 
 }

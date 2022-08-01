@@ -1,5 +1,8 @@
 package com.chainsys.healthmanagement.service;
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.chainsys.healthmanagement.dao.UsersRepository;
@@ -7,9 +10,15 @@ import com.chainsys.healthmanagement.pojo.Users;
 
 @Service
 public class UsersService {
-	private UsersRepository repo;
+	@Autowired
+	private UsersRepository userservicerepo;
 
-	public Users addUsers(Users us) {
-		return repo.save(us);
+	public List<Users> getAllUsers() {
+		List<Users> userservicelist = userservicerepo.findAll();
+		return userservicelist;
+	}
+
+	public Users save(Users user) {
+		return userservicerepo.save(user);
 	}
 }
