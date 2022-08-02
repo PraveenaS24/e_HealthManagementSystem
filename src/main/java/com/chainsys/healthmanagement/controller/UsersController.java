@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.chainsys.healthmanagement.pojo.Users;
+import com.chainsys.healthmanagement.model.Users;
 import com.chainsys.healthmanagement.service.UsersService;
 
 @Controller

@@ -9,35 +9,43 @@
 <title>Add Users</title>
 </head>
 <body>
+	<h1 align="center">TO ADD USER FORM</h1>
 	<div id="root">
 		<div id="form">
-			<form:form action="adduser" method="post" modelAttribute="addusers">
-				<div>
-					<label for="userId">User Id</label>
+			<div align="center">
+				<form:form action="adduser" method="post" modelAttribute="addusers">
 					<div>
-						<form:input path="userId" />
+						<label for="userId">User Id</label>
+						<div>
+							<form:input path="userId" />
+						</div>
 					</div>
-				</div>
-				<div>
-					<label for="userType">User Type</label>
 					<div>
-						<form:input path="userType" />
+						<label for="userType">User Type</label>
+						<form:select path="userType">
+							<form:option value="nurse">Nurse</form:option>
+							<form:option value="murse">Murse</form:option>
+							<form:option value="attendant">Attendant</form:option>
+						</form:select>
 					</div>
-				</div>
-				<div>
-					<label for="secretword">Secret Word</label>
 					<div>
-						<form:input path="secretword" />
+						<label for="secretword">Secret Word</label>
+						<div>
+							<form:input path="secretword" />
+						</div>
 					</div>
-				</div>
-				<div>
-					<label for="register">Register Date</label>
 					<div>
-						<form:input path="register" />
+						<label for="register">Register Date</label>
+						<div>
+							<form:input path="register" type="date" />
+						</div>
 					</div>
-				</div>
-				<form:button>Click to add</form:button>
-			</form:form>
+					</br>
+					<div>
+						<form:button>Click to add</form:button>
+					</div>
+				</form:form>
+			</div>
 		</div>
 	</div>
 </body>

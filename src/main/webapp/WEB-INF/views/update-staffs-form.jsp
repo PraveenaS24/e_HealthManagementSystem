@@ -10,78 +10,82 @@
 </head>
 <body style="background-color: wheat;">
 <body>
+	<h1 align="center">UPDATE LIST</h1>
 	<div id="root">
 		<div id="form">
-			<form:form action="updatestaff" method="post"
-				modelAttribute="updatestaffs">
-				<div>
-					<label for="staffId">Staffs Id</label>
+			<div align="center">
+				<form:form action="updatestaff" method="post"
+					modelAttribute="updatestaffs">
 					<div>
-						<form:input path="staffId" />
+						<label for="staffId">Staffs Id</label>
+						<div>
+							<form:input path="staffId" />
+						</div>
 					</div>
-				</div>
-				<div>
-					<label for="firstName">First Name</label>
 					<div>
-						<form:input path="firstName" />
+						<label for="firstName">First Name</label>
+						<div>
+							<form:input path="firstName" />
+						</div>
 					</div>
-				</div>
-				<div>
-					<label for="lastName">Last Name</label>
 					<div>
-						<form:input path="lastName" />
+						<label for="lastName">Last Name</label>
+						<div>
+							<form:input path="lastName" />
+						</div>
 					</div>
-				</div>
-				<div>
-					<label for="gender">Gender</label>
 					<div>
-						<form:input path="gender" />
+						<label for="gender">Gender</label>
+						<div>
+							<form:input path="gender" />
+						</div>
 					</div>
-				</div>
-				<div>
-					<label for="contactNo">Contact No</label>
 					<div>
-						<form:input path="contactNo" />
+						<label for="contactNo">Contact No</label>
+						<div>
+							<form:input path="contactNo" />
+						</div>
 					</div>
-				</div>
-				<div>
-					<label for="dob">DOB</label>
 					<div>
-						<form:input path="dob" />
+						<label for="dob">DOB</label>
+						<div>
+							<form:input path="dob" />
+						</div>
 					</div>
-				</div>
-				<div>
-					<label for="email">Email</label>
 					<div>
-						<form:input path="email" />
+						<label for="email">Email</label>
+						<div>
+							<form:input path="email" />
+						</div>
 					</div>
-				</div>
-				<div>
-					<label for="role">Role</label>
 					<div>
-						<form:input path="role" />
+						<label for="role">Role</label>
+						<div>
+							<form:input path="role" />
+						</div>
 					</div>
-				</div>
-				<div>
-					<label for="qualification">Qualification</label>
 					<div>
-						<form:input path="qualification" />
+						<label for="qualification">Qualification</label>
+						<div>
+							<form:input path="qualification" />
+						</div>
 					</div>
-				</div>
-				<div>
-					<label for="speciality">Speciality</label>
 					<div>
-						<form:input path="speciality" />
+						<label for="speciality">Speciality</label>
+						<div>
+							<form:input path="speciality" />
+						</div>
 					</div>
-				</div>
-				<div>
-					<label for="dutytime">Dutytime</label>
 					<div>
-						<form:input path="dutytime" />
+						<label for="dutytime">Dutytime</label>
+						<div>
+							<form:input path="dutytime" />
+						</div>
+						</br>
 					</div>
-				</div>
-				<form:button>Click here to Update</form:button>
-			</form:form>
+					<form:button>Click here to Update</form:button>
+				</form:form>
+			</div>
 		</div>
 	</div>
 </body>

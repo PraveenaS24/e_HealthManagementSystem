@@ -6,58 +6,104 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Add FeedBack</title>
+<title>TO ADD FEEDBACK FORM</title>
 </head>
+<body style="background-color: DarkSalmon;">
 <body>
+	<h1 align="center">FINDED LIST</h1>
 	<div id="root">
 		<div id="form">
-			<form:form action="addfeedback" method="post"
-				modelAttribute="addfeedback">
+			<table align="center">
 				<div>
-					<label for="patientId">Patient Id</label>
-					<div>
-						<form:input path="patientId" />
-					</div>
-				</div>
-				<div>
-					<label for="staffId">Staff Id</label>
-					<div>
-						<form:input path="staffId" />
-					</div>
-				</div>
-				<div>
-					<label for="staffNature">Staff Nature</label>
-					<div>
-						<form:input path="staffNature" />
-					</div>
-				</div>
-				<div>
-					<label for="addressLocate">Address</label>
-					<div>
-						<form:input path="addressLocate" />
-					</div>
-				</div>
-				<div>
-					<label for="patientComment">Patient Comment</label>
-					<div>
-						<form:input path="patientComment" />
-					</div>
-				</div>
-				<div>
-					<label for="onregisterfeedback">Feedback</label>
-					<div>
-						<form:input path="onregisterfeedback" type="date" />
-					</div>
-				</div>
-				<div>
-					<label for="points">points</label>
-					<div>
-						<form:input path="points" />
-					</div>
-				</div>
-				<form:button>Click to register</form:button>
-			</form:form>
+					<form:form action="addfeedback" method="post"
+						modelAttribute="addfeedback">
+						<tr>
+							<div>
+								<td><label for="feedbackId">FeedBack Id</label></td>
+								<td>
+									<div>
+										<form:input path="feedbackId" />
+									</div>
+								</td>
+							</div>
+						</tr>
+						<tr>
+							<div>
+								<td><label for="patientId">Patient Id</label></td>
+								<td>
+									<div>
+										<form:input path="patientId" />
+									</div>
+								</td>
+							</div>
+						<tr>
+							<div>
+								<td><label for="staffId">Staff Id</label></td>
+								<td>
+									<div>
+
+										<form:input path="staffId" />
+									</div>
+								</td>
+
+							</div>
+						</tr>
+						<tr>
+							<div>
+								<td><label for="staffNature">Staff Nature</label></td>
+								<td>
+									<div>
+										<form:input path="staffNature" />
+									</div>
+								</td>
+							</div>
+						</tr>
+						<tr>
+							<div>
+								<td><label for="addressLocate">Address</label></td>
+								<td>
+									<div>
+										<form:input path="addressLocate" />
+									</div>
+								</td>
+							</div>
+						</tr>
+						<tr>
+							<div>
+								<td><label for="patientComment">Patient Comment</label></td>
+								<td><div>
+										<form:input path="patientComment" />
+									</div></td>
+							</div>
+						</tr>
+						<tr>
+							<div>
+								<td><label for="onregisterfeedback">Feedback</label></td>
+								<td>
+									<div>
+										<form:input path="onregisterfeedback" type="date" />
+									</div>
+								</td>
+							</div>
+						</tr>
+						<tr>
+							<div>
+								<td><label for="points">points</label></td>
+								<td>
+									<div>
+										<form:input path="points" />
+									</div>
+								</td>
+
+							</div>
+						</tr>
+						<tr align="center">
+							<form:button>Click to register</form:button>
+						</tr>
+					</form:form>
+			</table>
 		</div>
+	</div>
 	</div>
 </body>
 </html>

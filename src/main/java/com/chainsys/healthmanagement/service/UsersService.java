@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.chainsys.healthmanagement.dao.UsersRepository;
-import com.chainsys.healthmanagement.pojo.Users;
+import com.chainsys.healthmanagement.model.Users;
 
 @Service
 public class UsersService {

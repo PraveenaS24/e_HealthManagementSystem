@@ -1,10 +1,12 @@
-package com.chainsys.healthmanagement.pojo;
+package com.chainsys.healthmanagement.model;
 
-import java.util.Date;
+import java.sql.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -43,6 +45,17 @@ public class Patient {
 	private String foodmaintenance;
 	@Column(name = "Revisit")
 	private String revisit;
+	@OneToOne(mappedBy="patient",fetch=FetchType.LAZY)
+	private FeedBack feedback;
+	
+
+	public FeedBack getFeedback() {
+		return feedback;
+	}
+
+	public void setFeedback(FeedBack feedback) {
+		this.feedback = feedback;
+	}
 
 	public int getPatientId() {
 		return patientId;

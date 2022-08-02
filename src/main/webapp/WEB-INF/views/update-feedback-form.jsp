@@ -6,15 +6,14 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Find FeedBack</title>
+<title>Update FeedBack</title>
 </head>
-<body style="background-color: Cyan;">
 <body>
-	<h1 align="center">ADDED LIST</h1>
+	<h1 align="center">UPDATED LIST</h1>
 	<div id="root">
 		<div id="form">
 			<div align="center">
-				<form:form action="" method="post" modelAttribute="findfeedbackbyid">
+				<form:form action="updatefeedback" method="post" modelAttribute="updatefeedback">
 					<div>
 						<label for="feedbackId">FeedBack Id</label>
 						<div>
@@ -64,6 +63,7 @@
 						</div>
 						</br>
 					</div>
+					<form:button>Click to register</form:button>
 				</form:form>
 			</div>
 		</div>

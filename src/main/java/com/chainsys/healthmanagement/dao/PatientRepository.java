@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.chainsys.healthmanagement.pojo.Patient;
+import com.chainsys.healthmanagement.model.Patient;
 
 public interface PatientRepository extends JpaRepository<Patient, Integer> {
 	Patient findById(int id);

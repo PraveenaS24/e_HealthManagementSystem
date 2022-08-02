@@ -11,8 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.chainsys.healthmanagement.pojo.FeedBack;
-import com.chainsys.healthmanagement.pojo.Patient;
+import com.chainsys.healthmanagement.model.FeedBack;
 import com.chainsys.healthmanagement.service.FeedBackService;
 
 @Controller
@@ -49,7 +48,7 @@ public class FeedBackController {
 	}
 
 	@GetMapping("/updatefeedbackform")
-	public String showUpdateForm(@RequestParam("fbId") int id, Model model) {
+	public String showUpdateForm(@RequestParam("feedbackId") int id, Model model) {
 		FeedBack thefb = feedbackservice.findFeedBackById(id);
 		model.addAttribute("updatefeedback", thefb);
 		return "update-feedback-form";
@@ -57,6 +56,11 @@ public class FeedBackController {
 	@PostMapping("/updatefeedback")
 	public String updateFeedBack(@ModelAttribute("updatefeedback") FeedBack thefeedback) {
 		feedbackservice.save(thefeedback);
+		return "redirect:/feedback/feedbacklist";
+	}
+	@GetMapping("/deletefeedback")
+	public String deleteFeedBack(@RequestParam("feedbackId") int id) {
+		feedbackservice.deleteFeedBack(id);
 		return "redirect:/feedback/feedbacklist";
 	}
 
