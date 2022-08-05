@@ -10,13 +10,12 @@
 </head>
 <body style="background-color: DarkSalmon;">
 <body>
-	<h1 align="center">FINDED LIST</h1>
+	<h1 align="center">TO ADD FEEDBACK</h1>
 	<div id="root">
-		<div id="form">
-			<table align="center">
+		<div id="form" align="center">
+			<table border="" width="50%" cellpadding="10">
 				<div>
-					<form:form action="addfeedback" method="post"
-						modelAttribute="addfeedback">
+					<form:form action="addfeedback" method="post" modelAttribute="addfeedback">
 						<tr>
 							<div>
 								<td><label for="feedbackId">FeedBack Id</label></td>
@@ -94,16 +93,19 @@
 										<form:input path="points" />
 									</div>
 								</td>
-
 							</div>
 						</tr>
-						<tr align="center">
-							<form:button>Click to register</form:button>
+						<tr>
+							<td colspan="2" align="center">
+								<div>
+									<form:button>Click to register</form:button>
+								</div>
+							</td>
 						</tr>
 					</form:form>
+				</div>
 			</table>
 		</div>
-	</div>
 	</div>
 </body>
 </html>

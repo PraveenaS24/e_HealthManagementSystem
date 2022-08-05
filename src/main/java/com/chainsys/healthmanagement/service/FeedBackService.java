@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.chainsys.healthmanagement.Dto.FeedBackAndPatientDTO;
+import com.chainsys.healthmanagement.DTO.FeedBackAndPatientDTO;
 import com.chainsys.healthmanagement.dao.FeedBackRepository;
 import com.chainsys.healthmanagement.model.FeedBack;
 import com.chainsys.healthmanagement.model.Patient;
@@ -31,7 +31,5 @@ public class FeedBackService {
 	public void deleteFeedBack(int id) {
 		feedbackrepo.deleteById(id);
 	}
-	public FeedBackAndPatientDTO getPatientFeedBackDetail( String feedback) {
-		Patient patient = 
-	}
+	
 }

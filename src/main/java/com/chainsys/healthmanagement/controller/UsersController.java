@@ -38,5 +38,21 @@ public class UsersController {
 		userservice.save(theuser);
 		return "redirect:/users/userlist";
 	}
+	@GetMapping("/userlogin")
+    public String useraccessform(Model model) {
+        Users theuser = new Users();
+        model.addAttribute("users", theuser);
+        return "user-login-form";
+    }                   
 
+    @PostMapping("/checkuserlogin")
+    public String checkingAccess(@ModelAttribute("users") Users users) {
+        Users user = userservice.getUserByIdAndSecretword(users.getUserId(),users.getSecretword());
+        if (user!= null){
+
+            return "redirect:/patient/addpatientform";
+        } else
+            return "invalid-user-error";
+
+    }
 }

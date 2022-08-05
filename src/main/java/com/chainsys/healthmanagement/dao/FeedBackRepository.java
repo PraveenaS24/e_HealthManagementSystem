@@ -15,5 +15,7 @@ public interface FeedBackRepository extends JpaRepository<FeedBack, Integer> {
 
 	List<FeedBack> findAll();
 
-	List<FeedBack> findByPatientId(int id);
+	FeedBack findByPatientId(int id);
+	
+	List<FeedBack> findByStaffId(int id);
 }

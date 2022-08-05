@@ -9,4 +9,6 @@ import com.chainsys.healthmanagement.model.Users;
 public interface UsersRepository extends JpaRepository<Users, Integer> {
 	Users save(Users user);
 
+	Users findByUserIdAndSecretword(int id, String secretword);
+
 }

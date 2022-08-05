@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.chainsys.healthmanagement.DTO.FeedBackAndStaffsDTO;
 import com.chainsys.healthmanagement.model.Staffs;
 import com.chainsys.healthmanagement.service.StaffsService;
 
@@ -64,5 +65,12 @@ public class StaffsController {
 	public String deleteStaffs(@RequestParam("staffId") int id) {
 		staffservice.deleteStaffs(id);
 		return "redirect:/staffs/staffslist";
+	}
+	@GetMapping("/getstaffsfeedback")
+	public String getStaffsAndFeedback(@RequestParam("id") int id,Model model) {
+		FeedBackAndStaffsDTO dto=staffservice.getFeedBackAndStaffsDTO(id);
+		model.addAttribute("getstaffs",dto.getStaffs());
+		model.addAttribute("getfeedback",dto.getFeedbacklist());
+		return "list-staffs-feedback";
 	}
 }

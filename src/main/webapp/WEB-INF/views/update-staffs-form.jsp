@@ -77,9 +77,15 @@
 						</div>
 					</div>
 					<div>
-						<label for="dutytime">Dutytime</label>
+						<label for="intime">Intime</label>
 						<div>
-							<form:input path="dutytime" />
+							<form:input path="intime" type="time" />
+						</div>
+					</div>
+					<div>
+						<label for="outtime">Outtime</label>
+						<div>
+							<form:input path="outtime" type="time" />
 						</div>
 						</br>
 					</div>

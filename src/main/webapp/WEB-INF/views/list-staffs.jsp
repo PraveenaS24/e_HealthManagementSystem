@@ -26,7 +26,8 @@
 						<th>Role</th>
 						<th>Qualification</th>
 						<th>Speciality</th>
-						<th>Dutytime</th>
+						<th>Intime</th>
+						<th>Outtime</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -43,7 +44,8 @@
 							<td>${staffs.role}</td>
 							<td>${staffs.qualification}</td>
 							<td>${staffs.speciality}</td>
-							<td>${staffs.dutytime}</td>
+							<td>${staffs.intime}</td>
+							<td>${staffs.outtime}</td>
 						</tr>
 					</c:forEach>
 				</tbody>

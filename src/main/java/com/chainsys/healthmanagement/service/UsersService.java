@@ -21,4 +21,10 @@ public class UsersService {
 	public Users save(Users user) {
 		return userservicerepo.save(user);
 	}
+
+	public Users getUserByIdAndSecretword(int id, String secretword) {
+
+		return userservicerepo.findByUserIdAndSecretword(id, secretword);
+	}
+
 }

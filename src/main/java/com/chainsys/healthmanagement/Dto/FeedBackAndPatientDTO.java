@@ -1,8 +1,7 @@
-package com.chainsys.healthmanagement.Dto;
+package com.chainsys.healthmanagement.DTO;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.chainsys.healthmanagement.dao.FeedBackAndPatientRepository;
 import com.chainsys.healthmanagement.model.FeedBack;
 import com.chainsys.healthmanagement.model.Patient;
 
@@ -23,7 +22,9 @@ public class FeedBackAndPatientDTO {
 		return feedBack;
 	}
 
-	public void addPatientFeedBack(FeedBack feedback) {
-		feedBackAndPatientRepository.add(feedback);
+	public void setFeedBack(FeedBack feedBack) {
+		this.feedBack = feedBack;
 	}
+	
+	
 }

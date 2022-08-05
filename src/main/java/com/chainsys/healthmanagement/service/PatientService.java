@@ -5,13 +5,18 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.chainsys.healthmanagement.DTO.FeedBackAndPatientDTO;
+import com.chainsys.healthmanagement.dao.FeedBackRepository;
 import com.chainsys.healthmanagement.dao.PatientRepository;
+import com.chainsys.healthmanagement.model.FeedBack;
 import com.chainsys.healthmanagement.model.Patient;
 
 @Service
 public class PatientService {
 	@Autowired
 	private PatientRepository patientrepo;
+	@Autowired
+	private FeedBackRepository feedBackRepository;
 
 	public List<Patient> getAllPatient() {
 		List<Patient> patientlist = patientrepo.findAll();
@@ -29,6 +34,15 @@ public class PatientService {
 
 	public void deletePatient(int id) {
 		patientrepo.deleteById(id);
+	}
+
+	public FeedBackAndPatientDTO getFeedBackAndPatientDTO(int id) {
+		Patient patient = patientrepo.findById(id);
+		FeedBackAndPatientDTO dto = new FeedBackAndPatientDTO();
+		dto.setPatient(patient);
+		FeedBack feedBack = feedBackRepository.findByPatientId(id);
+		dto.setFeedBack(feedBack);
+		return dto;
 	}
 
 }

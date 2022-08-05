@@ -1,15 +1,19 @@
 package com.chainsys.healthmanagement.model;
 
 import java.sql.Date;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "Staffs")
 public class Staffs {
+
 	@Id
 	@Column(name = "Staff_Id")
 	private int staffId;
@@ -31,8 +35,21 @@ public class Staffs {
 	private String qualification;
 	@Column(name = "Speciality")
 	private String speciality;
-	@Column(name = "Dutytime")
-	private String dutytime;
+	@Column(name = "Intime")
+	private String intime;
+	@Column(name = "Outtime")
+	private String outtime;
+
+	@OneToMany(mappedBy = "staffs", fetch = FetchType.LAZY)
+	private List<FeedBack> feedback;
+
+	public List<FeedBack> getFeedback() {
+		return feedback;
+	}
+
+	public void setFeedback(List<FeedBack> feedback) {
+		this.feedback = feedback;
+	}
 
 	public int getStaffId() {
 		return staffId;
@@ -114,12 +131,20 @@ public class Staffs {
 		this.speciality = speciality;
 	}
 
-	public String getDutytime() {
-		return dutytime;
+	public String getIntime() {
+		return intime;
 	}
 
-	public void setDutytime(String dutytime) {
-		this.dutytime = dutytime;
+	public void setIntime(String intime) {
+		this.intime = intime;
+	}
+
+	public String getOuttime() {
+		return outtime;
+	}
+
+	public void setOuttime(String outtime) {
+		this.outtime = outtime;
 	}
 
 }

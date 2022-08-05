@@ -8,44 +8,63 @@
 <meta charset="ISO-8859-1">
 <title>Add Users</title>
 </head>
+<body style="background-color: bisque;">
 <body>
 	<h1 align="center">TO ADD USER FORM</h1>
 	<div id="root">
 		<div id="form">
-			<div align="center">
-				<form:form action="adduser" method="post" modelAttribute="addusers">
-					<div>
-						<label for="userId">User Id</label>
+			<table border="" width="50%" cellpadding="10">
+				<tr>
+					<form:form action="adduser" method="post" modelAttribute="addusers">
 						<div>
-							<form:input path="userId" />
+							<td><label for="userId">User Id</label></td>
+							<td>
+								<div>
+									<form:input path="userId" />
+								</div>
+							</td>
 						</div>
-					</div>
+				</tr>
+				<tr>
 					<div>
-						<label for="userType">User Type</label>
-						<form:select path="userType">
-							<form:option value="nurse">Nurse</form:option>
-							<form:option value="murse">Murse</form:option>
-							<form:option value="attendant">Attendant</form:option>
-						</form:select>
+						<td><label for="userType">User Type</label></td>
+						<td><div>
+								<form:select path="userType">
+									<form:option value="nurse">Nurse</form:option>
+									<form:option value="murse">Murse</form:option>
+									<form:option value="attendant">Attendant</form:option>
+								</form:select>
+							</div></td>
 					</div>
+				</tr>
+
+				<tr>
 					<div>
-						<label for="secretword">Secret Word</label>
+						<td><label for="secretword">Secret Word</label></td>
+						<td><div>
+								<form:input path="secretword" type="password"/>
+							</div></td>
+					</div>
+				</tr>
+				<tr>
+					<div>
+						<td><label for="register">Register Date</label></td>
+						<td>
+							<div>
+								<form:input path="register" type="date" />
+							</div>
+						</td>
+					</div>
+				</tr>
+				<tr>
+					<td colspan="2" align="center">
 						<div>
-							<form:input path="secretword" />
+							<form:button>Click to add</form:button>
 						</div>
-					</div>
-					<div>
-						<label for="register">Register Date</label>
-						<div>
-							<form:input path="register" type="date" />
-						</div>
-					</div>
-					</br>
-					<div>
-						<form:button>Click to add</form:button>
-					</div>
+					</td>
+				</tr>
 				</form:form>
-			</div>
+			</table>
 		</div>
 	</div>
 </body>

@@ -6,17 +6,16 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Find Staffs</title>
+<title>Insert title here</title>
 </head>
-<body style="background-color: lightSeaGreen;">
 <body>
-	<h1 align="center">FINDED LIST</h1>
+	<h1 align="center">TO ADD STAFFS FORM</h1>
 	<div id="root">
-		<div id="form">
-			<div align="center">
-				<form:form action="" method="post" modelAttribute="findstaffsbyid">
+		<div align="center">
+			<div id="form">
+				<form:form action="" method="post" modelAttribute="getstaffs">
 					<div>
-						<label for="staffId">Staffs Id</label>
+						<label for="staffId">Staff Id</label>
 						<div>
 							<form:input path="staffId" />
 						</div>
@@ -35,9 +34,10 @@
 					</div>
 					<div>
 						<label for="gender">Gender</label>
-						<div>
-							<form:input path="gender" />
-						</div>
+						<form:select path="gender">
+							<form:option value="male">Male</form:option>
+							<form:option value="female">Female</form:option>
+						</form:select>
 					</div>
 					<div>
 						<label for="contactNo">Contact No</label>
@@ -48,7 +48,7 @@
 					<div>
 						<label for="dob">DOB</label>
 						<div>
-							<form:input path="dob" />
+							<form:input path="dob" type="date" />
 						</div>
 					</div>
 					<div>
@@ -88,7 +88,41 @@
 						</div>
 						</br>
 					</div>
+					<div align="center"></div>
 				</form:form>
+			</div>
+		</div>
+		<div id="table root">
+			<div align="center">
+				<table border="2" width="50%" cellpadding="20">
+					<thead>
+						<tr>
+							<th>FeedBack_Id</th>
+							<th>Patient_Id</th>
+							<th>Staff_Id</th>
+							<th>Staff_nature</th>
+							<th>Address_locate</th>
+							<th>Patient_Comment</th>
+							<th>OnregisterFeedback</th>
+							<th>Points</th>
+						</tr>
+					</thead>
+					<tbody>
+						<c:forEach var="feedback" items="${getfeedback}">
+							<!--var represents variable items represents collection  -->
+							<tr>
+								<td>${feedback.feedbackId}</td>
+								<td>${feedback.patientId}</td>
+								<td>${feedback.staffId}</td>
+								<td>${feedback.staffNature}</td>
+								<td>${feedback.addressLocate}</td>
+								<td>${feedback.patientComment}</td>
+								<td>${feedback.onregisterfeedback}</td>
+								<td>${feedback.points}</td>
+							</tr>
+						</c:forEach>
+					</tbody>
+				</table>
 			</div>
 		</div>
 	</div>

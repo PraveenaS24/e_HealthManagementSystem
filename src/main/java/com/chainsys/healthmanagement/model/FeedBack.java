@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -30,9 +31,14 @@ public class FeedBack {
 	private Date onregisterfeedback;
 	@Column(name = "Points")
 	private String points;
+	
 	@OneToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name="Patient_Id",nullable=false,insertable=false,updatable=false)
 	private Patient patient;
+
+	@ManyToOne(fetch=FetchType.LAZY)
+    @JoinColumn(name="Staff_Id" , nullable=false,insertable=false,updatable=false)
+    private Staffs staffs;
 	
 
 	public Patient getPatient() {
