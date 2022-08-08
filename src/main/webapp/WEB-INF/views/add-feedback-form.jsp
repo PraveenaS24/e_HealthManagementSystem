@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>TO ADD FEEDBACK FORM</title>
+<title>ADD FEEDBACK FORM</title>
 </head>
 <body style="background-color: DarkSalmon;">
 <body>

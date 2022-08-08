@@ -10,7 +10,7 @@
 </head>
 <body style="background-color: pink">
 <body>
-	<h1 align="center">TO ADD STAFFS</h1>
+	<h1 align="center">ADD STAFFS</h1>
 	<div id="root">
 		<div id="form" align="center">
 			<table border="" width="50%" cellpadding="10">
@@ -49,10 +49,10 @@
 					<tr>
 						<div>
 							<td><label for="gender">Gender</label></td>
-							<td><form:select path="gender">
-									<form:option value="male">Male</form:option>
-									<form:option value="female">Female</form:option>
-								</form:select></td>
+							<td>
+							Male: <form:radiobutton path="gender" value="Male" />
+							Female: 	<form:radiobutton path="gender" value="Female" />
+							</td>
 						</div>
 					</tr>
 					<tr>
@@ -89,9 +89,9 @@
 						<div>
 							<td><label for="role">Role</label></td>
 							<td>
-								<div>
-									<form:input path="role" style= "width: 500px;height: 25px;" />
-								</div>
+							Perform diagnostic tests  : <form:radiobutton path="role" value="Perform diagnostic tests" />
+							Assess the patient   : 	<form:radiobutton path="role" value="Assess the patient" />
+							Management of illness  :  <form:radiobutton path="role" value="Management of illness" />
 							</td>
 						</div>
 					</tr>

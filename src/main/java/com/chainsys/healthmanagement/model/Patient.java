@@ -8,6 +8,7 @@ import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 @Entity
 @Table(name = "Patient")
@@ -21,6 +22,9 @@ public class Patient {
 	private String lastName;
 	@Column(name = "Gender")
 	private String gender;
+	@Transient
+	private int countryCode;
+
 	@Column(name = "Contact_No")
 	private long contactNo;
 	@Column(name = "DOB")
@@ -45,9 +49,8 @@ public class Patient {
 	private String foodmaintenance;
 	@Column(name = "Revisit")
 	private String revisit;
-	@OneToOne(mappedBy="patient",fetch=FetchType.LAZY)
+	@OneToOne(mappedBy = "patient", fetch = FetchType.LAZY)
 	private FeedBack feedback;
-	
 
 	public FeedBack getFeedback() {
 		return feedback;
@@ -183,6 +186,14 @@ public class Patient {
 
 	public void setRevisit(String revisit) {
 		this.revisit = revisit;
+	}
+
+	public int getCountryCode() {
+		return countryCode;
+	}
+
+	public void setCountryCode(int countryCode) {
+		this.countryCode = countryCode;
 	}
 
 }
