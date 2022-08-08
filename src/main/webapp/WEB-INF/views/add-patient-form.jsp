@@ -29,7 +29,7 @@ body {
 								<td><div>
 										<form:input path="patientId"
 											style="width: 400px;height: 25px;" />
-									</div></td>
+									</div></td><form:errors path="patientId" cssClass="text-danger" />
 							</div>
 						</tr>
 						<tr>
@@ -40,7 +40,7 @@ body {
 										<form:input path="firstName"
 											style="width: 400px;height: 25px;" />
 									</div>
-								</td>
+								</td><form:errors path="firstName" cssClass="text-danger" />
 							</div>
 						</tr>
 						<tr>
@@ -50,7 +50,7 @@ body {
 									<div>
 										<form:input path="lastName" style="width: 400px;height: 25px;" />
 									</div>
-								</td>
+								</td><form:errors path="lastName" cssClass="text-danger" />
 							</div>
 						</tr>
 						<tr>
@@ -185,7 +185,7 @@ body {
 								<td><label for="dob">DOB</label></td>
 								<td><div>
 										<form:input path="dob" type="date" />
-									</div></td>
+									</div></td><form:errors path="dob" cssClass="text-danger" />
 							</div>
 						</tr>
 						<tr>
@@ -193,7 +193,7 @@ body {
 								<td><label for="email">Email</label></td>
 								<td><div>
 										<form:input path="email" style="width: 400px;height: 25px;" />
-									</div></td>
+									</div></td><form:errors path="email" cssClass="text-danger" />
 							</div>
 						</tr>
 						<tr>
@@ -214,7 +214,7 @@ body {
 									<div>
 										<form:input path="address" style="width: 400px;height: 25px;" />
 									</div>
-								</td>
+								</td><form:errors path="address" cssClass="text-danger" />
 							</div>
 						</tr>
 						<tr>
@@ -224,7 +224,7 @@ body {
 									<div>
 										<form:input path="staffId" style="width: 400px;height: 25px;" />
 									</div>
-								</td>
+								</td><form:errors path="staffId" cssClass="text-danger" />
 							</div>
 						</tr>
 						<tr>
@@ -234,7 +234,7 @@ body {
 									<div>
 										<form:input path="observation" type="date" />
 									</div>
-								</td>
+								</td><form:errors path="observation" cssClass="text-danger" />
 							</div>
 						</tr>
 						<tr>
@@ -244,7 +244,7 @@ body {
 									<div>
 										<form:input path="report" style="width: 400px;height: 25px;" />
 									</div>
-								</td>
+								</td><form:errors path="report" cssClass="text-danger" />
 							</div>
 						</tr>
 						<tr>
@@ -255,7 +255,7 @@ body {
 										<form:input path="prescription"
 											style="width: 400px;height: 25px;" />
 									</div>
-								</td>
+								</td><form:errors path="prescription" cssClass="text-danger" />
 							</div>
 						</tr>
 						<tr>
@@ -265,7 +265,7 @@ body {
 									<div>
 										<form:input path="fees" style="width: 400px;height: 25px;" />
 									</div>
-								</td>
+								</td><form:errors path="fees" cssClass="text-danger" />
 							</div>
 						</tr>
 						<tr>
@@ -276,7 +276,7 @@ body {
 										<form:input path="foodmaintenance"
 											style="width: 400px;height: 25px;" />
 									</div>
-								</td>
+								</td><form:errors path="foodmaintenance" cssClass="text-danger" />
 							</div>
 						</tr>
 						<tr>
@@ -286,7 +286,7 @@ body {
 									<div>
 										<form:input path="revisit" style="width: 400px;height: 25px;" />
 									</div>
-								</td>
+								</td><form:errors path="revisit" cssClass="text-danger" />
 							</div>
 						</tr>
 						<tr>

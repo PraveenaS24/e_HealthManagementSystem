@@ -109,9 +109,12 @@
 						<div>
 							<td><label for="speciality">Speciality</label></td>
 							<td>
-								<div>
-									<form:input path="speciality" style= "width: 500px;height: 25px;" />
-								</div>
+								Pediatrics  : <form:radiobutton path="speciality" value="Pediatrics" />
+							   Geriatrics   : 	<form:radiobutton path="speciality" value="Geriatrics" />
+							Pain care   :  <form:radiobutton path="speciality" value="Pain care" />
+							 Wound care  : <form:radiobutton path="speciality" value=" Wound care" />
+							   Mental health   : 	<form:radiobutton path="speciality" value="Mental health" />
+							Specific disease:  <form:radiobutton path="speciality" value="Specific disease" />
 							</td>
 						</div>
 					</tr>

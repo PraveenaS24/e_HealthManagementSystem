@@ -2,9 +2,12 @@ package com.chainsys.healthmanagement.controller;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -17,7 +20,8 @@ import com.chainsys.healthmanagement.service.PatientService;
 
 @Controller
 @RequestMapping("/patient")
-public class PatientController {
+public class PatientController 
+{
 	@Autowired
 	PatientService patientservice;
 
@@ -36,9 +40,14 @@ public class PatientController {
 	}
 
 	@PostMapping("/addpatient")
-	public String addNewPatient(@ModelAttribute("addpatient") Patient thepatient) {
-		patientservice.save(thepatient);
-		return "redirect:/patient/patientlist";
+	public String addNewPatient(@Valid @ModelAttribute("addpatient") Patient thepatient, Errors error) {
+		if (error.hasErrors()) 
+		{
+			return "add-patient-form";
+		} else {
+			patientservice.save(thepatient);
+			return "redirect:/patient/patientlist";
+		}
 	}
 
 	@GetMapping("/updatepatientform")
@@ -55,11 +64,14 @@ public class PatientController {
 		return "find-patient-id-form";
 	}
 
-
 	@PostMapping("/updatepatient")
-	public String updatePatient(@ModelAttribute("updatepatient") Patient thepatient) {
-		patientservice.save(thepatient);
-		return "redirect:/patient/patientlist";
+	public String updatePatient(@Valid @ModelAttribute("updatepatient") Patient thepatient, Errors error) {
+		if (error.hasErrors()) {
+			return "update-patient-form";
+		} else {
+			patientservice.save(thepatient);
+			return "redirect:/patient/patientlist";
+		}
 	}
 
 	@GetMapping("/deletepatient")
@@ -67,11 +79,12 @@ public class PatientController {
 		patientservice.deletePatient(id);
 		return "redirect:/patient/patientlist";
 	}
+
 	@GetMapping("/getpatientfeedback")
-	public String getPatientAndFeedback(@RequestParam("id") int id,Model model) {
-		FeedBackAndPatientDTO dto=patientservice.getFeedBackAndPatientDTO(id);
-		model.addAttribute("getpatient",dto.getPatient());
-		model.addAttribute("getfeedback",dto.getFeedBack());
+	public String getPatientAndFeedback(@RequestParam("id") int id, Model model) {
+		FeedBackAndPatientDTO dto = patientservice.getFeedBackAndPatientDTO(id);
+		model.addAttribute("getpatient", dto.getPatient());
+		model.addAttribute("getfeedback", dto.getFeedBack());
 		return "list-patient-feedback";
 	}
 }

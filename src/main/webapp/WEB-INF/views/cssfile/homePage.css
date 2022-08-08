@@ -52,7 +52,7 @@ body {
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: center;
-	background-size: cover;
+	background-size: 100% 100%;
 	background: light blue;
 }
 .container{
@@ -81,6 +81,10 @@ body {
 	font-size: 15px;
 	margin-right: 15px;
 }
+.container p{
+	font-size: 15px;
+	margin-right: 15px;
+}
 @media(max-width: 500px){
 	.container{
 	text-align: center;
@@ -106,5 +110,25 @@ body {
 	background-color:white;
 	padding:10px;
 	margin:20px;
+	}
+	.sidenav {
+	width: 30px;
+	position: fixed;
+	z-index: 1;
+	top: 20px;
+	left: 10px;
+	background: #eee;
+	overflow-x: hidden;
+	padding: 8px 0;
+	}
+	.sidenav a{
+	padding: 6px 8px 6px 16px;
+	text-decoration: none;
+	font-size: 25px;
+	color: #2196f3;
+	display: block;
+	}
+	.sidenav a:hover{
+	color: #064579;
 	}
 	

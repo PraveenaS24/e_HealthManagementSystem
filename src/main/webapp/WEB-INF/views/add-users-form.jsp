@@ -22,6 +22,7 @@
 								<div>
 									<form:input path="userId" />
 								</div>
+								<form:errors path="userId" cssClass="text-danger" />
 							</td>
 						</div>
 				</tr>
@@ -44,6 +45,7 @@
 						<td><div>
 								<form:input path="secretword" type="password"/>
 							</div></td>
+							<form:errors path="secretword" cssClass="text-danger" />
 					</div>
 				</tr>
 				<tr>
@@ -54,6 +56,7 @@
 								<form:input path="register" type="date" />
 							</div>
 						</td>
+						<form:errors path="register" cssClass="text-danger" />
 					</div>
 				</tr>
 				<tr>
