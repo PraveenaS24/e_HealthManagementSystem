@@ -10,17 +10,46 @@
 </head>
 <style>
 body {
-	background-image:
-		url('https://img.freepik.com/premium-photo/doctor-with-stethoscope-hand-hospital-background-medical-medicine-concept_34200-278.jpg?w=2000');
+	background-image: url('https://www.firstneuro.in/img/dep/pediatric.jpg');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+h1 {
+	color: blue;
+}
+
+.table {
+	background-color: float: center;
+	font-style: bold;
+}
+
+tr {
+	color: black;
+}
+
+#cont {
+	width: 150px;
+	height: 30px;
+	border: black;
+	border-radius: 3px;
+	padding-right: 8px;
+	color: white;
+	background-color: maroon;
+	display: inline-block;
+	margin: 4px 2px;
+	cursor: pointer;
+	-webkit-transition-duration: 0.4s;
+	transition-duration: 0.4s;
 }
 </style>
-<body style="background-color: Cyan;">
+<body style="background-color:;">
 <body>
 	<h1 align="center">ADD PATIENT FORM</h1>
 	<div id="root">
 		<div id="form">
 			<div align="center">
-				<table border="" width="10%" cellpadding="2">
+				<table class="center" border="20" width="10%" cellpadding="2">
 					<form:form action="addpatient" method="post"
 						modelAttribute="addpatient">
 						<tr>
@@ -28,8 +57,11 @@ body {
 								<td><label for="patientId">Patient Id</label></td>
 								<td><div>
 										<form:input path="patientId"
-											style="width: 400px;height: 25px;" />
-									</div></td><form:errors path="patientId" cssClass="text-danger" />
+											style="width: 200px;height: 25px;" title="Id must be number"
+											pattern="^[0-9]+$" required="true"
+											placeholder="Enter PatientId" />
+									</div></td>
+								<form:errors path="patientId" cssClass="text-danger" />
 							</div>
 						</tr>
 						<tr>
@@ -38,9 +70,12 @@ body {
 								<td>
 									<div>
 										<form:input path="firstName"
-											style="width: 400px;height: 25px;" />
+											style="width: 200px;height: 25px;"
+											title="Name can't be empty And First Name must be in String"
+											required="true" placeholder="Enter FirstName" />
 									</div>
-								</td><form:errors path="firstName" cssClass="text-danger" />
+								</td>
+								<form:errors path="firstName" cssClass="text-danger" />
 							</div>
 						</tr>
 						<tr>
@@ -48,9 +83,12 @@ body {
 								<td><label for="lastName">Last Name</label></td>
 								<td>
 									<div>
-										<form:input path="lastName" style="width: 400px;height: 25px;" />
+										<form:input path="lastName" style="width: 200px;height: 25px;"
+											title="Name can't be empty And Last Name must be in String"
+											required="true" placeholder="Enter LastName" />
 									</div>
-								</td><form:errors path="lastName" cssClass="text-danger" />
+								</td>
+								<form:errors path="lastName" cssClass="text-danger" />
 							</div>
 						</tr>
 						<tr>
@@ -67,9 +105,9 @@ body {
 								<td>
 									<div>
 										<form:select path="countryCode">
-											<form:option value="93">93 --- Afghanistan</form:option>
-											<form:option value="355">355 --- Albania</form:option>
-											<form:option value="213">213 --- Algeria</form:option>
+											<form:option value="+93">93 --- Afghanistan</form:option>
+											<form:option value="+355">355 --- Albania</form:option>
+											<form:option value="+213">213 --- Algeria</form:option>
 											<form:option value="684">684 --- American Samoa</form:option>
 											<form:option value="376">376 --- Andorra</form:option>
 											<form:option value="244">244 --- Angola</form:option>
@@ -175,9 +213,9 @@ body {
 											<form:option value="260">260 --- Zambia</form:option>
 											<form:option value="263">263 --- Zimbabwe</form:option>
 										</form:select>
-							<td><form:input path="contactNo" /></td>
-							</div>
-							</td>
+										<form:input path="contactNo" />
+									</div>
+								</td>
 							</div>
 						</tr>
 						<tr>
@@ -185,15 +223,20 @@ body {
 								<td><label for="dob">DOB</label></td>
 								<td><div>
 										<form:input path="dob" type="date" />
-									</div></td><form:errors path="dob" cssClass="text-danger" />
+									</div></td>
+								<form:errors path="dob" cssClass="text-danger" />
 							</div>
 						</tr>
 						<tr>
 							<div>
 								<td><label for="email">Email</label></td>
 								<td><div>
-										<form:input path="email" style="width: 400px;height: 25px;" />
-									</div></td><form:errors path="email" cssClass="text-danger" />
+										<form:input path="email" style="width: 200px;height: 25px;"
+											title="Mail Id is not in correct formet"
+											pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$" required="true"
+											placeholder="Enter Email" />
+									</div></td>
+								<form:errors path="email" cssClass="text-danger" />
 							</div>
 						</tr>
 						<tr>
@@ -202,7 +245,9 @@ body {
 								<td>
 									<div>
 										<form:input path="bloodgroup"
-											style="width: 400px;height: 25px;" />
+											style="width: 200px;height: 25px;"
+											title="BloodGroup can't be empty And BloodGroup must be in String"
+											required="true" placeholder="Enter BloodGroup" />
 									</div>
 								</td>
 							</div>
@@ -212,9 +257,12 @@ body {
 								<td><label for="address">Address</label></td>
 								<td>
 									<div>
-										<form:input path="address" style="width: 400px;height: 25px;" />
+										<form:input path="address" style="width: 200px;height: 25px;"
+											title="Address can't be empty And Address must be in String"
+											required="true" placeholder="Enter Address" />
 									</div>
-								</td><form:errors path="address" cssClass="text-danger" />
+								</td>
+								<form:errors path="address" cssClass="text-danger" />
 							</div>
 						</tr>
 						<tr>
@@ -222,9 +270,12 @@ body {
 								<td><label for="staffId">Staff Id</label></td>
 								<td>
 									<div>
-										<form:input path="staffId" style="width: 400px;height: 25px;" />
+										<form:input path="staffId" style="width: 200px;height: 25px;"
+											title="Id must be number" pattern="^[0-9]+$" required="true"
+											placeholder="Enter Staff Id" />
 									</div>
-								</td><form:errors path="staffId" cssClass="text-danger" />
+								</td>
+								<form:errors path="staffId" cssClass="text-danger" />
 							</div>
 						</tr>
 						<tr>
@@ -232,9 +283,11 @@ body {
 								<td><label for="observation">Observation</label></td>
 								<td>
 									<div>
-										<form:input path="observation" type="date" />
+										<form:input path="observation" type="date"
+											placeholder="Enter Date" />
 									</div>
-								</td><form:errors path="observation" cssClass="text-danger" />
+								</td>
+								<form:errors path="observation" cssClass="text-danger" />
 							</div>
 						</tr>
 						<tr>
@@ -242,9 +295,12 @@ body {
 								<td><label for="report">Report</label></td>
 								<td>
 									<div>
-										<form:input path="report" style="width: 400px;height: 25px;" />
+										<form:input path="report" style="width: 200px;height: 25px;"
+											title="Report can't be empty And report must be in String"
+											required="true" placeholder="Enter Report" />
 									</div>
-								</td><form:errors path="report" cssClass="text-danger" />
+								</td>
+								<form:errors path="report" cssClass="text-danger" />
 							</div>
 						</tr>
 						<tr>
@@ -253,9 +309,12 @@ body {
 								<td>
 									<div>
 										<form:input path="prescription"
-											style="width: 400px;height: 25px;" />
+											style="width: 300px;height: 25px;"
+											title="Prescription can't be empty And Prescription must be in String"
+											required="true" placeholder="Enter Prescription" />
 									</div>
-								</td><form:errors path="prescription" cssClass="text-danger" />
+								</td>
+								<form:errors path="prescription" cssClass="text-danger" />
 							</div>
 						</tr>
 						<tr>
@@ -263,9 +322,12 @@ body {
 								<td><label for="fees">Fees</label></td>
 								<td>
 									<div>
-										<form:input path="fees" style="width: 400px;height: 25px;" />
+										<form:input path="fees" style="width: 200px;height: 25px;"
+											title="Fees must be number" pattern="^[0-9]+$"
+											placeholder="Enter Fees" />
 									</div>
-								</td><form:errors path="fees" cssClass="text-danger" />
+								</td>
+								<form:errors path="fees" cssClass="text-danger" />
 							</div>
 						</tr>
 						<tr>
@@ -274,9 +336,12 @@ body {
 								<td>
 									<div>
 										<form:input path="foodmaintenance"
-											style="width: 400px;height: 25px;" />
+											style="width: 300px;height: 25px;"
+											title="Food can't be empty And Food must be in String"
+											required="true" placeholder="Enter Food" />
 									</div>
-								</td><form:errors path="foodmaintenance" cssClass="text-danger" />
+								</td>
+								<form:errors path="foodmaintenance" cssClass="text-danger" />
 							</div>
 						</tr>
 						<tr>
@@ -284,17 +349,20 @@ body {
 								<td><label for="revisit">Revisit</label></td>
 								<td>
 									<div>
-										<form:input path="revisit" style="width: 400px;height: 25px;" />
+										<form:input path="revisit" style="width: 300px;height: 25px;"
+											title="Revisit can't be empty And Revisit must be in String"
+											required="true" placeholder="Enter Revisit" />
 									</div>
-								</td><form:errors path="revisit" cssClass="text-danger" />
+								</td>
+								<form:errors path="revisit" cssClass="text-danger" />
 							</div>
 						</tr>
 						<tr>
-							<td colspan="2" align="center">
-								<div>
-									<form:button>submit</form:button>
-								</div>
+						<div>
+							<td colspan="5" align="center"><br> <form:button id="cont">
+									submit</form:button>
 							</td>
+							</div>
 						</tr>
 					</form:form>
 				</table>

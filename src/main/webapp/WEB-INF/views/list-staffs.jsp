@@ -28,6 +28,8 @@
 						<th>Speciality</th>
 						<th>Intime</th>
 						<th>Outtime</th>
+						<th>Update</th>
+						<th>Delete</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -46,6 +48,15 @@
 							<td>${staffs.speciality}</td>
 							<td>${staffs.intime}</td>
 							<td>${staffs.outtime}</td>
+							<td><a
+								href="updatestaffsform?staffId=${staffs.staffId}">
+									<input onclick="change()" type="button" value="Update"
+									id="myButton1"></input>
+
+							</a></td>
+							<td><a
+								href="deletestaff?staffId=${staffs.staffId}"><input
+									onclick="change()" type="button" value="Delete" id="myButton2"></input></a></td>
 						</tr>
 					</c:forEach>
 				</tbody>

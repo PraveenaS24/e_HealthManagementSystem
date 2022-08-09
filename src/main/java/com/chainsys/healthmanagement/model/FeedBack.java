@@ -15,21 +15,21 @@ import javax.persistence.Table;
 @Table(name = "feedback")
 public class FeedBack {
 	@Id
-	@Column(name = "Feedback_Id")
+	@Column(name = "FEEDBACK_ID")
 	private int feedbackId;
-	@Column(name = "Patient_Id")
+	@Column(name = "PATIENT_ID")
 	private int patientId;
-	@Column(name = "Staff_Id")
+	@Column(name = "STAFF_ID")
 	private int staffId;
-	@Column(name = "Staff_nature")
+	@Column(name = "STAFF_NATURE")
 	private String staffNature;
-	@Column(name = "Address_locate")
+	@Column(name = "ADDRESS_LOCATE")
 	private String addressLocate;
-	@Column(name = "Patient_Comment")
+	@Column(name = "PATIENT_COMMENT")
 	private String patientComment;
-	@Column(name = "Onregisterfeedback")
+	@Column(name = "ONREGISTERFEEDBACK")
 	private Date onregisterfeedback;
-	@Column(name = "Points")
+	@Column(name = "POINTS")
 	private String points;
 	
 	@OneToOne(fetch=FetchType.LAZY)

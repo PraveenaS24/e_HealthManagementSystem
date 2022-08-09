@@ -54,6 +54,15 @@
 							<td>${patient.fees}</td>
 							<td>${patient.foodmaintenance}</td>
 							<td>${patient.revisit}</td>
+							<td><a
+								href="updatepatientform?patientId=${patient.patientId}">
+									<input onclick="change()" type="button" value="Update"
+									id="myButton1"></input>
+
+							</a></td>
+							<td><a
+								href="deletepatient?feedbackId=${patient.patientId}"><input
+									onclick="change()" type="button" value="Delete" id="myButton2"></input></a></td>
 						</tr>
 					</c:forEach>
 				</tbody>

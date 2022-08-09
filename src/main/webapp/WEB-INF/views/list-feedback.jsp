@@ -38,6 +38,15 @@
 							<td>${feedback.patientComment}</td>
 							<td>${feedback.onregisterfeedback}</td>
 							<td>${feedback.points}</td>
+							<td><a
+								href="updatefeedbackform?feedbackId=${feedback.feedbackId}">
+									<input onclick="change()" type="button" value="Update"
+									id="myButton1"></input>
+
+							</a></td>
+							<td><a
+								href="deletefeedback?feedbackId=${feedback.feedbackId}"><input
+									onclick="change()" type="button" value="Delete" id="myButton2"></input></a></td>
 						</tr>
 					</c:forEach>
 				</tbody>

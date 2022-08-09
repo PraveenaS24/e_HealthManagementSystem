@@ -6,6 +6,14 @@
 <meta charset="ISO-8859-1">
 <title>Error</title>
 </head>
+<style>
+body{
+background-image: url('https://hiraniconfigmgr.com/PostImages/221.jpg');
+background-size: fixed;
+	background-repeat: no-repeat;}
+
+
+</style>
 <body>
  <h2>Invalid User </h2>
  <div> Check your user id and secretword</div>

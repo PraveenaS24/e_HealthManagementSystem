@@ -100,7 +100,7 @@ left: 100px;
                     modelAttribute="users">
                     <tr>
                         <div>
-                            <td><label for="userId">User Name</label></td>
+                            <td><label for="userId">User Id</label></td>
                             <div>
                                 <td><form:input path="userId" class="form-control" /></td>
                             </div>

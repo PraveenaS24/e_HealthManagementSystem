@@ -11,57 +11,84 @@ import javax.persistence.Id;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.Transient;
+import javax.validation.constraints.Digits;
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 import org.hibernate.validator.constraints.Range;
+import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.lang.NonNull;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 @Entity
 @Table(name = "Patient")
 public class Patient {
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@Column(name = "Patient_Id")
+	@Column(name = "PATIENT_ID")
 	@NotNull
-	@Range(min=1,message="*Greater than zero")
+	@Range(min = 1, message = "*Greater than zero")
 	private int patientId;
-	@Column(name = "First_name")
-	@Size(max=20, min=3, message="*Name length should be 3 to 20")
-	@NotBlank(message="*Name can't be Empty")
-	@Pattern(regexp = "^[A-Za-z]\\w{3,20}$", message = "*Enter valid type ")
+	@Column(name = "FIRST_NAME")
+	@Size(max = 20, min = 3, message = "*Name length should be 3 to 20")
+	@NotBlank(message = "*Name can't be Empty")
+	@Pattern(regexp = "^[A-Za-z]\\w{3,20}$", message = "*Enter valid name ")
 	private String firstName;
-	@Column(name = "Last_name")
+	@Column(name = "LAST_NAME")
+	@Size(max = 20, min = 3, message = "*Name length should be 3 to 20")
+	@NotBlank(message = "*Name can't be Empty")
+	@Pattern(regexp = "^[A-Za-z]\\w{3,20}$", message = "*Enter valid name ")
 	private String lastName;
-	@Column(name = "Gender")
+	@Column(name = "GENDER")
+	@NotBlank(message = "*Gender is required")
 	private String gender;
-	@Transient
+	@Transient()
 	private int countryCode;
-
-	@Column(name = "Contact_No")
+	@Column(name = "CONTACT_NO")
+	@Digits(integer = 20, fraction = 0)
 	private long contactNo;
 	@Column(name = "DOB")
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy")
 	private Date dob;
-	@Column(name = "Email")
+	@Column(name = "EMAIL")
+	@Email(regexp = "[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,3}")
 	private String email;
-	@Column(name = "Bloodgroup")
+	@Column(name = "BLOODGROUP")
+	@NotNull(message = "*BloodGroup is required")
 	private String bloodgroup;
-	@Column(name = "Address")
+	@Column(name = "ADDRESS")
+	@NotBlank(message = "*Address is required")
 	private String address;
-	@Column(name = "Staff_Id")
-	private String staffId;
-	@Column(name = "Observation")
+	@Column(name = "STAFF_ID")
+	@NotNull(message="*Staffid is required")
+	@Range(min = 1, message = "*Greater than zero")
+	private int staffId;
+
+	@Column(name = "OBSERVATION")
+
+	@NotNull(message = "*Correct date format is required")
 	private Date observation;
-	@Column(name = "Report")
+	@Column(name = "REPORT")
+	@Size(max = 200, min = 3, message = "*Report length should be 3 to 200")
+	@NotBlank(message = "*Report can't be Empty")
 	private String report;
-	@Column(name = "Prescription")
+	@Column(name = "PRESCRIPTION")
+	@Size(max = 200, min = 3, message = "*Prescription length should be 3 to 200")
+	@NotBlank(message = "*Prescription can't be Empty")
 	private String prescription;
-	@Column(name = "Fees")
+	@Column(name = "FEES")
+	@NotNull(message = "*Fees is must necessary")
 	private float fees;
-	@Column(name = "Foodmaintenance")
+	@Column(name = "FOODMAINTENANCE")
+	@Size(max = 200, min = 3, message = "*Food length should be 3 to 200")
+	@NotBlank(message = "*Food can't be Empty")
 	private String foodmaintenance;
-	@Column(name = "Revisit")
+	@Column(name = "REVISIT")
+	@Size(max = 30, min = 3, message = "*Revisit length should be 3 to 30")
+	@NotBlank(message = "*Revisit can't be Empty")
 	private String revisit;
 	@OneToOne(mappedBy = "patient", fetch = FetchType.LAZY)
 	private FeedBack feedback;
@@ -146,11 +173,11 @@ public class Patient {
 		this.address = address;
 	}
 
-	public String getStaffId() {
+	public int getStaffId() {
 		return staffId;
 	}
 
-	public void setStaffId(String staffId) {
+	public void setStaffId(int staffId) {
 		this.staffId = staffId;
 	}
 

@@ -15,29 +15,29 @@ import javax.persistence.Table;
 public class Staffs {
 
 	@Id
-	@Column(name = "Staff_Id")
+	@Column(name = "STAFF_ID")
 	private int staffId;
-	@Column(name = "First_name")
+	@Column(name = "FIRST_NAME")
 	private String firstName;
-	@Column(name = "Last_name")
+	@Column(name = "LAST_NAME")
 	private String lastName;
-	@Column(name = "Gender")
+	@Column(name = "GENDER")
 	private String gender;
-	@Column(name = "Contact_No")
+	@Column(name = "CONTACT_NO")
 	private long contactNo;
 	@Column(name = "DOB")
 	private Date dob;
-	@Column(name = "Email")
+	@Column(name = "EMAIL")
 	private String email;
-	@Column(name = "Role")
+	@Column(name = "ROLE")
 	private String role;
-	@Column(name = "Qualification")
+	@Column(name = "QUALIFICATION")
 	private String qualification;
-	@Column(name = "Speciality")
+	@Column(name = "SPECIALITY")
 	private String speciality;
-	@Column(name = "Intime")
+	@Column(name = "INTIME")
 	private String intime;
-	@Column(name = "Outtime")
+	@Column(name = "OUTTIME")
 	private String outtime;
 
 	@OneToMany(mappedBy = "staffs", fetch = FetchType.LAZY)
