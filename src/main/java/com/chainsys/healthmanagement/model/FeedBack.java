@@ -5,31 +5,52 @@ import java.sql.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 @Entity
 @Table(name = "feedback")
 public class FeedBack {
 	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO,generator="FEEDBACK_ID_REF")
+    @SequenceGenerator(name="FEEDBACK_ID_REF",sequenceName ="FEEDBACK_ID_REF",allocationSize = 1)
 	@Column(name = "FEEDBACK_ID")
 	private int feedbackId;
 	@Column(name = "PATIENT_ID")
+	@NotNull(message="*Id must be required")
 	private int patientId;
 	@Column(name = "STAFF_ID")
+	@NotNull(message="*Id must be required")
 	private int staffId;
 	@Column(name = "STAFF_NATURE")
+	@Size(max = 30, min = 3, message = "*Staff Nature length should be 3 to 30")
+	@NotBlank(message = "*Staff nat can't be Empty")
 	private String staffNature;
 	@Column(name = "ADDRESS_LOCATE")
+	@Size(max = 40, min = 3, message = "*Name length should be 3 to 40")
+	@NotBlank(message = "*Address can't be Empty")
 	private String addressLocate;
 	@Column(name = "PATIENT_COMMENT")
+	@Size(max = 40, min = 3, message = "*Comment length should be 3 to 40")
+	@NotBlank(message = "*Comment can't be Empty")
 	private String patientComment;
 	@Column(name = "ONREGISTERFEEDBACK")
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy")
 	private Date onregisterfeedback;
 	@Column(name = "POINTS")
+	@NotBlank(message="*Points must be Required")
 	private String points;
 	
 	@OneToOne(fetch=FetchType.LAZY)

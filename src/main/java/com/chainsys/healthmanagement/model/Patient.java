@@ -9,6 +9,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 import javax.validation.constraints.Digits;
@@ -28,9 +29,9 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 @Table(name = "Patient")
 public class Patient {
 	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO,generator="PATIENT_ID_REF")
+    @SequenceGenerator(name="PATIENT_ID_REF",sequenceName ="PATIENT_ID_REF",allocationSize = 1)
 	@Column(name = "PATIENT_ID")
-	@NotNull
-	@Range(min = 1, message = "*Greater than zero")
 	private int patientId;
 	@Column(name = "FIRST_NAME")
 	@Size(max = 20, min = 3, message = "*Name length should be 3 to 20")
@@ -48,7 +49,7 @@ public class Patient {
 	@Transient()
 	private int countryCode;
 	@Column(name = "CONTACT_NO")
-	@Digits(integer = 20, fraction = 0)
+	@Digits(integer = 13, fraction = 0)
 	private long contactNo;
 	@Column(name = "DOB")
 	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy")

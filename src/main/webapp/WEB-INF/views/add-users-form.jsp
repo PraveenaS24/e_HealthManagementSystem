@@ -8,24 +8,47 @@
 <meta charset="ISO-8859-1">
 <title>Add Users</title>
 </head>
-<body style="background-color: bisque;">
+<style>
+body {
+	background-image:
+		url('https://c8.alamy.com/zooms/9/9743bae1a97c4d8f9c25d4600d86e6b4/2hywk61.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+h1{
+position: relative;
+left: 100px;
+color: blue;
+
+}
+#log{
+    width: 150px;
+    height: 30px;
+    border: black;
+    border-radius: 3px;
+    padding-left: 8px; 
+    color: white;
+    background-color: maroon;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+#log {
+box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+tr{
+color: black;}
+</style>
 <body>
-	<h1 align="center">TO ADD USER FORM</h1>
-	<div id="root">
+	<h1>ADD USER</h1>
+	<div id="root" align="left">
 		<div id="form">
-			<!-- <table border="" width="50%" cellpadding="10"> -->
+      <table border="10" width="70%" cellpadding="20">
 				<tr>
 					<form:form action="adduser" method="post" modelAttribute="addusers">
-						<div>
-							<td><label for="userId">User Id</label></td>
-							<td>
-								<div>
-									<form:input path="userId" title="Id must be number" pattern="^[0-9]+$"
-						 required="true" placeholder="Enter User Id"/>
-								</div>
-								<form:errors path="userId" cssClass="text-danger" />
-							</td>
-						</div>
+						
 				</tr>
 				<tr>
 					<div>
@@ -61,12 +84,12 @@
 						<form:errors path="register" cssClass="text-danger" />
 					</div>
 				</tr>
-				<tr>
+				<tr><div>
 					<td colspan="2" align="center">
-						<div>
-							<form:button>Click to add</form:button>
-						</div>
+							<form:button id="log">Click</form:button>
+						
 					</td>
+					</div>
 				</tr>
 				</form:form>
 			</table>

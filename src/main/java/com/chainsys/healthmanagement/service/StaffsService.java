@@ -25,6 +25,8 @@ public class StaffsService {
 	}
 
 	public Staffs save(Staffs staffs) {
+		long contactNo = staffs.getCountryCode() * 10000000000L + staffs.getContactNo();
+		staffs.setContactNo(contactNo);
 		return staffsrepo.save(staffs);
 	}
 
@@ -37,15 +39,15 @@ public class StaffsService {
 	}
 
 	public FeedBackAndStaffsDTO getFeedBackAndStaffsDTO(int id) {
-        Staffs staffs = staffsrepo.findById(id);
-        FeedBackAndStaffsDTO dto = new FeedBackAndStaffsDTO();
-        dto.setStaffs(staffs);
-        List<FeedBack> feedback = feedBackRepository.findByStaffId(id);
-        Iterator<FeedBack> itr = feedback.iterator();
-        while (itr.hasNext()) {
-            dto.addFeedBack((FeedBack) itr.next());
-        }
-        return dto;
-    }
+		Staffs staffs = staffsrepo.findById(id);
+		FeedBackAndStaffsDTO dto = new FeedBackAndStaffsDTO();
+		dto.setStaffs(staffs);
+		List<FeedBack> feedback = feedBackRepository.findByStaffId(id);
+		Iterator<FeedBack> itr = feedback.iterator();
+		while (itr.hasNext()) {
+			dto.addFeedBack((FeedBack) itr.next());
+		}
+		return dto;
+	}
 
 }

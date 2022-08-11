@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -44,9 +45,13 @@ public class FeedBackController {
 	}
 
 	@PostMapping("/addfeedback")
-	public String addNewFeedBack(@ModelAttribute("addfeedback") FeedBack thefeedback) {
-		feedbackservice.save(thefeedback);
-		return "redirect:/feedback/feedbacklist";
+	public String addNewFeedBack(@ModelAttribute("addfeedback") FeedBack thefeedback, Errors error) {
+		if (error.hasErrors()) {
+			return "add-feedback-form";
+		} else {
+			feedbackservice.save(thefeedback);
+			return "redirect:/feedback/feedbacklist";
+		}
 	}
 
 	@GetMapping("/updatefeedbackform")
@@ -57,9 +62,13 @@ public class FeedBackController {
 	}
 
 	@PostMapping("/updatefeedback")
-	public String updateFeedBack(@ModelAttribute("updatefeedback") FeedBack thefeedback) {
-		feedbackservice.save(thefeedback);
-		return "redirect:/feedback/feedbacklist";
+	public String updateFeedBack(@ModelAttribute("updatefeedback") FeedBack thefeedback, Errors error) {
+		if (error.hasErrors()) {
+			return " update-feedback-form";
+		} else {
+			feedbackservice.save(thefeedback);
+			return "redirect:/feedback/feedbacklist";
+		}
 	}
 
 	@GetMapping("/deletefeedback")

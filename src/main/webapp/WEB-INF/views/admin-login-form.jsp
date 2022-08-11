@@ -5,31 +5,29 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>User Login</title>
+<title>Admin Login</title>
 </head>
 <body>
-
 	<div id="root">
 		<div id="form">
-			<form:form action="checkuserlogin" method="post"
-				modelAttribute="users">
+			<form:form action="checkadminlogin" method="post"
+				modelAttribute="admin">
 
 				<div>
-					<label for="userId">User Id</label>
+					<label for="adminId">Admin Id</label>
 					<div>
-						<form:input path="userId" />
+						<form:input path="adminId" />
 					</div>
 				</div>
 				<div>
-					<label for="secretword">Secretword</label>
+					<label for="password">Password</label>
 					<div>
-						<form:input path="secretword" type="password" />
+						<form:input path="password" type="password" />
 					</div>
 				</div>
-				<form:button>User Login</form:button>
+				<form:button>Admin Login</form:button>
 			</form:form>
 		</div>
 	</div>
-	</table>
 </body>
 </html>

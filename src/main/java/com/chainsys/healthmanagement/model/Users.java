@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -22,9 +23,9 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 @Table(name = "USERS")
 public class Users {
 	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO,generator="USER_ID_REF")
+    @SequenceGenerator(name="USER_ID_REF",sequenceName ="USER_ID_REF",allocationSize = 1)
 	@Column(name = "USER_ID")
-	@NotNull(message="*Id is required")
-	@Range(min=1,message="*Greater than zero")
 	private int userId;
 	@Column(name = "USER_TYPE")
 	@Size(max=20, min=3, message="*Name length should be 3 to 20")

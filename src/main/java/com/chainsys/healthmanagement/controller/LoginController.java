@@ -16,4 +16,8 @@ public class LoginController {
     public String start() {
         return "homePage";
     }
+	@GetMapping("/admin")
+    public String begin() {
+        return "homePage";
+    }
 }

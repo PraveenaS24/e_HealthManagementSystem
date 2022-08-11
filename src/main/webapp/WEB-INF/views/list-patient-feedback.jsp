@@ -10,7 +10,7 @@
 </head>
 <body style="background-color: Silver;">
 <body>
-	<h1 align="center">TO ADD PATIENT FORM</h1>
+	<h1 align="center">PATIENT AND FEEDBACK</h1>
 	<div id="root">
 		<div id="form">
 			<div align="center">

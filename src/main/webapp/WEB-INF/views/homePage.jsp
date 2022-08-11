@@ -18,12 +18,16 @@
 	</div>
 	
 		<ul>
-			<li><a href="/users/userlogin">login</a></li>
+		<li><a href="/admin/adminlogin">Admin</a></li>
+			<li><a href="/users/userlogin">User</a></li>
 			<li><a href="/patient/patientlist">Patients</a></li>
 			<li><a href="/staffs/staffslist">Staffs</a></li>
 			<li><a href="/feedback/feedbacklist">FeedBack</a></li>
+			
 		</ul>
 	</nav>
-
+	
+	</div>
+	
 </body>
 </html>

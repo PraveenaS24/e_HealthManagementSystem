@@ -13,6 +13,20 @@ body {
 	background-image:
 		url('https://thumbs.dreamstime.com/b/medical-doctor-pointing-finger-virtual-screen-stars-sastisfaction-rating-copy-space-blur-hospital-background-186175033.jpg')
 }
+#cont {
+	width: 150px;
+	height: 30px;
+	border: black;
+	border-radius: 3px;
+	padding-right: 8px;
+	color: white;
+	background-color: maroon;
+	display: inline-block;
+	margin: 4px 2px;
+	cursor: pointer;
+	-webkit-transition-duration: 0.4s;
+	transition-duration: 0.4s;
+}
 </style>
 <body style="background-color: red;">
 <body>
@@ -28,8 +42,10 @@ body {
 								<td><label for="patientId">Patient Id</label></td>
 								<td><div>
 										<form:input path="patientId"
-											style="width: 400px;height: 25px;" />
-									</div></td><form:errors path="patientId" cssClass="text-danger" />
+											style="width: 300px;height: 25px;" title="Id must be number"
+											pattern="^[0-9]+$" required="true" />
+									</div></td>
+								<form:errors path="patientId" cssClass="text-danger" />
 							</div>
 						</tr>
 						<tr>
@@ -38,9 +54,11 @@ body {
 								<td>
 									<div>
 										<form:input path="firstName"
-											style="width: 400px;height: 25px;" />
+											style="width: 300px;height: 25px;" title="Name can't be empty And First Name must be in String"
+											required="true" />
 									</div>
-								</td><form:errors path="firstName" cssClass="text-danger" />
+								</td>
+								<form:errors path="firstName" cssClass="text-danger" />
 							</div>
 						</tr>
 						<tr>
@@ -48,9 +66,11 @@ body {
 								<td><label for="lastName">Last Name</label></td>
 								<td>
 									<div>
-										<form:input path="lastName" style="width: 400px;height: 25px;" />
+										<form:input path="lastName" style="width: 300px;height: 25px;" title="Name can't be empty And Last Name must be in String"
+											required="true" />
 									</div>
-								</td><form:errors path="lastName" cssClass="text-danger" />
+								</td>
+								<form:errors path="lastName" cssClass="text-danger" />
 							</div>
 						</tr>
 						<tr>
@@ -175,25 +195,28 @@ body {
 											<form:option value="260">260 --- Zambia</form:option>
 											<form:option value="263">263 --- Zimbabwe</form:option>
 										</form:select>
-							<td><form:input path="contactNo" /></td>
-							</div>
-							</td>
+										<form:input path="contactNo" required="true"/></td>
+									</div>
 							</div>
 						</tr>
 						<tr>
 							<div>
 								<td><label for="dob">DOB</label></td>
 								<td><div>
-										<form:input path="dob" type="date" />
-									</div></td><form:errors path="dob" cssClass="text-danger" />
+										<form:input path="dob" type="date" required="true"/>
+									</div></td>
+								<form:errors path="dob" cssClass="text-danger" />
 							</div>
 						</tr>
 						<tr>
 							<div>
 								<td><label for="email">Email</label></td>
 								<td><div>
-										<form:input path="email" style="width: 400px;height: 25px;" />
-									</div></td><form:errors path="email" cssClass="text-danger" />
+										<form:input path="email" style="width: 300px;height: 25px;" 
+										title="Mail Id is not in correct formet"
+											pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$" required="true"/>
+									</div></td>
+								<form:errors path="email" cssClass="text-danger" />
 							</div>
 						</tr>
 						<tr>
@@ -202,7 +225,9 @@ body {
 								<td>
 									<div>
 										<form:input path="bloodgroup"
-											style="width: 400px;height: 25px;" />
+											style="width: 300px;height: 25px;" 
+											title="BloodGroup can't be empty And BloodGroup must be in String"
+											required="true"/>
 									</div>
 								</td>
 							</div>
@@ -212,9 +237,12 @@ body {
 								<td><label for="address">Address</label></td>
 								<td>
 									<div>
-										<form:input path="address" style="width: 400px;height: 25px;" />
+										<form:input path="address" style="width: 300px;height: 25px;" 
+										title="Address can't be empty And Address must be in String"
+											required="true"/>
 									</div>
-								</td><form:errors path="address" cssClass="text-danger" />
+								</td>
+								<form:errors path="address" cssClass="text-danger" />
 							</div>
 						</tr>
 						<tr>
@@ -222,9 +250,10 @@ body {
 								<td><label for="staffId">Staff Id</label></td>
 								<td>
 									<div>
-										<form:input path="staffId" style="width: 400px;height: 25px;" />
+										<form:input path="staffId" style="width: 300px;height: 25px;" title="Id must be number" pattern="^[0-9]+$" required="true"/>
 									</div>
-								</td><form:errors path="staffId" cssClass="text-danger" />
+								</td>
+								<form:errors path="staffId" cssClass="text-danger" />
 							</div>
 						</tr>
 						<tr>
@@ -232,9 +261,10 @@ body {
 								<td><label for="observation">Observation</label></td>
 								<td>
 									<div>
-										<form:input path="observation" type="date" />
+										<form:input path="observation" type="date" required="true"/>
 									</div>
-								</td><form:errors path="observation" cssClass="text-danger" />
+								</td>
+								<form:errors path="observation" cssClass="text-danger" />
 							</div>
 						</tr>
 						<tr>
@@ -242,9 +272,12 @@ body {
 								<td><label for="report">Report</label></td>
 								<td>
 									<div>
-										<form:input path="report" style="width: 400px;height: 25px;" />
+										<form:input path="report" style="width: 300px;height: 25px;" 
+										title="Report can't be empty And report must be in String"
+											required="true"/>
 									</div>
-								</td><form:errors path="report" cssClass="text-danger" />
+								</td>
+								<form:errors path="report" cssClass="text-danger" />
 							</div>
 						</tr>
 						<tr>
@@ -253,9 +286,11 @@ body {
 								<td>
 									<div>
 										<form:input path="prescription"
-											style="width: 400px;height: 25px;" />
+											style="width: 300px;height: 25px;" title="Prescription can't be empty And Prescription must be in String"
+											required="true"/>
 									</div>
-								</td><form:errors path="prescription" cssClass="text-danger" />
+								</td>
+								<form:errors path="prescription" cssClass="text-danger" />
 							</div>
 						</tr>
 						<tr>
@@ -263,9 +298,10 @@ body {
 								<td><label for="fees">Fees</label></td>
 								<td>
 									<div>
-										<form:input path="fees" style="width: 400px;height: 25px;" />
+										<form:input path="fees" style="width: 300px;height: 25px;" title="Fees must be number" pattern="^[0-9]+$"/>
 									</div>
-								</td><form:errors path="fees" cssClass="text-danger" />
+								</td>
+								<form:errors path="fees" cssClass="text-danger" />
 							</div>
 						</tr>
 						<tr>
@@ -274,9 +310,11 @@ body {
 								<td>
 									<div>
 										<form:input path="foodmaintenance"
-											style="width: 400px;height: 25px;" />
+											style="width: 300px;height: 25px;" title="Food can't be empty And Food must be in String"
+											required="true"/>
 									</div>
-								</td><form:errors path="foodmaintenance" cssClass="text-danger" />
+								</td>
+								<form:errors path="foodmaintenance" cssClass="text-danger" />
 							</div>
 						</tr>
 						<tr>
@@ -284,18 +322,20 @@ body {
 								<td><label for="revisit">Revisit</label></td>
 								<td>
 									<div>
-										<form:input path="revisit" style="width: 400px;height: 25px;" />
+										<form:input path="revisit" style="width: 300px;height: 25px;" title="Revisit can't be empty And Revisit must be in String"
+											required="true"/>
 									</div>
-								</td><form:errors path="revisit" cssClass="text-danger" />
+								</td>
+								<form:errors path="revisit" cssClass="text-danger" />
 							</div>
 						</tr>
 						<tr>
 						<tr>
-							<td colspan="2" align="center">
-								<div>
-									<form:button>Click here to Update</form:button>
-								</div>
+						<div>
+							<td colspan="2" align="center"><br>
+									<form:button id="cont">Click</form:button>
 							</td>
+							</div>
 						</tr>
 					</form:form>
 				</table>

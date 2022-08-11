@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -43,9 +44,13 @@ public class StaffsController {
 	}
 
 	@PostMapping("/addstaff")
-	public String addNewStaff(@ModelAttribute("addstaffs") Staffs thestaff) {
-		staffservice.save(thestaff);
-		return "redirect:/staffs/staffslist";
+	public String addNewStaff(@ModelAttribute("addstaffs") Staffs thestaff, Errors error) {
+		if (error.hasErrors()) {
+			return "add-staffs-form";
+		} else {
+			staffservice.save(thestaff);
+			return "redirect:/staffs/staffslist";
+		}
 	}
 
 	@GetMapping("/updatestaffsform")
@@ -56,9 +61,13 @@ public class StaffsController {
 	}
 
 	@PostMapping("/updatestaff")
-	public String updateStaffs(@ModelAttribute("updatestaffs") Staffs thestaff) {
-		staffservice.save(thestaff);
-		return "redirect:/staffs/staffslist";
+	public String updateStaffs(@ModelAttribute("updatestaffs") Staffs thestaff, Errors error) {
+		if (error.hasErrors()) {
+			return "update-staffs-form";
+		} else {
+			staffservice.save(thestaff);
+			return "redirect:/staffs/staffslist";
+		}
 	}
 
 	@GetMapping("/deletestaff")
@@ -66,11 +75,12 @@ public class StaffsController {
 		staffservice.deleteStaffs(id);
 		return "redirect:/staffs/staffslist";
 	}
+
 	@GetMapping("/getstaffsfeedback")
-	public String getStaffsAndFeedback(@RequestParam("id") int id,Model model) {
-		FeedBackAndStaffsDTO dto=staffservice.getFeedBackAndStaffsDTO(id);
-		model.addAttribute("getstaffs",dto.getStaffs());
-		model.addAttribute("getfeedback",dto.getFeedbacklist());
+	public String getStaffsAndFeedback(@RequestParam("id") int id, Model model) {
+		FeedBackAndStaffsDTO dto = staffservice.getFeedBackAndStaffsDTO(id);
+		model.addAttribute("getstaffs", dto.getStaffs());
+		model.addAttribute("getfeedback", dto.getFeedbacklist());
 		return "list-staffs-feedback";
 	}
 }
