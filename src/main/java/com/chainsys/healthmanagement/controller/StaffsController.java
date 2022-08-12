@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.chainsys.healthmanagement.DTO.FeedBackAndStaffsDTO;
+import com.chainsys.healthmanagement.dto.FeedBackAndStaffsDTO;
 import com.chainsys.healthmanagement.model.Staffs;
 import com.chainsys.healthmanagement.service.StaffsService;
 

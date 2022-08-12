@@ -1,4 +1,4 @@
-package com.chainsys.healthmanagement.DTO;
+package com.chainsys.healthmanagement.dto;
 
 import org.springframework.beans.factory.annotation.Autowired;
 

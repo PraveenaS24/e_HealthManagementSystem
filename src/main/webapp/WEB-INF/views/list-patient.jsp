@@ -3,14 +3,35 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="ISO-8859-1">
 <title>Patient List</title>
+<style>
+body {
+	background-image: linear-gradient(to right, plum, sandybrown, peachpuff, papayawhip, pink,
+		sandybrown, salmon, plum);
+}
+
+tr:hover {
+	background-color: skyblue;
+}
+
+tr {
+	color: black;
+	font-weight: 900;
+}
+
+h1 {
+	color: blue;
+}
+</style>
 </head>
-<body style="background-color: linen;">
 <body>
 	<h1 align="center">PATIENT LIST</h1>
+	<br>
+	<br>
+	<br>
 	<div id="table root">
 		<div align="center">
 			<table border="2" width="10%" cellpadding="10">
@@ -32,6 +53,7 @@
 						<th>Fees</th>
 						<th>FoodMaintenance</th>
 						<th>Revisit</th>
+						<th>Status</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -54,14 +76,13 @@
 							<td>${patient.fees}</td>
 							<td>${patient.foodmaintenance}</td>
 							<td>${patient.revisit}</td>
+							<td>${patient.status}</td>
 							<td><a
-								href="updatepatientform?patientId=${patient.patientId}">
-									<input onclick="change()" type="button" value="Update"
-									id="myButton1"></input>
+								href="updatepatientform?patientId=${patient.patientId}"> <input
+									onclick="change()" type="button" value="Update" id="myButton1"></input>
 
 							</a></td>
-							<td><a
-								href="deletepatient?feedbackId=${patient.patientId}"><input
+							<td><a href="deletepatient?feedbackId=${patient.patientId}"><input
 									onclick="change()" type="button" value="Delete" id="myButton2"></input></a></td>
 						</tr>
 					</c:forEach>

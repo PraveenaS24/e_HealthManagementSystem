@@ -3,17 +3,38 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="ISO-8859-1">
 <title>FeedBack List</title>
+<style>
+body {
+	background-image: linear-gradient(to right, plum, sandybrown, peachpuff, papayawhip, pink,
+		sandybrown, salmon, plum);
+}
+
+tr:hover {
+	background-color: skyblue;
+}
+
+tr {
+	color: black;
+	font-weight: 900;
+}
+
+h1 {
+	color: blue;
+}
+</style>
 </head>
-<body style="background-color: Gold;">
 <body>
 	<h1 align="center">FEEDBACK LIST</h1>
+	<br>
+	<br>
+	<br>
 	<div id="table root">
 		<div align="center">
-			<table border="2" width="50%" cellpadding="20">
+			<table border="2" width="30%" cellpadding="10">
 				<thead>
 					<tr>
 						<th>FeedBack_Id</th>

@@ -29,8 +29,8 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 @Table(name = "Patient")
 public class Patient {
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO,generator="PATIENT_ID_REF")
-    @SequenceGenerator(name="PATIENT_ID_REF",sequenceName ="PATIENT_ID_REF",allocationSize = 1)
+	@GeneratedValue(strategy = GenerationType.AUTO, generator = "PATIENT_ID_REF")
+	@SequenceGenerator(name = "PATIENT_ID_REF", sequenceName = "PATIENT_ID_REF", allocationSize = 1)
 	@Column(name = "PATIENT_ID")
 	private int patientId;
 	@Column(name = "FIRST_NAME")
@@ -64,12 +64,10 @@ public class Patient {
 	@NotBlank(message = "*Address is required")
 	private String address;
 	@Column(name = "STAFF_ID")
-	@NotNull(message="*Staffid is required")
+	@NotNull(message = "*Staffid is required")
 	@Range(min = 1, message = "*Greater than zero")
 	private int staffId;
-
 	@Column(name = "OBSERVATION")
-
 	@NotNull(message = "*Correct date format is required")
 	private Date observation;
 	@Column(name = "REPORT")
@@ -91,6 +89,9 @@ public class Patient {
 	@Size(max = 30, min = 3, message = "*Revisit length should be 3 to 30")
 	@NotBlank(message = "*Revisit can't be Empty")
 	private String revisit;
+	@Column(name = "STATUS")
+	private String status;
+
 	@OneToOne(mappedBy = "patient", fetch = FetchType.LAZY)
 	private FeedBack feedback;
 
@@ -236,6 +237,14 @@ public class Patient {
 
 	public void setCountryCode(int countryCode) {
 		this.countryCode = countryCode;
+	}
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
 	}
 
 }

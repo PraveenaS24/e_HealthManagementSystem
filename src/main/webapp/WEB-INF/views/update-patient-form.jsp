@@ -3,7 +3,7 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="ISO-8859-1">
 <title>Update Patient</title>
@@ -11,8 +11,13 @@
 <style>
 body {
 	background-image:
-		url('https://thumbs.dreamstime.com/b/medical-doctor-pointing-finger-virtual-screen-stars-sastisfaction-rating-copy-space-blur-hospital-background-186175033.jpg')
+		url('https://img.freepik.com/premium-photo/fruits-vegetables-wood-table-with-supermarket-grocery-store-blurred-defocused-background_293060-6797.jpg?w=2000');
+	background-repeat: no-repeat;
+	background-size: 50% 100%;
+	padding-bottom: 20px;
+	float: right;
 }
+
 #cont {
 	width: 150px;
 	height: 30px;
@@ -28,9 +33,9 @@ body {
 	transition-duration: 0.4s;
 }
 </style>
-<body style="background-color: red;">
 <body>
-	<h1 align="center">UPDATE LIST</h1>
+<body>
+	<h1 align="center">UPDATE PATIENT</h1>
 	<div id="root">
 		<div id="form">
 			<div align="center">
@@ -54,7 +59,8 @@ body {
 								<td>
 									<div>
 										<form:input path="firstName"
-											style="width: 300px;height: 25px;" title="Name can't be empty And First Name must be in String"
+											style="width: 300px;height: 25px;"
+											title="Name can't be empty And First Name must be in String"
 											required="true" />
 									</div>
 								</td>
@@ -66,7 +72,8 @@ body {
 								<td><label for="lastName">Last Name</label></td>
 								<td>
 									<div>
-										<form:input path="lastName" style="width: 300px;height: 25px;" title="Name can't be empty And Last Name must be in String"
+										<form:input path="lastName" style="width: 300px;height: 25px;"
+											title="Name can't be empty And Last Name must be in String"
 											required="true" />
 									</div>
 								</td>
@@ -195,15 +202,16 @@ body {
 											<form:option value="260">260 --- Zambia</form:option>
 											<form:option value="263">263 --- Zimbabwe</form:option>
 										</form:select>
-										<form:input path="contactNo" required="true"/></td>
-									</div>
+										<form:input path="contactNo" required="true" />
+								</td>
+							</div>
 							</div>
 						</tr>
 						<tr>
 							<div>
 								<td><label for="dob">DOB</label></td>
 								<td><div>
-										<form:input path="dob" type="date" required="true"/>
+										<form:input path="dob" type="date" required="true" />
 									</div></td>
 								<form:errors path="dob" cssClass="text-danger" />
 							</div>
@@ -212,9 +220,9 @@ body {
 							<div>
 								<td><label for="email">Email</label></td>
 								<td><div>
-										<form:input path="email" style="width: 300px;height: 25px;" 
-										title="Mail Id is not in correct formet"
-											pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$" required="true"/>
+										<form:input path="email" style="width: 300px;height: 25px;"
+											title="Mail Id is not in correct formet"
+											pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$" required="true" />
 									</div></td>
 								<form:errors path="email" cssClass="text-danger" />
 							</div>
@@ -225,9 +233,9 @@ body {
 								<td>
 									<div>
 										<form:input path="bloodgroup"
-											style="width: 300px;height: 25px;" 
+											style="width: 300px;height: 25px;"
 											title="BloodGroup can't be empty And BloodGroup must be in String"
-											required="true"/>
+											required="true" />
 									</div>
 								</td>
 							</div>
@@ -237,9 +245,9 @@ body {
 								<td><label for="address">Address</label></td>
 								<td>
 									<div>
-										<form:input path="address" style="width: 300px;height: 25px;" 
-										title="Address can't be empty And Address must be in String"
-											required="true"/>
+										<form:input path="address" style="width: 300px;height: 25px;"
+											title="Address can't be empty And Address must be in String"
+											required="true" />
 									</div>
 								</td>
 								<form:errors path="address" cssClass="text-danger" />
@@ -250,7 +258,8 @@ body {
 								<td><label for="staffId">Staff Id</label></td>
 								<td>
 									<div>
-										<form:input path="staffId" style="width: 300px;height: 25px;" title="Id must be number" pattern="^[0-9]+$" required="true"/>
+										<form:input path="staffId" style="width: 300px;height: 25px;"
+											title="Id must be number" pattern="^[0-9]+$" required="true" />
 									</div>
 								</td>
 								<form:errors path="staffId" cssClass="text-danger" />
@@ -261,7 +270,7 @@ body {
 								<td><label for="observation">Observation</label></td>
 								<td>
 									<div>
-										<form:input path="observation" type="date" required="true"/>
+										<form:input path="observation" type="date" required="true" />
 									</div>
 								</td>
 								<form:errors path="observation" cssClass="text-danger" />
@@ -272,9 +281,9 @@ body {
 								<td><label for="report">Report</label></td>
 								<td>
 									<div>
-										<form:input path="report" style="width: 300px;height: 25px;" 
-										title="Report can't be empty And report must be in String"
-											required="true"/>
+										<form:input path="report" style="width: 300px;height: 25px;"
+											title="Report can't be empty And report must be in String"
+											required="true" />
 									</div>
 								</td>
 								<form:errors path="report" cssClass="text-danger" />
@@ -286,8 +295,9 @@ body {
 								<td>
 									<div>
 										<form:input path="prescription"
-											style="width: 300px;height: 25px;" title="Prescription can't be empty And Prescription must be in String"
-											required="true"/>
+											style="width: 300px;height: 25px;"
+											title="Prescription can't be empty And Prescription must be in String"
+											required="true" />
 									</div>
 								</td>
 								<form:errors path="prescription" cssClass="text-danger" />
@@ -298,7 +308,8 @@ body {
 								<td><label for="fees">Fees</label></td>
 								<td>
 									<div>
-										<form:input path="fees" style="width: 300px;height: 25px;" title="Fees must be number" pattern="^[0-9]+$"/>
+										<form:input path="fees" style="width: 300px;height: 25px;"
+											title="Fees must be number" pattern="^[0-9]+$" />
 									</div>
 								</td>
 								<form:errors path="fees" cssClass="text-danger" />
@@ -310,8 +321,9 @@ body {
 								<td>
 									<div>
 										<form:input path="foodmaintenance"
-											style="width: 300px;height: 25px;" title="Food can't be empty And Food must be in String"
-											required="true"/>
+											style="width: 300px;height: 25px;"
+											title="Food can't be empty And Food must be in String"
+											required="true" />
 									</div>
 								</td>
 								<form:errors path="foodmaintenance" cssClass="text-danger" />
@@ -322,19 +334,26 @@ body {
 								<td><label for="revisit">Revisit</label></td>
 								<td>
 									<div>
-										<form:input path="revisit" style="width: 300px;height: 25px;" title="Revisit can't be empty And Revisit must be in String"
-											required="true"/>
+										<form:input path="revisit" style="width: 300px;height: 25px;"
+											title="Revisit can't be empty And Revisit must be in String"
+											required="true" />
 									</div>
 								</td>
 								<form:errors path="revisit" cssClass="text-danger" />
 							</div>
 						</tr>
 						<tr>
+							<div>
+								<td><label for="status">Status</label></td>
+								<td>Active: <form:radiobutton path="status" value="Active" />
+									InActive: <form:radiobutton path="status" value="InActive" />
+								</td>
+							</div>
+						</tr>
 						<tr>
-						<div>
-							<td colspan="2" align="center"><br>
-									<form:button id="cont">Click</form:button>
-							</td>
+							<div>
+								<td colspan="2" align="center"><br> <form:button
+										id="cont">Click</form:button></td>
 							</div>
 						</tr>
 					</form:form>

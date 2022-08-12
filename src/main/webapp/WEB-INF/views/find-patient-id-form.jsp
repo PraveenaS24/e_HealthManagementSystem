@@ -3,7 +3,7 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="ISO-8859-1">
 <title>Find Patient</title>
@@ -179,6 +179,16 @@ body {
 								<td>
 									<div>
 										<form:input path="revisit" style="width: 400px;height: 25px;"/>
+									</div>
+								</td>
+							</div>
+						</tr>
+						<tr>
+							<div>
+								<td><label for="status">Status</label></td>
+								<td>
+									<div>
+										<form:input path="status" style="width: 400px;height: 25px;"/>
 									</div>
 								</td>
 							</div>

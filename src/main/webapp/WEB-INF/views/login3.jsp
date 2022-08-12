@@ -3,13 +3,14 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="ISO-8859-1">
 <title>Login</title>
 <style type="text/css">
 body {
-	background-image: linear-gradient(to right, #2E4053, #808B96, #BFC9CA, #626567);
+	background-image: linear-gradient(to right, lightgray,#2E4053, #808B96, #BFC9CA, #626567, black, slategrey);
+	background-size: 50% 80%;
 }
 
 h1 {
@@ -102,8 +103,12 @@ label {
 						<div>
 							<td><label for="adminId">Admin Id</label></td>
 							<div>
-								<td><form:input path="adminId" class="form-control" /></td>
+								<td><form:input path="adminId" class="form-control" 
+								title="Id must be number"
+											pattern="^[0-9]+$" required="true"
+											placeholder="Enter AdminId" style="width: 200px;height: 25px;"/></td>
 							</div>
+							<form:errors path="adminId" cssClass="text-danger" />
 						</div>
 					</tr>
 					<tr>
@@ -111,10 +116,12 @@ label {
 							<td><label for="password">Password</label></td>
 							<div>
 								<td><form:input type="password" path="password"
-										class="form-control" /></td>
+										class="form-control" title='password must begin with letter and contain atleast one number and must have atleast 8 characters'
+						pattern="^(?=.*[A-Za-z])(?=.*\\d)(?=.*[@$!%*#?&])[A-Za-z\\d@$!%*#?&]{8,}$"
+						required="true" placeholder="Enter PassWord" style="width: 200px;height: 25px;"/></td>
 							</div>
+							<form:errors path="password" cssClass="text-danger" />
 						</div>
-
 						<br>
 					</tr>
 					<tr>

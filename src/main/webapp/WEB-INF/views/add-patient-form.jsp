@@ -3,14 +3,14 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="ISO-8859-1">
 <title>Add Patient</title>
 </head>
 <style type="text/css">
 body {
-	background-image: linear-gradient(gray, black);
+	background-image: linear-gradient(black,gray,silver, black);
 	
 }
 
@@ -20,7 +20,7 @@ h1 {
 }
 
 tr {
-	color: black;
+	color: red;
 }
 
 label {
@@ -65,6 +65,7 @@ label {
 	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0
 		rgba(0, 0, 0, 0.19);
 }
+
 </style>
 
 <body>
@@ -370,11 +371,20 @@ label {
 							</div>
 						</tr>
 						<tr>
+							<div class="moon">
+								<td><label for="status">Status</label></td>
+								<td>Active: <form:radiobutton path="status" value="Active" />
+									InActive: <form:radiobutton path="status" value="InActive" />
+								</td>
+							</div>
+						</tr>
+						<tr>
 							<div>
 								<td colspan="2" align="center"><br> <form:button
 										id="log">
 									Click</form:button></td>
 							</div>
+							<div><a href="/login/home"><button>logout</button></a></div>
 						</tr>
 					</form:form>
 				</table>

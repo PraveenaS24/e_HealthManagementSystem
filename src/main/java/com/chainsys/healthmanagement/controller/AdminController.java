@@ -59,7 +59,7 @@ public class AdminController {
 	public String checkingAccess(@ModelAttribute("admin") Admin admins) {
 		Admin admin = adminservice.getAdminByIdAndPassword(admins.getAdminId(), admins.getPassword());
 		if (admin != null) {
-			return "redirect:/patient/patientlist";
+			return "list";
 		} else
 			return "invalid-admin-error";
 	}

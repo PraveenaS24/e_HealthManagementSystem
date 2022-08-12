@@ -1,5 +1,4 @@
-package com.chainsys.healthmanagement.DTO;
-
+package com.chainsys.healthmanagement.dto;
 import java.util.ArrayList;
 import java.util.List;
 

@@ -3,7 +3,7 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="ISO-8859-1">
 <title>ADD FEEDBACK FORM</title>
@@ -11,7 +11,7 @@
 <style>
 body {
 	background-image:
-		linear-gradient(  white, gray);
+		linear-gradient(to right,  white, gray);
 }
 
 h1 {
@@ -33,7 +33,7 @@ label {
 
 #cont {
 	width: 150px;
-	height: 30px;
+	height:30px;
 	border: black;
 	border-radius: 3px;
 	padding-right: 8px;
@@ -81,7 +81,7 @@ label {
 									<div>
 										<form:input path="patientId" style="width: 300px;height: 25px;"
 										title="Id can't be empty And Id must be in Integer"
-										required="true" placeholder="Enter PatientId"/>
+										required="true" placeholder="Enter PatientId" />
 									</div>
 								</td><form:errors path="patientId" cssClass="text-danger" />
 							</div>
