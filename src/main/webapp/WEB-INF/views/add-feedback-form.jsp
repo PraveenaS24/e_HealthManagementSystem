@@ -66,55 +66,43 @@ label {
 </style>
 <body>
 <body>
-	<h1 align="center">TO ADD FEEDBACK</h1>
+	<h1>TO ADD FEEDBACK</h1>
 	<div id="root" class="box">
-		<div id="form" align="center">
-			<table width="50%" cellpadding="10">
+		<div id="form">
 				<div>
 					<form:form action="addfeedback" method="post"
 						modelAttribute="addfeedback">
-		
-						<tr>
 							<div>
-								<td><label for="patientId">Patient Id</label></td>
-								<td>
+								<label for="patientId">Patient Id</label>
 									<div>
 										<form:input path="patientId" style="width: 300px;height: 25px;"
 										title="Id can't be empty And Id must be in Integer"
 										required="true" placeholder="Enter PatientId" />
 									</div>
-								</td><form:errors path="patientId" cssClass="text-danger" />
+								<form:errors path="patientId" cssClass="text-danger" />
 							</div>
-						<tr>
 							<div>
-								<td><label for="staffId">Staff Id</label></td>
-								<td>
+								<label for="staffId">Staff Id</label>
 									<div>
 
 										<form:input path="staffId" style="width: 300px;height: 25px;"
 										title="StaffId can't be empty And StaffId must be in Integer"
 										required="true" placeholder="Enter StaffId"/>
 									</div>
-								</td><form:errors path="staffId" cssClass="text-danger" />
+								<form:errors path="staffId" cssClass="text-danger" />
 
 							</div>
-						</tr>
-						<tr>
 							<div>
-								<td><label for="staffNature">Staff Nature</label></td>
-								<td>
+								<label for="staffNature">Staff Nature</label>
 									<div>
 										<form:input path="staffNature" style="width: 300px;height: 25px;"
 										title="StaffNature can't be empty And StaffNature must be in String"
 										required="true" placeholder="Enter StaffNature" />
 									</div>
-								</td><form:errors path="staffNature" cssClass="text-danger" />
+								<form:errors path="staffNature" cssClass="text-danger" />
 							</div>
-						</tr>
-						<tr>
 							<div>
-								<td><label for="addressLocate">Address</label></td>
-								<td>
+								<label for="addressLocate">Address</label>
 									<div>
 										<form:input path="addressLocate" style="width: 300px;height: 25px;"
 										title="Address can't be empty And Address must be in String"

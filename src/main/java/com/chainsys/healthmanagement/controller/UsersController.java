@@ -49,7 +49,6 @@ public class UsersController {
     public String useraccessform(Model model) {
         Users theuser = new Users();
         model.addAttribute("users", theuser);
-//        return "user-login-form";
         return "login2";
     }                   
 
@@ -58,7 +57,7 @@ public class UsersController {
         Users user = userservice.getUserByIdAndSecretword(users.getUserId(),users.getSecretword());
         if (user!= null){
 
-            return "redirect:/patient/addpatientform";
+            return "listus";
         } else
             return "invalid-user-error";
 

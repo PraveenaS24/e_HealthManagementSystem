@@ -67,9 +67,9 @@ button {
 	</div>
 	<div class="button-list">
 		<ul>
-			<li><a href="/users/adduserform"><button class="click">Add
-						User</button></a></li> 
-			<li><a href="/users/userlist"><button class="click">User</button></a></li>
+			<li><a href="/patient/addpatientform"><button class="click">Add
+						Patient</button></a></li> 
+			<li><a href="users/userlist"><button class="click">User</button></a></li>
 			<li><a href="/patient/patientlist"><button class="click">Patient</button></a></li>
 			<li><a href="/staffs/staffslist"><button class="click">Staffs</button></a></li>
 			<li><a href="/feedback/feedbacklist"><button class="click">FeedBack</button></a></li>

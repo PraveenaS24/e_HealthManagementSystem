@@ -51,7 +51,6 @@ h1 {
 							<td>${users.userType}</td>
 							<td>${users.secretword}</td>
 							<td>${users.register}</td>
-
 						</tr>
 					</c:forEach>
 				</tbody>

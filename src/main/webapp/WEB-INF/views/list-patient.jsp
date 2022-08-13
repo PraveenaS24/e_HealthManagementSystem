@@ -82,7 +82,7 @@ h1 {
 									onclick="change()" type="button" value="Update" id="myButton1"></input>
 
 							</a></td>
-							<td><a href="deletepatient?feedbackId=${patient.patientId}"><input
+							<td><a href="deletepatient?patientId=${patient.patientId}"><input
 									onclick="change()" type="button" value="Delete" id="myButton2"></input></a></td>
 						</tr>
 					</c:forEach>

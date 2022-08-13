@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.chainsys.healthmanagement.model.Admin;
-import com.chainsys.healthmanagement.model.Users;
 import com.chainsys.healthmanagement.service.AdminService;
 
 @Controller
@@ -51,7 +50,6 @@ public class AdminController {
 	public String adminaccessform(Model model) {
 		Admin theadmin = new Admin();
 		model.addAttribute("admin", theadmin);
-//        return "user-login-form";
 		return "login3";
 	}
 

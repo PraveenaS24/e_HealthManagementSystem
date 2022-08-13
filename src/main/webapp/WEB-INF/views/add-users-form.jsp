@@ -10,18 +10,52 @@
 </head>
 <style>
 body {
-	background-image:
-		url('https://c8.alamy.com/zooms/9/9743bae1a97c4d8f9c25d4600d86e6b4/2hywk61.jpg');
-	background-size: cover;
-	background-repeat: no-repeat;
+    background-image: url("https://www.bigstatefinancial.com/wp-content/uploads/2019/12/3-Tips-for-Financial-Health.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
 }
-h1{
-position: relative;
-left: 100px;
-color: blue;
 
+h1 {
+    color: blue;
+    text-align: center;
 }
-#log{
+
+label {
+    color: blue;
+    font-size: 1.3em;
+    display: flex;
+    margin: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+
+#userId {
+    width: 250px;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    padding-left: 8px;
+}
+
+#secretword {
+    width: 250px;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    padding-left: 8px;
+}
+
+#userType {
+    width: 260px;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    padding-left: 8px;
+}
+
+#log {
     width: 150px;
     height: 30px;
     border: black;
@@ -35,64 +69,65 @@ color: blue;
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
 }
+
+.box {
+    width: 400px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 5px 20px 50px #000;
+    margin: auto;
+    padding: 30px;
+    text-align: center;
+    
+}
 #log {
 box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
-tr{
-color: black;}
+#cont {
+position: relative;
+left: 100px;
+}
 </style>
 <body>
 	<h1>ADD USER</h1>
-	<div id="root" align="left">
-		<div id="form">
-      <table border="10" width="70%" cellpadding="20">
-				<tr>
-					<form:form action="adduser" method="post" modelAttribute="addusers">
-						
-				</tr>
-				<tr>
+	<div id="root">
+		<div id="form" class="box">
+			<div>
+				<form:form action="adduser" method="post" modelAttribute="addusers">
 					<div>
-						<td><label for="userType">User Type</label></td>
-						<td><div>
-								<form:select path="userType" required="true">
-									<form:option value="nurse">Nurse</form:option>
-									<form:option value="murse">Murse</form:option>
-								</form:select>
-							</div></td>
+						<label for="userType">User Type</label>
+						<div>
+							<form:select path="userType" required="true" style="width: 260px;height: 30px;">
+								<form:option value="nurse">Nurse</form:option>
+								<form:option value="murse">Murse</form:option>
+							</form:select>
+						</div>
+						<form:errors path="userType" cssClass="text-danger" />
 					</div>
-				</tr>
-
-				<tr>
 					<div>
-						<td><label for="secretword">Secret Word</label></td>
-						<td><div>
-								<form:input path="secretword" type="password" title='password must begin with letter and contain atleast one number and must have atleast 8 characters'
-						pattern="^(?=.*[A-Za-z])(?=.*\\d)(?=.*[@$!%*#?&])[A-Za-z\\d@$!%*#?&]{8,}$"
-						required="true" placeholder="Enter SecretWord"/>
-							</div></td>
-							<form:errors path="secretword" cssClass="text-danger" />
+						<label for="secretword">Secret Word</label>
+						<div>
+							<form:input path="secretword" type="password"
+								title='password must begin with letter and contain atleast one number and must have atleast 8 characters'
+								pattern="^(?=.*[A-Za-z])(?=.*\\d)(?=.*[@$!%*#?&])[A-Za-z\\d@$!%*#?&]{8,}$"
+								required="true" placeholder="Enter SecretWord" style="width: 250px;height: 25px;"/>
+						</div>
+						<form:errors path="secretword" cssClass="text-danger" />
 					</div>
-				</tr>
-				<tr>
 					<div>
-						<td><label for="register">Register Date</label></td>
-						<td>
-							<div>
-								<form:input path="register" type="date" required="true"/>
-							</div>
-						</td>
+						<label for="register">Register Date</label>
+						<div>
+							<form:input path="register" type="date" required="true" style="width: 250px;height: 30px;"/>
+						</div>
 						<form:errors path="register" cssClass="text-danger" />
 					</div>
-				</tr>
-				<tr><div>
-					<td colspan="2" align="center">
-							<form:button id="log">Click</form:button>
-						
-					</td>
+					<div>
+					<br>
+						<form:button id="log">Click</form:button>
 					</div>
-				</tr>
 				</form:form>
-			</table>
+			</div>
 		</div>
 	</div>
 </body>
