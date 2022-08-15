@@ -81,6 +81,7 @@ label {
 	padding: 10px;
 	text-align: center;
 	float: center;
+	margin-top: 100px;
 }
 
 #log {
@@ -92,10 +93,57 @@ label {
 	float: center;
 }
 </style>
+<script>
+	function validate() {
+		var pass = document.getElementById('pass');
+		var upper = document.getElementById('upper');
+		var lower = document.getElementById('lower');
+		var num = document.getElementById('number');
+		var len = document.getElementById('length');
+		var sp_char = document.getElementById('special_character');
+
+		if (pass.value.match(/[0-9]/)) {
+			num.style.color = 'green'
+		} else {
+			num.style.color = 'red'
+		}
+		if (pass.value.match(/[A-Z]/)) {
+			upper.style.color = 'green'
+		} else {
+			upper.style.color = 'red'
+		}
+		if (pass.value.match(/[a-z]/)) {
+
+			lower.style.color = 'green'
+		} else {
+			lower.style.color = 'red';
+		}
+		if (pass.value.match(/[!\@\#\$\%\^\&\*\(\)\_\-\+\=\?\>\<\.\,]/)) {
+
+			sp_char.style.color = 'green'
+		} else {
+			sp_char.style.color = 'red';
+		}
+		if (pass.value.length < 6) {
+
+			len.style.color = 'green'
+		} else {
+			len.style.color = 'red';
+		}
+	}
+	function confirm() {
+		var pass = document.getElementById('pass');
+		var email = document.getElementById('email');
+		if (pass.value != email.value) {
+			document.getElementById('number').style.display = 'none'
+		}
+	}
+}
+</script>
 </head>
 <body>
 	<h1>ADMIN LOGIN</h1>
-	
+
 	<div id="root" class="box">
 		<div id="form">
 			<form:form action="checkadminlogin" method="post"

@@ -20,8 +20,7 @@ import com.chainsys.healthmanagement.service.PatientService;
 
 @Controller
 @RequestMapping("/patient")
-public class PatientController 
-{
+public class PatientController {
 	@Autowired
 	PatientService patientservice;
 
@@ -41,8 +40,7 @@ public class PatientController
 
 	@PostMapping("/addpatient")
 	public String addNewPatient(@Valid @ModelAttribute("addpatient") Patient thepatient, Errors error) {
-		if (error.hasErrors()) 
-		{
+		if (error.hasErrors()) {
 			return "add-patient-form";
 		} else {
 			patientservice.save(thepatient);
@@ -56,8 +54,14 @@ public class PatientController
 		model.addAttribute("updatepatient", thepatient);
 		return "update-patient-form";
 	}
-
-	@GetMapping("/findpatientid")
+	
+    @GetMapping("/getpatient")
+      public String getpatient() {
+    	return "getpatientid";
+    }
+	
+    
+    @GetMapping("/findpatientid")
 	public String findPatientById(@RequestParam("patientId") int id, Model model) {
 		Patient thepatient = patientservice.findPatientById(id);
 		model.addAttribute("findpatientbyid", thepatient);
@@ -80,8 +84,13 @@ public class PatientController
 		return "redirect:/patient/patientlist";
 	}
 
+	@GetMapping("/getpatientfeedbackform")
+	public String getPatientFeedbackForm() {
+		return "getpatientidfeedback";
+	}
+
 	@GetMapping("/getpatientfeedback")
-	public String getPatientAndFeedback(@RequestParam("id") int id, Model model) {
+	public String getPatientAndFeedback(@RequestParam("patientId") int id, Model model) {
 		FeedBackAndPatientDTO dto = patientservice.getFeedBackAndPatientDTO(id);
 		model.addAttribute("getpatient", dto.getPatient());
 		model.addAttribute("getfeedback", dto.getFeedBack());

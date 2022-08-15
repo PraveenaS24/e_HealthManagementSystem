@@ -128,7 +128,7 @@ h1 {
 					<div>
 						<label for="contactNo">Contact No</label>
 						<div>
-							<form:select path="countryCode" style="width: 150px;height: 25px;">
+							<form:select path="countryCode" style="width: 150px;height: 25px;" required="true">
 								<form:option value="93">93 --- Afghanistan</form:option>
 								<form:option value="355">355 --- Albania</form:option>
 								<form:option value="213">213 --- Algeria</form:option>

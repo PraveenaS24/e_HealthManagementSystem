@@ -95,7 +95,7 @@ label {
 </style>
 <body style="background-color: Cyan;">
 <body>
-	<h1>ADDED LIST</h1>
+	<h1>FINDED LIST</h1>
 	<div id="root">
 		<div id="form">
 			<div class="box">

@@ -28,6 +28,11 @@ public class StaffsController {
 		model.addAttribute("allstaffs", staffslist);
 		return "list-staffs";
 	}
+	
+	@GetMapping("/getstaff")
+	public String getstaff() {
+		return "getstaffid";
+	}
 
 	@GetMapping("/findstaffsid")
 	public String findStaffsById(@RequestParam("staffId") int id, Model model) {
@@ -75,9 +80,14 @@ public class StaffsController {
 		staffservice.deleteStaffs(id);
 		return "redirect:/staffs/staffslist";
 	}
-
+	
+    @GetMapping("/getstafffeedbackform")
+    public String getStaffFeedbackForm()  {
+    	return "getstaffidfeedback";
+    }
+	
 	@GetMapping("/getstaffsfeedback")
-	public String getStaffsAndFeedback(@RequestParam("id") int id, Model model) {
+	public String getStaffsAndFeedback(@RequestParam("staffId") int id, Model model) {
 		FeedBackAndStaffsDTO dto = staffservice.getFeedBackAndStaffsDTO(id);
 		model.addAttribute("getstaffs", dto.getStaffs());
 		model.addAttribute("getfeedback", dto.getFeedbacklist());

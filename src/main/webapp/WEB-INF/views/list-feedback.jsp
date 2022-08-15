@@ -24,16 +24,20 @@ tr {
 
 h1 {
 	color: blue;
+	text-align: center;
 }
+.box{
+   text-align: center;
+ }
 </style>
 </head>
 <body>
-	<h1 align="center">FEEDBACK LIST</h1>
+	<h1>FEEDBACK LIST</h1>
 	<br>
 	<br>
 	<br>
 	<div id="table root">
-		<div align="center">
+		<div class="box">
 			<table border="2" width="30%" cellpadding="10">
 				<thead>
 					<tr>

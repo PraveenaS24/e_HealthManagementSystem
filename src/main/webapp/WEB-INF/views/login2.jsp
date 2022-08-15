@@ -72,7 +72,7 @@ label {
 
 .box {
 	width: 400px;
-	height: 240px;
+	height: 280px;
 	overflow: hidden;
 	border-radius: 10px;
 	box-shadow: 5px 20px 50px #000;
@@ -93,6 +93,59 @@ label {
 	left: 100px;
 }
 </style>
+<script>
+function validate(){
+	var pass = document.getElementById('pass');
+	var upper = document.getElementById('upper');
+	 var lower = document.getElementById('lower');
+	 var num = document.getElementById('number');
+	 var len = document.getElementById('length');
+	 var sp_char = document.getElementById('special_character');
+	 
+	 if(pass.value.match(/[0-9]/)) {
+		 num.style.color = 'green'
+	 }
+	 else {
+		 num.style.color = 'red'
+	 }
+	 if(pass.value.match(/[A-Z]/)) {
+		 upper.style.color = 'green'
+	 }
+	 else{
+		 upper.style.color = 'red'
+	 }
+	 if(pass.value.match(/[a-z]/)) {
+		 
+		 lower.style.color = 'green'
+	 }
+	 else{
+		 lower.style.color = 'red';
+	 }
+    if(pass.value.match(/[!\@\#\$\%\^\&\*\(\)\_\-\+\=\?\>\<\.\,]/)) {
+		 
+   	 sp_char.style.color = 'green'
+	 }
+	 else{
+		 sp_char.style.color = 'red';
+	 }
+	if(pass.value.length<6) {
+		 
+		len.style.color = 'green'
+	 }
+	 else{
+		 len.style.color = 'red';
+	 }
+}
+function confirm() {
+	 var pass = document.getElementById('pass');
+	 var email = document.getElementById('email');
+	 if(pass.value != email.value) {
+		 document.getElementById('number').style.display = 'none'
+	 }
+}
+}
+
+</script>
 </head>
 <body>
 	<br>
@@ -140,9 +193,11 @@ label {
 				<div>
 				<form:button id="log">Login</form:button>
 				</div>
+				<div>
+				  <a href="/login/home"><button>Home</button></a>
+				</div>
 			</form:form>
 		</div>
-
 	</div>
 </body>
 </html>

@@ -10,11 +10,13 @@
 </head>
 <style>
 body {
-	background-image: linear-gradient(gainsboro, grey, lavender);
+	background-image: url("https://images.pexels.com/photos/2383010/pexels-photo-2383010.jpeg?cs=srgb&dl=pexels-total-shape-2383010.jpg&fm=jpg");
+	background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 
 label {
-	color: red;
+	color: blue;
 	font-size: 1.3em;
 	display: flex;
 	margin: 5px;
@@ -30,8 +32,8 @@ tr {
 }
 
 h1 {
-	position: relative;
-	color: blue;
+    text-align: center;
+ 	color: blue;
 	float: center;
 }
 
@@ -63,7 +65,8 @@ h1 {
 	cursor: pointer;
 	-webkit-transition-duration: 0.4s;
 	transition-duration: 0.4s;
-	margin-right: 400px;
+	float: center;
+	text-align: : center;
 }
 
 .box {
@@ -75,7 +78,8 @@ h1 {
 	text-align: center;
 	float: center;
 	font-weight: 900;
-	width: 900px;
+	width: 600px;
+	height: 600px;
 }
 
 #log {
@@ -84,110 +88,93 @@ h1 {
 }
 </style>
 <body>
-	<h1 align="center">UPDATED LIST</h1>
+	<h1>UPDATED LIST</h1>
 	<div id="root" class="box">
 		<div id="form">
-			<div align="center">
-				<table width="100%" cellpadding="10">
-					<form:form action="updatefeedback" method="post"
-						modelAttribute="updatefeedback">
-						<tr>
-							<div>
-								<td><label for="feedbackId">FeedBack Id</label></td>
-								<td>
-									<div>
-										<form:input path="feedbackId" style="width: 300px;height: 25px;"
-										title="Id can't be empty And Id must be in Integer"
-										required="true" placeholder="Enter FeedBackId"/>
-									</div>
-								</td><form:errors path="feedbackId" cssClass="text-danger" />
-							</div>
-						</tr>
-						<tr>
-						<div><td>
-							<label for="patientId">Patient Id</label></td>
-							<td>
-							<div>
-								<form:input path="patientId" style="width: 300px;height: 25px;"
-										title="Id can't be empty And Id must be in Integer"
-										required="true" placeholder="Enter PatientId"/>
-							</div></td><form:errors path="patientId" cssClass="text-danger" />
-						</div>
-						</tr>
-						<tr>
-						<div><td>
-							<label for="staffId">Staff Id</label></td>
-							<td>
-							<div>
-								<form:input path="staffId" style="width: 300px;height: 25px;"
-										title="StaffId can't be empty And StaffId must be in Integer"
-										required="true" placeholder="Enter StaffId"/>
-							</div></td><form:errors path="staffId" cssClass="text-danger" />
-						</div></tr>
-						<tr>
-						<div><td>
-							<label for="staffNature">Staff Nature</label></td>
-							<td>
-							<div>
-								<form:input path="staffNature" style="width: 300px;height: 25px;"
-										title="StaffNature can't be empty And StaffNature must be in String"
-										required="true" placeholder="Enter StaffNature"/>
-							</div>
-							</td><form:errors path="staffNature" cssClass="text-danger" />
-						</div></tr>
-						<tr>
+			<div>
+				<form:form action="updatefeedback" method="post"
+					modelAttribute="updatefeedback">
+					<div>
+						<label for="feedbackId">FeedBack Id</label>
 						<div>
-						<td>
-							<label for="addressLocate">Address</label></td>
-							<td>
-							<div>
-								<form:input path="addressLocate" style="width: 300px;height: 25px;"
-										title="Address can't be empty And Address must be in String"
-										required="true" placeholder="Enter Address"/>
-							</div>
-							</td><form:errors path="addressLocate" cssClass="text-danger" />
-						</div></tr>
-						<tr>
-						<div><td>
-							<label for="patientComment">Patient Comment</label></td>
-							<td>
-							<div>
-								<form:input path="patientComment" style="width: 300px;height: 25px;"
-										title="PatientComment can't be empty And Patient must be in String"
-										required="true" placeholder="Enter Comment"/>
-							</div>
-							</td><form:errors path="patientComment" cssClass="text-danger" />
-						</div></tr>
-						<tr>
-						<div><td>
-							<label for="onregisterfeedback">Feedback</label></td>
-							<td>
-							<div>
-								<form:input path="onregisterfeedback" required="true"/>
-							</div>
-							</td><form:errors path="onregisterfeedback" cssClass="text-danger" />
-						</div></tr>
-						<tr>
-						<div>
-						<td>
-							<label for="points">points</label></td>
-							<td>
-							ExtraOrdinary: <form:radiobutton path="points" value="*****" />
-								Good: <form:radiobutton path="points" value="****" />
-								Average: <form:radiobutton path="points" value="***" />
-								Bad: <form:radiobutton path="points" value="****" />
-								Inferior: <form:radiobutton path="points" value="**" />
-							</td>
+							<form:input path="feedbackId" style="width: 300px;height: 25px;"
+								title="Id can't be empty And Id must be in Integer"
+								required="true" placeholder="Enter FeedBackId" />
 						</div>
-						</tr>
-						<tr>
+						<form:errors path="feedbackId" cssClass="text-danger" />
+					</div>
+					<div>
+						<label for="patientId">Patient Id</label>
 						<div>
-						<td colspan="2" align="center"><br> <form:button
-									id="log">Click</form:button></td>
+							<form:input path="patientId" style="width: 300px;height: 25px;"
+								title="Id can't be empty And Id must be in Integer"
+								required="true" placeholder="Enter PatientId" />
 						</div>
-						</tr>
-					</form:form>
-				</table>
+						<form:errors path="patientId" cssClass="text-danger" />
+					</div>
+					<div>
+						<label for="staffId">Staff Id</label>
+						<div>
+							<form:input path="staffId" style="width: 300px;height: 25px;"
+								title="StaffId can't be empty And StaffId must be in Integer"
+								required="true" placeholder="Enter StaffId" />
+						</div>
+						<form:errors path="staffId" cssClass="text-danger" />
+					</div>
+					<div>
+						<label for="staffNature">Staff Nature</label>
+						<div>
+							<form:input path="staffNature" style="width: 300px;height: 25px;"
+								title="StaffNature can't be empty And StaffNature must be in String"
+								required="true" placeholder="Enter StaffNature" />
+						</div>
+						<form:errors path="staffNature" cssClass="text-danger" />
+					</div>
+					<div>
+						<label for="addressLocate">Address</label>
+						<div>
+							<form:input path="addressLocate"
+								style="width: 300px;height: 25px;"
+								title="Address can't be empty And Address must be in String"
+								required="true" placeholder="Enter Address" />
+						</div>
+						<form:errors path="addressLocate" cssClass="text-danger" />
+					</div>
+					<div>
+						<label for="patientComment">Patient Comment</label>
+						<div>
+							<form:input path="patientComment"
+								style="width: 300px;height: 25px;"
+								title="PatientComment can't be empty And Patient must be in String"
+								required="true" placeholder="Enter Comment" />
+						</div>
+						<form:errors path="patientComment" cssClass="text-danger" />
+					</div>
+					<div>
+						<label for="onregisterfeedback">Feedback</label>
+						<div>
+							<form:input path="onregisterfeedback" required="true" />
+						</div>
+						<form:errors path="onregisterfeedback" cssClass="text-danger" />
+					</div>
+					<div>
+						<label for="points">points</label>
+						ExtraOrdinary:
+						<form:radiobutton path="points" value="*****" required="true"/>
+						Good:
+						<form:radiobutton path="points" value="****" required="true"/>
+						Average:
+						<form:radiobutton path="points" value="***" required="true"/>
+						Bad:
+						<form:radiobutton path="points" value="****" required="true"/>
+						Inferior:
+						<form:radiobutton path="points" value="**" required="true"/>
+					</div>
+					<br>
+					<div>
+						<form:button id="log">Click</form:button>
+					</div>
+				</form:form>
 			</div>
 		</div>
 	</div>

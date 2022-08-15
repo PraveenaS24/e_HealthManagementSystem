@@ -33,7 +33,7 @@ h1 {
 	<br>
 	<br>
 	<div id="table root">
-		<div align="center">
+		<div>
 			<table border="2" width="10%" cellpadding="10">
 				<thead>
 					<tr>

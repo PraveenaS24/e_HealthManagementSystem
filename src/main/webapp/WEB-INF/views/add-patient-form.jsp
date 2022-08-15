@@ -10,7 +10,10 @@
 </head>
 <style type="text/css">
 body {
-	background-image: linear-gradient(black, gray, silver, black);
+	background-image:
+		url("https://images.pexels.com/photos/612825/pexels-photo-612825.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
 }
 
 h1 {
@@ -24,7 +27,7 @@ tr {
 }
 
 label {
-	color: blue;
+	color: skyblue;
 	font-size: 1.3em;
 	display: flex;
 	margin: 5px;
@@ -97,14 +100,15 @@ label {
 					</div>
 					<div>
 						<label for="gender">Gender</label> Male:
-						<form:radiobutton path="gender" value="Male" required="true"/>
+						<form:radiobutton path="gender" value="Male" required="true" />
 						Female:
-						<form:radiobutton path="gender" value="Female" required="true"/>
+						<form:radiobutton path="gender" value="Female" required="true" />
 
 					</div>
 					<label for="contactNo">Contact No</label>
 					<div>
-						<form:select path="countryCode" style="width: 150px;height: 30px;" required="true">
+						<form:select path="countryCode" style="width: 150px;height: 30px;"
+							required="true">
 							<form:option value="+93">93 --- Afghanistan</form:option>
 							<form:option value="+355">355 --- Albania</form:option>
 							<form:option value="+213">213 --- Algeria</form:option>
@@ -213,7 +217,8 @@ label {
 							<form:option value="260">260 --- Zambia</form:option>
 							<form:option value="263">263 --- Zimbabwe</form:option>
 						</form:select>
-						<form:input path="contactNo" placeholder="Enter PhoneNumber" style="width: 150px;height: 25px;" required="true"/>
+						<form:input path="contactNo" placeholder="Enter PhoneNumber"
+							style="width: 150px;height: 25px;" required="true" />
 					</div>
 					<form:errors path="contactNo" cssClass="text-danger" />
 
@@ -221,7 +226,8 @@ label {
 					<div>
 						<label for="dob">DOB</label>
 						<div>
-							<form:input path="dob" type="date" placeholder="Enter Date" style="width: 300px;height: 25px;" required="true"/>
+							<form:input path="dob" type="date" placeholder="Enter Date"
+								style="width: 300px;height: 25px;" required="true" />
 						</div>
 						<form:errors path="dob" cssClass="text-danger" />
 					</div>
@@ -275,8 +281,9 @@ label {
 						<label for="observation">Observation</label>
 
 						<div>
-							<form:input path="observation" type="date" style="width: 300px;height: 25px;"
-								placeholder="Enter Date" required="true" />
+							<form:input path="observation" type="date"
+								style="width: 300px;height: 25px;" placeholder="Enter Date"
+								required="true" />
 						</div>
 
 						<form:errors path="observation" cssClass="text-danger" />
@@ -312,7 +319,7 @@ label {
 						<div>
 							<form:input path="fees" style="width: 300px;height: 25px;"
 								title="Fees must be number" pattern="^[0-9]+$"
-								placeholder="Enter Fees" required="true"/>
+								placeholder="Enter Fees" required="true" />
 						</div>
 
 						<form:errors path="fees" cssClass="text-danger" />
@@ -344,9 +351,9 @@ label {
 					</div>
 					<div class="moon">
 						<label for="status">Status</label> Active:
-						<form:radiobutton path="status" value="Active" required="true"/>
+						<form:radiobutton path="status" value="Active" required="true" />
 						InActive:
-						<form:radiobutton path="status" value="InActive" required="true"/>
+						<form:radiobutton path="status" value="InActive" required="true" />
 
 					</div>
 
@@ -355,11 +362,10 @@ label {
 						<form:button id="log">
 									Click</form:button>
 					</div>
-					<div>
-						<a href="/login/home"><button>logout</button></a>
-					</div>
-
 				</form:form>
+				<div>
+					<a href="/login/home"><button>logout</button></a>
+				</div>
 			</div>
 		</div>
 	</div>

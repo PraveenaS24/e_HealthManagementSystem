@@ -94,7 +94,6 @@ label {
 	position: relative;
 	left: 100px;
 }
-
 </style>
 <body>
 	<h1>FINDED LIST</h1>

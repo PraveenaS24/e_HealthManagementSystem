@@ -4,7 +4,8 @@
 <html lang="en">
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>USERS</title>
+<style><%@include file="/WEB-INF/views/cssfile/login.css"%></style>
 </head>
 <style>
 body {
@@ -65,15 +66,32 @@ button {
 		</h2>
 
 	</div>
-	<div class="button-list">
+	<!-- <div class="button-list"> -->
 		<ul>
-			<li><a href="/patient/addpatientform"><button class="click">Add
-						Patient</button></a></li> 
-			<li><a href="users/userlist"><button class="click">User</button></a></li>
-			<li><a href="/patient/patientlist"><button class="click">Patient</button></a></li>
-			<li><a href="/staffs/staffslist"><button class="click">Staffs</button></a></li>
-			<li><a href="/feedback/feedbacklist"><button class="click">FeedBack</button></a></li>
-		</ul>
+		<li><a href="#">Patient</a>
+			<ul>
+				<li><a href="/patient/patientlist">Patient List</a></li>
+				<li><a href="/patient/addpatientform">Add Patient</a></li>
+				<li><a href="/patient/updatepatientform">Update Patient</a></li>
+				<li><a href="/patient/getpatient">Find Patient</a></li>
+			</ul>
+		</li>
+		<li><a href="#">Staffs</a>
+			<ul>
+				<li><a href="/staffs/staffslist">Staff List</a></li>
+				<li><a href="/staffs/addstaffsform">Add Staff</a></li>
+				<li><a href="/staffs/updatestaffsform">Update Staff</a></li>
+				<li><a href="/staffs/getstaff">Find Staff</a></li>
+			</ul>
+		</li>
+		<li><a href="#">FeedBack</a>
+			<ul>
+				<li><a href="/feedback/feedbacklist">FeedBack List</a></li>
+				<li><a href="/feedback/addfeedbackform">Add FeedBack</a></li>
+				<li><a href="/feedback/updatefeedbackform">Update FeedBack</a></li>
+			</ul>
+		</li>
+	</ul>
 	</div>
 </body>
 </html>

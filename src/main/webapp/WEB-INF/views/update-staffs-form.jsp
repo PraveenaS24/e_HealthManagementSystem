@@ -6,18 +6,18 @@
 <html lang="en">
 <head>
 <meta charset="ISO-8859-1">
-<title>Add Staffs</title>
+<title>Update Staffs</title>
 </head>
 <style type="text/css">
 body {
-	background-image: url("https://img.freepik.com/free-photo/front-view-assortment-medical-still-life-elements_23-2148854096.jpg?w=2000");
+	background-image: url("https://images.pexels.com/photos/2383010/pexels-photo-2383010.jpeg?cs=srgb&dl=pexels-total-shape-2383010.jpg&fm=jpg");
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: 100% 100%;
 }
 
 label {
-	color: white;
+	color: red;
 	font-size: 1.3em;
 	display: flex;
 	margin: 5px;
@@ -89,7 +89,7 @@ h1 {
 }
 </style>
 <body>
-	<h1>ADD STAFFS</h1>
+	<h1>UPDATE STAFFS</h1>
 	<div id="root" class="box">
 		<div id="form">
 			<div>

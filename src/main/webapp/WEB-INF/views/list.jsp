@@ -73,6 +73,7 @@ button {
 			<li><a href="/patient/patientlist"><button class="click">Patient</button></a></li>
 			<li><a href="/staffs/staffslist"><button class="click">Staffs</button></a></li>
 			<li><a href="/feedback/feedbacklist"><button class="click">FeedBack</button></a></li>
+			<li><a href="/patient/getpatientfeedbackform"> <button class ="click"> Get Patient Feedback</button></a></li>
 		</ul>
 	</div>
 </body>

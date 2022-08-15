@@ -122,7 +122,21 @@ div.transbox p {
 					<div>
 						<a href="/feedback/deletefeedback?feedbackId=">Delete Feedback</a>
 					</div>
-					<div></div>
+	<nav>
+        <ul>
+            <div class="dropdown">
+                <button class="dropbtn">
+                    Book Details <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/patient/patientlist">All Book List</a>
+                     <a href="/patient/addpatientform">Add New Book</a>
+                     <a href="/patient/updatepatientform">View a Book</a> 
+                     <a href="/patient/getpatient">View Book Details By Author</a>
+                </div>
+            </div>
+            </ul>
+            </nav>
 			</div>
 		</body>
 	</div>
