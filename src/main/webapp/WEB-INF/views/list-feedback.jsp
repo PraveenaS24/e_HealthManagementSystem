@@ -8,27 +8,7 @@
 <meta charset="ISO-8859-1">
 <title>FeedBack List</title>
 <style>
-body {
-	background-image: linear-gradient(to right, plum, sandybrown, peachpuff, papayawhip, pink,
-		sandybrown, salmon, plum);
-}
-
-tr:hover {
-	background-color: skyblue;
-}
-
-tr {
-	color: black;
-	font-weight: 900;
-}
-
-h1 {
-	color: blue;
-	text-align: center;
-}
-.box{
-   text-align: center;
- }
+<%@include file="/WEB-INF/views/cssfile/listfeedback.css"%>
 </style>
 </head>
 <body>

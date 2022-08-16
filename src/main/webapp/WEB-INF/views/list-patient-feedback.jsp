@@ -9,75 +9,7 @@
 <title>Add Patient</title>
 </head>
 <style>
-body {
-	background-image:
-		url("https://media.istockphoto.com/photos/stethoscope-with-space-for-copy-picture-id1343679839?b=1&k=20&m=1343679839&s=170667a&w=0&h=PmxkddUD8hBWZ8PvpiVFF6SMIwxTsBTElEi31X6RGGI=");
-	background-repeat: no-repeat;
-	background-size: 100% 100%;
-}
-
-h1 {
-	color: black;
-	float: center;
-	text-align: center;
-}
-
-tr {
-	color: white;
-}
-
-tr:hover {
-	background-color: orange;
-}
-
-label {
-	color: maroon;
-	font-size: 1.3em;
-	display: flex;
-	margin: 5px;
-	font-weight: bold;
-	cursor: pointer;
-	transition: .5s ease-in-out;
-	text-align: center;
-}
-
-#log {
-	width: 150px;
-	height: 30px;
-	border: black;
-	border-radius: 3px;
-	padding-left: 8px;
-	color: white;
-	background-color: maroon;
-	display: inline-block;
-	margin: 4px 2px;
-	cursor: pointer;
-	-webkit-transition-duration: 0.4s;
-	transition-duration: 0.4s;
-	float: center;
-}
-
-.box {
-	overflow: hidden;
-	border-radius: 10px;
-	box-shadow: 5px 20px 50px #000;
-	margin: auto;
-	padding: 10px;
-	text-align: center;
-	float: center;
-	font-weight: 900;
-	width: 600px;
-}
-
-#log {
-	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0
-		rgba(0, 0, 0, 0.19);
-}
-
-.son {
-	color: yellow;
-	text-align: center;
-}
+<%@include file="/WEB-INF/views/cssfile/listpatientfeed.css"%>
 </style>
 <body>
 	<h1>PATIENT</h1>

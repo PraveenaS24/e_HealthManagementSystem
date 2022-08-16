@@ -8,32 +8,16 @@
 <meta charset="ISO-8859-1">
 <title>Users List</title>
 <style>
-body {
-	background-image: linear-gradient(to right, plum, sandybrown, peachpuff, papayawhip, pink,
-		sandybrown, salmon, plum);
-}
-
-tr:hover {
-	background-color: skyblue;
-}
-
-tr {
-	color: black;
-	font-weight: 900;
-}
-
-h1 {
-	color: blue;
-}
+<%@include file="/WEB-INF/views/cssfile/listuser.css"%>
 </style>
 </head>
 <body>
-	<h1 align="center">USER LIST</h1>
+	<h1>USER LIST</h1>
 	<br>
 	<br>
 	<br>
 	<div id="table root">
-		<div align="center">
+		<div>
 			<table border="2" width="60%" cellpadding="10">
 				<thead>
 					<tr>

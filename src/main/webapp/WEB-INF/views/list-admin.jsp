@@ -8,32 +8,16 @@
 <meta charset="ISO-8859-1">
 <title>Admin List</title>
 <style>
-body {
-	background-image: linear-gradient(to right, plum, sandybrown, peachpuff, papayawhip, pink,
-		sandybrown, salmon, plum);
-}
-
-tr:hover {
-	background-color: skyblue;
-}
-
-tr {
-	color: black;
-	font-weight: 900;
-}
-
-h1 {
-	color: blue;
-}
+<%@include file="/WEB-INF/views/cssfile/listadmin.css"%>
 </style>
 </head>
 <body>
-	<h1 align="center">ADMIN LIST</h1>
+	<h1>ADMIN LIST</h1>
 	<br>
 	<br>
 	<br>
 	<div id="table root">
-		<div align="center">
+		<div>
 			<table border="2" width="30%" cellpadding="10">
 				<thead>
 					<tr>
@@ -43,7 +27,6 @@ h1 {
 				</thead>
 				<tbody>
 					<c:forEach var="admin" items="${alladmin}">
-						<!--var represents variable items represents collection  -->
 						<tr>
 							<td>${admin.adminId}</td>
 							<td>${admin.password}</td>

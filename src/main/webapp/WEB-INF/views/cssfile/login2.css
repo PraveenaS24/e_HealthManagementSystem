@@ -1,0 +1,86 @@
+@charset "ISO-8859-1";
+
+body {
+	background-image:
+		url("https://media.istockphoto.com/photos/stethoscope-doctor-with-red-heart-on-black-wooden-table-background-picture-id1222435595?k=20&m=1222435595&s=170667a&w=0&h=JFZJsl4-nfh3e5QWupqxEpcb9XFnRNiqjrYPWhtsCMs=");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 100% 100%;
+}
+
+h1 {
+	color: blue;
+}
+
+label {
+	color: blue;
+	font-size: 1.3em;
+	display: flex;
+	margin: 5px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: .5s ease-in-out;
+}
+
+#userId {
+	width: 250px;
+	height: 30px;
+	border: none;
+	border-radius: 3px;
+	padding-left: 8px;
+}
+
+#secretword {
+	width: 250px;
+	height: 30px;
+	border: none;
+	border-radius: 3px;
+	padding-left: 8px;
+}
+
+#userType {
+	width: 260px;
+	height: 30px;
+	border: none;
+	border-radius: 3px;
+	padding-left: 8px;
+}
+
+#log {
+	width: 150px;
+	height: 30px;
+	border: black;
+	border-radius: 3px;
+	padding-left: 8px;
+	color: white;
+	background-color: maroon;
+	display: inline-block;
+	margin: 4px 2px;
+	cursor: pointer;
+	-webkit-transition-duration: 0.4s;
+	transition-duration: 0.4s;
+	text-align: center;
+}
+
+.box {
+	width: 400px;
+	height: 280px;
+	overflow: hidden;
+	border-radius: 10px;
+	box-shadow: 5px 20px 50px #000;
+	margin: auto;
+	padding: 10px;
+	text-align: center;
+	float: left;
+	margin-top: 20px;
+}
+
+#log {
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0
+		rgba(0, 0, 0, 0.19);
+}
+
+#cont {
+	position: relative;
+	left: 100px;
+}
