@@ -7,12 +7,7 @@
 <title>Error</title>
 </head>
 <style>
-body{
-background-image: url('https://hiraniconfigmgr.com/PostImages/221.jpg');
-background-size: fixed;
-	background-repeat: no-repeat;}
-
-
+<%@include file="/WEB-INF/views/cssfile/invaliduser.css"%>
 </style>
 <body>
  <h2>Invalid User </h2>
