@@ -22,7 +22,7 @@
 	<div class="navbar">
    <div class="dropdown"> 
 		<button class="dropbtn">Patient
-		<i class= "fa fa-caret-down"></i>
+		<em class= "fa fa-caret-down"></em>
 		</button>
 		<div class="dropdown-content">
 				<a href="/patient/patientlist">Patient List</a>
@@ -32,7 +32,7 @@
 			</div>
 			<div class="dropdowns">
 			<button class="dropbtns">Staffs
-		<i class= "fa fa-caret-downs"></i>
+		<em class= "fa fa-caret-downs"></em>
 		</button>
 	<div class="dropdown-contents">
 				<a href="/staffs/staffslist">Staff List</a>

@@ -6,17 +6,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.chainsys.healthmanagement.dao.FeedBackRepository;
-import com.chainsys.healthmanagement.dto.FeedBackAndPatientDTO;
 import com.chainsys.healthmanagement.model.FeedBack;
-import com.chainsys.healthmanagement.model.Patient;
 
 @Service
 public class FeedBackService {
 	@Autowired
 	private FeedBackRepository feedbackrepo;
     public List<FeedBack> getAllFeedBack() {
-		List<FeedBack> feedbacklist = feedbackrepo.findAll();
-		return feedbacklist;
+		return feedbackrepo.findAll();
 	}
 
 	public FeedBack save(FeedBack feedback) {

@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 
 import com.chainsys.healthmanagement.dao.AdminRepository;
 import com.chainsys.healthmanagement.model.Admin;
-import com.chainsys.healthmanagement.model.Users;
 
 @Service
 public class AdminService {
@@ -15,8 +14,7 @@ public class AdminService {
 	private AdminRepository adminservicerepo;
 
 	public List<Admin> getAllAdmin() {
-		List<Admin> adminservicelist = adminservicerepo.findAll();
-		return adminservicelist;
+		return adminservicerepo.findAll();
 	}
 
 	public Admin save(Admin admin) {

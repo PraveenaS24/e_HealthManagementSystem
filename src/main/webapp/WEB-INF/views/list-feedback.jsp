@@ -18,7 +18,8 @@
 	<br>
 	<div id="table root">
 		<div class="box">
-			<table border="2" width="30%" cellpadding="10">
+			<table>
+			<caption></caption>
 				<thead>
 					<tr>
 						<th>FeedBack_Id</th>

@@ -10,7 +10,7 @@ import com.chainsys.healthmanagement.model.Staffs;
 public class FeedBackAndStaffsDTO {
 	@Autowired
 	private Staffs staffs;
-	private List<FeedBack> fdbacklist = new ArrayList<FeedBack>();
+	private List<FeedBack> fdbacklist = new ArrayList<>();
 
 	public Staffs getStaffs() {
 		return staffs;

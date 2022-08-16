@@ -18,7 +18,8 @@
 	<br>
 	<div id="table root">
 		<div>
-			<table border="2" width="30%" cellpadding="10">
+			<table>
+			<caption></caption>
 				<thead>
 					<tr>
 						<th>Admin Id</th>

@@ -20,8 +20,7 @@ public class StaffsService {
 	private FeedBackRepository feedBackRepository;
 
 	public List<Staffs> getAllStaffs() {
-		List<Staffs> staffslist = staffsrepo.findAll();
-		return staffslist;
+		return staffsrepo.findAll();
 	}
 
 	public Staffs save(Staffs staffs) {
@@ -45,7 +44,7 @@ public class StaffsService {
 		List<FeedBack> feedback = feedBackRepository.findByStaffId(id);
 		Iterator<FeedBack> itr = feedback.iterator();
 		while (itr.hasNext()) {
-			dto.addFeedBack((FeedBack) itr.next());
+			dto.addFeedBack(itr.next());
 		}
 		return dto;
 	}

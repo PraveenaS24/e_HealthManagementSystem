@@ -58,11 +58,11 @@
 				<div>
 				<form:button id="log">Login</form:button>
 				</div>
-				<div>
-				  <a href="/login/home"><button>Home</button></a>
-				</div>
 			</form:form>
 		</div>
 	</div>
+	<div>
+				  <a href="/login/home"><button class="button1">Home</button></a>
+				</div>
 </body>
 </html>

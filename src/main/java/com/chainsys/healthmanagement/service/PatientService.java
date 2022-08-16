@@ -19,8 +19,7 @@ public class PatientService {
 	private FeedBackRepository feedBackRepository;
 
 	public List<Patient> getAllPatient() {
-		List<Patient> patientlist = patientrepo.findAll();
-		return patientlist;
+		return patientrepo.findAll();
 	}
 
 	public Patient save(Patient patient) {

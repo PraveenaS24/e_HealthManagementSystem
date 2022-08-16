@@ -96,7 +96,8 @@
 		<div class="son">
 			<h1>FEEDBACK</h1>
 			<div>
-				<table border="2" width="50%" cellpadding="20">
+				<table>
+				<caption></caption>
 					<thead>
 						<tr>
 							<th>FeedBack_Id</th>
