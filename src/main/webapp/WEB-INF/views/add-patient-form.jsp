@@ -305,11 +305,11 @@
 									Click</form:button>
 					</div>
 				</form:form>
-				<div>
-					<a href="/login/home"><button>logout</button></a>
-				</div>
 			</div>
 		</div>
 	</div>
+	<div>
+		<a href="/login/home"><button class="button!">logout</button></a>
+				</div>
 </body>
 </html>
