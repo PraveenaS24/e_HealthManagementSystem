@@ -41,10 +41,6 @@ nav {
 	background-color: inherit;
 	font-family: inherit;
 	margin: 0;
-	outline: none;
-	padding: 14px 16px;
-	background-color: inherit;
-	font-family: inherit;
 	font-size: -webkit-xxx-large;
 }
 
@@ -91,10 +87,6 @@ nav {
 	background-color: inherit;
 	font-family: inherit;
 	margin: 0;
-	outline: none;
-	padding: 14px 16px;
-	background-color: inherit;
-	font-family: inherit;
 	font-size: -webkit-xxx-large;
 }
 
@@ -142,11 +134,7 @@ nav {
 	padding: 14px 16px;
 	background-color: inherit;
 	font-family: inherit;
-	/* margin-left: 280px; */
 	text-align: center;
-	outline: none;
-	background-color: inherit;
-	font-family: inherit;
 	font-size: -webkit-xxx-large;
 }
 
