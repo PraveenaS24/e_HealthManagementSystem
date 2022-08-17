@@ -23,8 +23,6 @@ public class PatientService {
 	}
 
 	public Patient save(Patient patient) {
-		long contactNo = patient.getCountryCode() * 10000000000L + patient.getContactNo();
-		patient.setContactNo(contactNo);
 		return patientrepo.save(patient);
 
 	}

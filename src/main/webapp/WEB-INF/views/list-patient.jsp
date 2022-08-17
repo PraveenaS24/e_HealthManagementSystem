@@ -18,7 +18,7 @@
 	<br>
 	<div id="table root">
 		<div>
-			<table>
+			<table class="container">
 			<caption></caption>
 				<thead>
 					<tr>

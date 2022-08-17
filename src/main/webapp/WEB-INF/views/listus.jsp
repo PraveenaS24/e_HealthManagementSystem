@@ -10,16 +10,16 @@
 <%@include file="/WEB-INF/views/cssfile/listus.css"%>
 </style>
 <body>
-	<h1>
+	<!-- <h1>
 		Delighted Welcome!<br> Happy To Have You!!
 	</h1>
 
 		<h2>
 			Login Sucessfully! 
 		</h2>
-
+ -->
 	<nav>
-	<div class="navbar">
+	 <div class="navbar">
    <div class="dropdown"> 
 		<button class="dropbtn">Patient
 		<em class= "fa fa-caret-down"></em>
@@ -30,9 +30,10 @@
 				<a href="/patient/updatepatientform">Update Patient</a>
 				<a href="/patient/getpatient">Find Patient</a>
 			</div>
-			<div class="dropdowns">
+			</div>
+   <div class="dropdowns">
 			<button class="dropbtns">Staffs
-		<em class= "fa fa-caret-downs"></em>
+		<em class= "fa fa-caret-down"></em>
 		</button>
 	<div class="dropdown-contents">
 				<a href="/staffs/staffslist">Staff List</a>
@@ -41,8 +42,18 @@
 				<a href="/staffs/getstaff">Find Staff</a>
 			</div>
 		</div>
+	<div class="dropsdown">
+			<button class="dropsbtn">FeedBack
+		<em class= "fa fa-caret-down"></em>
+		</button>
+	<div class="dropsdown-content">
+				<a href="/feedback/feedbacklist">FeedBack List</a>
+				<a href="/feedback/addfeedbackform">Add FeedBack</a>
+				<a href="/feedback/updatefeedbackform">Update FeedBack</a>
+			</div>
+		</div>
 	</div>
-	</div>
-	</nav>
+	</nav> 
+	
 </body>
 </html>

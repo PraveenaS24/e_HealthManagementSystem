@@ -20,92 +20,92 @@
 					<div>
 						<label for="patientId">Patient ID</label>
 						<div>
-							<form:input path="patientId" style="width:300px;height: 25px;" />
+							<form:input path="patientId" readonly="true" style="width:300px;height: 25px;" />
 						</div>
 					</div>
 					<div>
 						<label for="firstName">First Name</label>
 						<div>
-							<form:input path="firstName" style="width: 300px;height: 25px;" />
+							<form:input path="firstName" readonly="true" style="width: 300px;height: 25px;" />
 						</div>
 					</div>
 					<div>
 						<label for="lastName">Last Name</label>
 						<div>
-							<form:input path="lastName" style="width: 300px;height: 25px;" />
+							<form:input path="lastName" readonly="true" style="width: 300px;height: 25px;" />
 						</div>
 					</div>
 					<div>
 						<label for="gender">Gender</label>
 						<div>
-							<form:input path="gender" style="width: 300px;height: 25px;" />
+							<form:input path="gender" readonly="true" style="width: 300px;height: 25px;" />
 						</div>
 					</div>
 					<div>
 						<label for="contactNo">Contact No</label>
 						<div>
-							<form:input path="contactNo" style="width: 300px;height: 25px;" />
+							<form:input path="contactNo" readonly="true" style="width: 300px;height: 25px;" />
 						</div>
 					</div>
 					<div>
 						<label for="dob">DOB</label>
 						<div>
-							<form:input path="dob" style="width: 300px;height: 25px;" />
+							<form:input path="dob" readonly="true" style="width: 300px;height: 25px;" />
 						</div>
 					</div>
 					<div>
 						<label for="email">Email</label>
 						<div>
-							<form:input path="email" style="width: 300px;height: 25px;" />
+							<form:input path="email" readonly="true" style="width: 300px;height: 25px;" />
 						</div>
 					</div>
 					<div>
 						<label for="bloodgroup">Blood Group</label>
 						<div>
-							<form:input path="bloodgroup" style="width: 300px;height: 25px;" />
+							<form:input path="bloodgroup" readonly="true" style="width: 300px;height: 25px;" />
 						</div>
 					</div>
 					<div>
 						<label for="address">Address</label>
 						<div>
-							<form:input path="address" style="width: 300px;height: 25px;" />
+							<form:input path="address" readonly="true" style="width: 300px;height: 25px;" />
 						</div>
 					</div>
 					<div>
 						<label for="staffId">Staff Id</label>
 						<div>
-							<form:input path="staffId" style="width: 300px;height: 25px;" />
+							<form:input path="staffId" readonly="true" style="width: 300px;height: 25px;" />
 						</div>
 					</div>
 					<div>
 						<label for="observation">Observation</label>
 						<div>
-							<form:input path="observation" style="width: 300px;height: 25px;" />
+							<form:input path="observation" readonly="true" style="width: 300px;height: 25px;" />
 						</div>
 					</div>
 					<div>
 						<label for="report">Report</label>
 						<div>
-							<form:input path="report" style="width: 300px;height: 25px;" />
+							<form:input path="report" readonly="true" style="width: 300px;height: 25px;" />
 						</div>
 					</div>
 					<div>
 						<label for="prescription">Prescription</label>
 						<div>
-							<form:input path="prescription"
+							<form:input path="prescription" readonly="true"
 								style="width: 300px;height: 25px;" />
 						</div>
 					</div>
 					<div>
 						<label for="fees">Fees</label>
 						<div>
-							<form:input path="fees" style="width: 300px;height: 25px;" />
+							<form:input path="fees" readonly="true" style="width: 300px;height: 25px;" />
 						</div>
 					</div>
 					<div>
 						<label for="foodmaintenance">FoodMaintenance</label>
 						<div>
-							<form:input path="foodmaintenance"
+							<form:input path="foodmaintenance" readonly="true"
 								style="width: 300px;height: 25px;" />
 						</div>
 					</div>
@@ -113,14 +113,14 @@
 					<div>
 						<label for="revisit">Revisit</label>
 						<div>
-							<form:input path="revisit" style="width: 300px;height: 25px;" />
+							<form:input path="revisit" readonly="true" style="width: 300px;height: 25px;" />
 						</div>
 					</div>
 					<div>
 						<label for="status">Status</label>
 
 						<div>
-							<form:input path="status" style="width: 300px;height: 25px;" />
+							<form:input path="status" readonly="true" style="width: 300px;height: 25px;" />
 						</div>
 					</div>
 				</form:form>

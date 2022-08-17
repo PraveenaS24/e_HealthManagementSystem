@@ -14,7 +14,7 @@
 		Delighted Welcome!<br> Happy To Have You!!
 	</h1>
 	<div class="com">
-		<h2>
+		<h2>  
 			Login Sucessfully! 
 		</h2>
 

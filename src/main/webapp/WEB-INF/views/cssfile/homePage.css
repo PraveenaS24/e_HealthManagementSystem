@@ -48,8 +48,8 @@ nav li a:hover {
 
 
 body {
-	background-image:
-		url("https://img.freepik.com/free-photo/doctor-with-stethoscope-hands-hospital-background_1423-1.jpg?w=2000");
+	 background-image:
+		url("https://img.freepik.com/free-photo/doctor-with-stethoscope-hands-hospital-background_1423-1.jpg?w=2000"); 
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: center;
@@ -130,5 +130,13 @@ h3{
 	font-weight: bolder;
 	float: right;
 }	
+h1{
+	text-align: center;
+}
+
+h2{
+	text-align: center;
+}
+
 	
 	

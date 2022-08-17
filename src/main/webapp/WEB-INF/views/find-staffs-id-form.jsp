@@ -21,73 +21,73 @@
 					<div>
 						<label for="staffId">Staffs Id</label>
 						<div>
-							<form:input path="staffId" />
+							<form:input path="staffId" readonly="true" style="width:300px;height: 25px;"/>
 						</div>
 					</div>
 					<div>
 						<label for="firstName">First Name</label>
 						<div>
-							<form:input path="firstName" />
+							<form:input path="firstName" readonly="true" style="width:300px;height: 25px;"/>
 						</div>
 					</div>
 					<div>
 						<label for="lastName">Last Name</label>
 						<div>
-							<form:input path="lastName" />
+							<form:input path="lastName" readonly="true" style="width:300px;height: 25px;"/>
 						</div>
 					</div>
 					<div>
 						<label for="gender">Gender</label>
 						<div>
-							<form:input path="gender" />
+							<form:input path="gender" readonly="true" style="width:300px;height: 25px;"/>
 						</div>
 					</div>
 					<div>
 						<label for="contactNo">Contact No</label>
 						<div>
-							<form:input path="contactNo" />
+							<form:input path="contactNo" readonly="true" style="width:300px;height: 25px;"/>
 						</div>
 					</div>
 					<div>
 						<label for="dob">DOB</label>
 						<div>
-							<form:input path="dob" />
+							<form:input path="dob" readonly="true" style="width:300px;height: 25px;"/>
 						</div>
 					</div>
 					<div>
 						<label for="email">Email</label>
 						<div>
-							<form:input path="email" />
+							<form:input path="email" readonly="true" style="width:300px;height: 25px;"/>
 						</div>
 					</div>
 					<div>
 						<label for="role">Role</label>
 						<div>
-							<form:input path="role" />
+							<form:input path="role" readonly="true" style="width:300px;height: 25px;"/>
 						</div>
 					</div>
 					<div>
 						<label for="qualification">Qualification</label>
 						<div>
-							<form:input path="qualification" />
+							<form:input path="qualification" readonly="true" style="width:300px;height: 25px;"/>
 						</div>
 					</div>
 					<div>
 						<label for="speciality">Speciality</label>
 						<div>
-							<form:input path="speciality" />
+							<form:input path="speciality" readonly="true" style="width:300px;height: 25px;"/>
 						</div>
 					</div>
 					<div>
 						<label for="intime">Intime</label>
 						<div>
-							<form:input path="intime" />
+							<form:input path="intime" readonly="true" style="width:300px;height: 25px;"/>
 						</div>
 					</div>
 					<div>
 						<label for="outtime">Outtime</label>
 						<div>
-							<form:input path="outtime" />
+							<form:input path="outtime" readonly="true" style="width:300px;height: 25px;"/>
 						</div>
 						<br>
 					</div>

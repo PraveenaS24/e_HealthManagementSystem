@@ -12,7 +12,6 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
-import javax.persistence.Transient;
 import javax.validation.constraints.Digits;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
@@ -42,10 +41,8 @@ public class Staffs {
 	@Column(name = "GENDER")
 	@NotBlank(message = "*Gender is required")
 	private String gender;
-	@Transient()
-	private int countryCode;
 	@Column(name = "CONTACT_NO")
-	@Digits(integer = 13, fraction = 0)
+	@Digits(integer = 10, fraction = 0)
 	private long contactNo;
 	@Column(name = "DOB")
 	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy")
@@ -115,13 +112,6 @@ public class Staffs {
 		this.gender = gender;
 	}
 
-	public int getCountryCode() {
-		return countryCode;
-	}
-
-	public void setCountryCode(int countryCode) {
-		this.countryCode = countryCode;
-	}
 
 	public long getContactNo() {
 		return contactNo;

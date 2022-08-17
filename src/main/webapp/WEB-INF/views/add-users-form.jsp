@@ -11,16 +11,32 @@
 <style>
 <%@include file="/WEB-INF/views/cssfile/adduser.css"%>
 </style>
+<script type="text/javascript">
+var userTypeCheck = function() {
+	 var nameRegex = new RegExp("^[a-zA-Z]+$");
+	 if(!document.myForm.userType.value.match(nameRegex)){
+			if(alert("UserType can't be empty or must contain only alphabets")){ 
+				 document.myForm.userType.focus();
+		    }
+			else
+				document.activeElement.blur();
+		}
+  else{
+      return false;
+  } 
+ 
+}
+</script>
 <body>
 	<h1>ADD USER</h1>
 	<div id="root">
 		<div id="form" class="box">
 			<div>
-				<form:form action="adduser" method="post" modelAttribute="addusers">
+				<form:form action="adduser" method="post" modelAttribute="addusers" name="myForm">
 					<div>
 						<label for="userType">User Type</label>
 						<div>
-							<form:select path="userType" required="true" style="width: 260px;height: 30px;">
+							<form:select path="userType" onblur="userTypeCheck" id="userType" name="userType" required="true" style="width: 260px;height: 30px;">
 								<form:option value="nurse">Nurse</form:option>
 								<form:option value="murse">Murse</form:option>
 							</form:select>

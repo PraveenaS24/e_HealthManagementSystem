@@ -24,8 +24,6 @@ public class StaffsService {
 	}
 
 	public Staffs save(Staffs staffs) {
-		long contactNo = staffs.getCountryCode() * 10000000000L + staffs.getContactNo();
-		staffs.setContactNo(contactNo);
 		return staffsrepo.save(staffs);
 	}
 

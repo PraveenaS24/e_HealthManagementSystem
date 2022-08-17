@@ -22,8 +22,6 @@
 		<ul>
 		<li><a href="/admin/adminlogin">Admin</a></li>
 			<li><a href="/users/userlogin">User</a></li>
-			
-			
 		</ul>
 	</nav>
 	<div class="com">

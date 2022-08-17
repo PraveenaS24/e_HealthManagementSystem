@@ -21,49 +21,49 @@
 					<div>
 						<label for="feedbackId">FeedBack Id</label>
 						<div>
-							<form:input path="feedbackId" style="width:300px;height: 25px;"/>
+							<form:input path="feedbackId" readonly="true" style="width:300px;height: 25px;"/>
 						</div>
 					</div>
 					<div>
 						<label for="patientId">Patient Id</label>
 						<div>
-							<form:input path="patientId" style="width:300px;height: 25px;"/>
+							<form:input path="patientId" readonly="true" style="width:300px;height: 25px;"/>
 						</div>
 					</div>
 					<div>
 						<label for="staffId">Staff Id</label>
 						<div>
-							<form:input path="staffId" style="width:300px;height: 25px;"/>
+							<form:input path="staffId" readonly="true" style="width:300px;height: 25px;"/>
 						</div>
 					</div>
 					<div>
 						<label for="staffNature">Staff Nature</label>
 						<div>
-							<form:input path="staffNature" style="width:300px;height: 25px;"/>
+							<form:input path="staffNature" readonly="true" style="width:300px;height: 25px;"/>
 						</div>
 					</div>
 					<div>
 						<label for="addressLocate">Address</label>
 						<div>
-							<form:input path="addressLocate" style="width:300px;height: 25px;"/>
+							<form:input path="addressLocate" readonly="true" style="width:300px;height: 25px;"/>
 						</div>
 					</div>
 					<div>
 						<label for="patientComment">Patient Comment</label>
 						<div>
-							<form:input path="patientComment" style="width:300px;height: 25px;"/>
+							<form:input path="patientComment" readonly="true" style="width:300px;height: 25px;"/>
 						</div>
 					</div>
 					<div>
 						<label for="onregisterfeedback">Feedback</label>
 						<div>
-							<form:input path="onregisterfeedback" style="width:300px;height: 25px;"/>
+							<form:input path="onregisterfeedback" readonly="true" style="width:300px;height: 25px;"/>
 						</div>
 					</div>
 					<div>
 						<label for="points">points</label>
 						<div>
-							<form:input path="points" style="width:300px;height: 25px;"/>
+							<form:input path="points" readonly="true" style="width:300px;height: 25px;"/>
 						</div>
 					</div>
 				</form:form>
