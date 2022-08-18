@@ -5,12 +5,13 @@
 <html lang="en">
 <head>
 <meta charset="ISO-8859-1">
-<title>PatientFeedBack</title>
+<title>Patient</title>
 </head>
 <style>
 <%@include file="/WEB-INF/views/cssfile/getpatient.css"%>
 </style>
 <body>
+<h1>View Patient</h1>
 	<div>
 		<div id="form">
 			<div class="box">

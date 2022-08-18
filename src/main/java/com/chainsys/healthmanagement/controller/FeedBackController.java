@@ -20,7 +20,7 @@ import com.chainsys.healthmanagement.service.FeedBackService;
 public class FeedBackController {
 	@Autowired
 	FeedBackService feedbackservice;
-
+	private static final String LIST="redirect:/feedback/feedbacklist";
 	@GetMapping("/feedbacklist")
 	public String getAllFeedBack(Model model) {
 		List<FeedBack> feedbacklist = feedbackservice.getAllFeedBack();
@@ -48,7 +48,7 @@ public class FeedBackController {
 			return "add-feedback-form";
 		} else {
 			feedbackservice.save(thefeedback);
-			return "redirect:/feedback/feedbacklist";
+			return LIST;
 		}
 	}
 
@@ -65,14 +65,14 @@ public class FeedBackController {
 			return " update-feedback-form";
 		} else {
 			feedbackservice.save(thefeedback);
-			return "redirect:/feedback/feedbacklist";
+			return LIST;
 		}
 	}
 
 	@GetMapping("/deletefeedback")
 	public String deleteFeedBack(@RequestParam("feedbackId") int id) {
 		feedbackservice.deleteFeedBack(id);
-		return "redirect:/feedback/feedbacklist";
+		return LIST;
 	}
 
 }

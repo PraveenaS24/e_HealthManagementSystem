@@ -11,6 +11,7 @@
 <%@include file="/WEB-INF/views/cssfile/getstafffeed.css"%>
 </style>
 <body>
+  <h1>View Staff FeedBack</h1>
 	<div>
 		<div id="form">
 			<div class="box">

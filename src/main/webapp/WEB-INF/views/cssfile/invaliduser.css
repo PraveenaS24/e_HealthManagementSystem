@@ -1,7 +1,28 @@
 @charset "ISO-8859-1";
 
 body{
-background-image: url('https://hiraniconfigmgr.com/PostImages/221.jpg');
-background-size: fixed;
-	background-repeat: no-repeat;}
+background-image: url('https://stringfixer.com/files/140319519.jpg');
+background-size: 100% 707%;
+background-repeat: no-repeat;
+}
+.button1 {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    font-size: 20px;
+    color: crimson;
+    margin-top: 585px;
+    background-color: black;
+    margin-left: 550px;
+}
 
+.button2 {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    font-size: 20px;
+    color: crimson;
+    margin-top: 30px;
+    background-color: black;
+    margin-left: 23px;
+}

@@ -1,34 +1,60 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Invoicing with GST</title>
+<style><%@include file="/WEB-INF/views/cssfile/listus.css"%></style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/fontawesome.min.css">
 </head>
-<style>
-<%@include file="/WEB-INF/views/cssfile/list.css"%>
-</style>
 <body>
-	<h1>
-		Delighted Welcome!<br> Happy To Have You!!
-	</h1>
-	<div class="com">
-		<h2>  
-			Login Sucessfully! 
-		</h2>
-
+	<div class="hero-image">
+	<div class="menu-bar">
+	<ul>
+	<li class="active"> <a href="#">Patient</a>
+		<div class="sub-menu-1">
+		<ul><li><a href="/patient/addpatientform">Add Patient</a></li>
+			<li><a href="/patient/updatepatientform">Update Patient</a></li>
+			<li><a href="/patient/getpatient">Find Patient By Id</a></li>
+			<li><a href="/patient/patientlist">Patient List</a></li>
+			<li><a href="/patient/deleteform">Delete Patient</a></li>
+			<li><a href="/patient/getpatientfeedbackform">Find Patient FeedBack</a></li>
+			</ul>
+			</div>
+			</li>
+			<li><a href="#">Users</a>
+	<div class="sub-menu-1">
+	<ul>
+		<li><a href="/users/adduserform">Add User</a></li>
+		<li><a href="/users/userlist">List User</a></li>
+	</ul>
 	</div>
-	<div class="button-list">
-		<ul>
-			<li><a href="/users/adduserform"><button class="click">Add
-						User</button></a></li> 
-			<li><a href="/users/userlist"><button class="click">User</button></a></li>
-			<li><a href="/patient/patientlist"><button class="click">Patient</button></a></li>
-			<li><a href="/staffs/staffslist"><button class="click">Staffs</button></a></li>
-			<li><a href="/feedback/feedbacklist"><button class="click">FeedBack</button></a></li>
-			<li><a href="/patient/getpatientfeedbackform"> <button class ="click"> Get Patient Feedback</button></a></li>
-		</ul>
+	</li>
+			<li><a href="#">Staffs</a>
+	<div class="sub-menu-1">
+	<ul>
+		<li><a href="/staffs/addstaffsform">Add Staff</a></li>
+		<li><a href="/staffs/updatestaffsform">Update Staff</a></li>
+		<li><a href="/staffs/getstaff">Find Staff By Id</a></li>
+		<li><a href="/staffs/staffslist">All Staff List</a></li>
+		<li><a href="/staffs/deleteform">Delete Staff</a></li>
+		<li><a href="/staffs/getstafffeedbackform">Find Staff FeedBack</a></li>
+	</ul>
 	</div>
+	</li>
+	<li><a href="#">FeedBack</a>
+	<div class="sub-menu-1">
+	<ul>
+		<li><a href="/feedback/addfeedbackform">Add FedBack</a></li>
+		<li><a href="/feedback/updatefeedbackform">Update FeedBack</a></li>
+		<li><a href="/feedback/feedbacklist">List FeedBack</a></li>
+	</ul>
+	</div>
+	</li>
+	</ul>
+	</div>
+    </div>
 </body>
 </html>
+		

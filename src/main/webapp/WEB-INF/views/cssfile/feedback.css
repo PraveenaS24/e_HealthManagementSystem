@@ -1,7 +1,9 @@
 @charset "ISO-8859-1";
 
 body {
-	background-image: linear-gradient(to right, white, gray);
+	background-image: url("https://www.cedar.com/wp-content/uploads/2021/12/CSAT_blog.2e16d0ba.fill-1000x563-1.png");
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 h1 {
@@ -10,7 +12,7 @@ h1 {
 }
 
 label {
-	color: darkblue;
+	color: black;
 	font-size: 1.3em;
 	display: flex;
 	margin: 5px;
@@ -47,6 +49,7 @@ label {
 	font-weight: 900;
 	width: 600px;
 	height: 500px;
+	backdrop-filter: blur(17px);
 }
 #log {
 	width: 150px;
@@ -57,7 +60,7 @@ label {
 	color: white;
 	background-color: maroon;
 	display: inline-block;
-	margin: 4px 2px;
+	margin: 19px 2px;
 	cursor: pointer;
 	-webkit-transition-duration: 0.4s;
 	transition-duration: 0.4s;
@@ -68,4 +71,17 @@ label {
 #log {
 	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0
 		rgba(0, 0, 0, 0.19);
+}
+
+h1 {
+	color: #ff0080;
+	text-align: center;
+	background-color: black ;
+	height: 80px;
+    width: 289px;
+    margin-left: 530px;
+    border-radius: 10px;
+}
+h1:hover{
+	background-color: #37c8ab;
 }

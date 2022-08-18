@@ -15,7 +15,7 @@ h1 {
 	background-color: black ;
 	height: 43px;
     width: 289px;
-    margin-left: 500px;
+    margin-left: 529px;
     border-radius: 10px;
 }
 h1:hover{
@@ -93,4 +93,27 @@ label {
 #cont {
 	float: center;
 }
+.button2 {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    font-size: 20px;
+    color: crimson;
+    margin-top: 30px;
+    background-color: black;
+    margin-left: 23px;
+     border-radius: 10px; 
+}
 
+
+.button3 {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    font-size: 20px;
+    color: crimson;
+    margin-top: 35px;
+    background-color: black;
+    margin-left: 1209px;
+    border-radius: 10px;
+}

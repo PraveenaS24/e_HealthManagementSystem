@@ -11,6 +11,7 @@
 <%@include file="/WEB-INF/views/cssfile/getpatientfeed.css"%>
 </style>
 <body>
+<h1>View Patient FeedBack</h1>
 	<div>
 		<div id="form">
 			<div class="box">

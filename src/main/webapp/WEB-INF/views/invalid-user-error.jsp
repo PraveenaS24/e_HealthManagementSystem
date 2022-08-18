@@ -12,6 +12,9 @@
 <body>
  <h2>Invalid User </h2>
  <div> Check your user id and secretword</div>
- <a href="/users/userlogin"> Return to User login</a>
+ <a href="/users/userlogin"><button class="button1">Return to User login</button></a>
+ <div>
+				  <a href="/login/home"><button class="button2">Home</button></a>
+				</div>
 </body>
 </html>

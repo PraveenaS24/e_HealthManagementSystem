@@ -11,6 +11,7 @@
 <%@include file="/WEB-INF/views/cssfile/getstaff.css"%>
 </style>
 <body>
+     <h1>View Staff</h1>
 	<div>
 		<div id="form">
 		   <div class="box">

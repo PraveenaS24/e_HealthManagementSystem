@@ -62,7 +62,11 @@
 		</div>
 	</div>
 	<div>
-				  <a href="/login/home"><button class="button1">Home</button></a>
+				  <a href="/login/home"><button class="button2">Home</button></a>
+				</div>
+				
+				<div>
+				  <a href="/admin/login"><button class="button3">Logout</button></a>
 				</div>
 </body>
 </html>

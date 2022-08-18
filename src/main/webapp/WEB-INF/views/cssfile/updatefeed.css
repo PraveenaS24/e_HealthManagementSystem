@@ -1,13 +1,13 @@
 @charset "ISO-8859-1";
 
 body {
-	background-image: url("https://images.pexels.com/photos/2383010/pexels-photo-2383010.jpeg?cs=srgb&dl=pexels-total-shape-2383010.jpg&fm=jpg");
+	background-image: url("https://www.pihappiness.com/wp-content/uploads/2020/08/Collecting-Feedback-Without-Collecting-Feedback-for-Driving-Patient-Experience-in-Hospitals-1.png");
 	background-repeat: no-repeat;
     background-size: 100% 100%;
 }
 
 label {
-	color: blue;
+	color: rgb(0, 0, 0);
 	font-size: 1.3em;
 	display: flex;
 	margin: 5px;
@@ -70,6 +70,9 @@ h1 {
 	font-weight: 900;
 	width: 600px;
 	height: 600px;
+	margin-left: 32px;
+	border-radius: 10px;
+	backdrop-filter: blur(10px);
 }
 
 #log {
