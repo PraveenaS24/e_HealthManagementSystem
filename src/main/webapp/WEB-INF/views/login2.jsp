@@ -7,6 +7,8 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Login</title>
+<link href='https://css.gg/arrow-left-r.css' rel='stylesheet'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style type="text/css">
 <%@include file="/WEB-INF/views/cssfile/login2.css"%>
 </style>
@@ -62,11 +64,14 @@
 		</div>
 	</div>
 	<div>
-				  <a href="/login/home"><button class="button2">Home</button></a>
+				  <a href="/login/home"><button class="button2"><i class="fa fa-home"></i></button></a>
+				</div>
+				<div>
+				  <a href="/login/home"><button class="button3"><i class="gg-arrow-left-r"></i>
+
+				  </button></a>
 				</div>
 				
-				<div>
-				  <a href="/admin/login"><button class="button3">Logout</button></a>
-				</div>
+				
 </body>
 </html>

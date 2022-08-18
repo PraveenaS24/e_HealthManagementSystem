@@ -1,15 +1,22 @@
 @charset "ISO-8859-1";
 
 body {
-	background-image: url("https://images.pexels.com/photos/2383010/pexels-photo-2383010.jpeg?cs=srgb&dl=pexels-total-shape-2383010.jpg&fm=jpg");
+	background-image: url("https://media.istockphoto.com/vectors/frontline-fighters-doctor-as-angel-against-medical-challenges-vector-id1344507364?k=20&m=1344507364&s=612x612&w=0&h=3zEaLWh62tqutTY2Cafy7rafvSo23BBahh-ZcwAflw8=");
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
 
 h1 {
-	color: blue;
-	float: center;
+	color: #ff0080;
 	text-align: center;
+	background-color: black ;
+	height: 43px;
+    width: 289px;
+    margin-left: 500px;
+    border-radius: 10px;
+}
+h1:hover{
+	background-color: #37c8ab;
 }
 
 tr {
@@ -52,9 +59,37 @@ label {
 	float: center;
 	font-weight: 900;
 	width: 600px;
+	backdrop-filter: blur(10px);
 }
 
 #log {
 	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0
 		rgba(0, 0, 0, 0.19);
 }
+
+.button2 {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    font-size: 20px;
+    color: crimson;
+    margin-top: 30px;
+    background-color: white;
+    margin-left: 23px;
+     border-radius: 10px; 
+}
+
+
+.button3 {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    font-size: 20px;
+    color: crimson;
+    margin-top: 35px;
+    background-color: white;
+    margin-left: 1209px;
+    border-radius: 10px;
+}
+
+ 

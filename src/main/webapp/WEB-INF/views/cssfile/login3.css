@@ -100,11 +100,10 @@ label {
     font-size: 20px;
     color: crimson;
     margin-top: 30px;
-    background-color: black;
+    background-color: rgb(255, 255, 255);
     margin-left: 23px;
      border-radius: 10px; 
 }
-
 
 .button3 {
     position: absolute;
@@ -112,8 +111,44 @@ label {
     left: 16px;
     font-size: 20px;
     color: crimson;
-    margin-top: 35px;
-    background-color: black;
-    margin-left: 1209px;
-    border-radius: 10px;
+    margin-top:531px;
+    background-color: blue;
+    margin-left: 25px;
+     border-radius: 10px; 
 }
+
+.gg-arrow-left-r {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    width: 22px;
+    height: 22px;
+    border: 2px solid;
+    transform: scale(var(--ggs,1));
+    border-radius: 4px
+}
+.gg-arrow-left-r::after,
+.gg-arrow-left-r::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    left: 4px
+}
+.gg-arrow-left-r::after {
+    width: 6px;
+    height: 6px;
+    border-bottom: 2px solid;
+    border-left: 2px solid;
+    transform: rotate(45deg);
+    bottom: 6px
+}
+.gg-arrow-left-r::before {
+    width: 10px;
+    height: 2px;
+    bottom: 8px;
+    background: currentColor
+}
+
+
+

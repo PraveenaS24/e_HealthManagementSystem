@@ -47,6 +47,10 @@ public class PatientController {
 			return "redirect:/patient/patientlist";
 		}
 	}
+	@GetMapping("/updatepatientid")
+    public String updatepatientid() {
+  	return "updatepatientid";
+  }
 
 	@GetMapping("/updatepatientform")
 	public String showUpdateForm(@RequestParam("patientId") int id, Model model) {

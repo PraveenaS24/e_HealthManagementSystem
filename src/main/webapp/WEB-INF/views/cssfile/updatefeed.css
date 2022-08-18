@@ -1,13 +1,13 @@
 @charset "ISO-8859-1";
 
 body {
-	background-image: url("https://www.pihappiness.com/wp-content/uploads/2020/08/Collecting-Feedback-Without-Collecting-Feedback-for-Driving-Patient-Experience-in-Hospitals-1.png");
+	background-image: url("https://dz2cdn1.dzone.com/storage/temp/8545556-feedback-header.png");
 	background-repeat: no-repeat;
     background-size: 100% 100%;
 }
 
 label {
-	color: rgb(0, 0, 0);
+	color: black;
 	font-size: 1.3em;
 	display: flex;
 	margin: 5px;
@@ -70,7 +70,7 @@ h1 {
 	font-weight: 900;
 	width: 600px;
 	height: 600px;
-	margin-left: 32px;
+	margin-left: 343px;
 	border-radius: 10px;
 	backdrop-filter: blur(10px);
 }
@@ -78,4 +78,29 @@ h1 {
 #log {
 	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0
 		rgba(0, 0, 0, 0.19);
+}
+
+.button2 {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    font-size: 20px;
+    color: crimson;
+    margin-top: 30px;
+    background-color: black;
+    margin-left: 23px;
+     border-radius: 10px; 
+}
+
+
+.button3 {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    font-size: 20px;
+    color: crimson;
+    margin-top: 35px;
+    background-color: black;
+    margin-left: 1209px;
+    border-radius: 10px;
 }

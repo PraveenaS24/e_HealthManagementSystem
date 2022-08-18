@@ -181,5 +181,12 @@ var patientCommentCheck = function() {
 			</div>
 		</div>
 	</div>
+	<div>
+				  <a href="/login/home"><button class="button2">Home</button></a>
+				</div>
+				
+				<div>
+				  <a href="/admin/login"><button class="button3">Logout</button></a>
+				</div>
 </body>
 </html>

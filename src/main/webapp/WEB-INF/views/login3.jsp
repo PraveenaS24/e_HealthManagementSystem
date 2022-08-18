@@ -7,6 +7,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Login</title>
+<link href='https://css.gg/arrow-left-r.css' rel='stylesheet'>
 <style type="text/css">
 <%@include file="/WEB-INF/views/cssfile/login3.css"%>
 </style>
@@ -49,9 +50,12 @@
 	<div>
 				  <a href="/login/home"><button class="button2">Home</button></a>
 				</div>
-				
-				<div>
-				  <a href="/admin/login"><button class="button3">Logout</button></a>
+		   <div>
+				<a href="/login/home"><button class="button3"><i class="gg-arrow-left-r"></i>
+
+				  </button></a>
 				</div>
+				
+				
 </body>
 </html>

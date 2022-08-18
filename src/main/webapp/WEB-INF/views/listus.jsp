@@ -15,10 +15,9 @@
 	<li class="active"> <a href="#">Patient</a>
 		<div class="sub-menu-1">
 		<ul><li><a href="/patient/addpatientform">Add Patient</a></li>
-			<li><a href="/patient/updatepatientform">Update Patient</a></li>
+			<li><a href="/patient/updatepatientid">Update Patient</a></li>
 			<li><a href="/patient/getpatient">Find Patient By Id</a></li>
 			<li><a href="/patient/patientlist">Patient List</a></li>
-			<li><a href="/patient/deleteform">Delete Patient</a></li>
 			<li><a href="/patient/getpatientfeedbackform">Find Patient FeedBack</a></li>
 			</ul>
 			</div>
@@ -30,7 +29,6 @@
 		<li><a href="/staffs/updatestaffsform">Update Staff</a></li>
 		<li><a href="/staffs/getstaff">Find Staff By Id</a></li>
 		<li><a href="/staffs/staffslist">All Staff List</a></li>
-		<li><a href="/staffs/deleteform">Delete Staff</a></li>
 		<li><a href="/staffs/getstafffeedbackform">Find Staff FeedBack</a></li>
 	</ul>
 	</div>
@@ -47,6 +45,13 @@
 	</ul>
 	</div>
     </div>
+    <div>
+				  <a href="/login/home"><button class="button2">Home</button></a>
+				</div>
+				
+				<div>
+				  <a href="/admin/login"><button class="button3">Logout</button></a>
+				</div>
 </body>
 </html>
 		
