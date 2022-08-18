@@ -11,9 +11,8 @@
 <style>
 <%@include file="/WEB-INF/views/cssfile/listpatientfeed.css"%>
 </style>
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <body>
-	<h1>PATIENT</h1>
+	<h1>PATIENT</h1>	
 	<div id="root">
 		<div id="form">
 			<div class="box">
@@ -123,60 +122,60 @@
 			</div>
 		</div>
 	</div>
- 
-	<div class="box">
+	
+     <div class="box">
 		<div class="son">
 			<h1>FEEDBACK</h1>
 			<div>
 				<form:form action="" method="post" modelAttribute="getfeedback">
-					<div class="modal">
+					<div>
 						<label for="feedbackId">FeedBack Id</label>
-						<div class="modal__inner">
+						<div>
 							<form:input path="feedbackId" readonly="true" style="width: 300px;height: 25px;"  />
 						</div>
 					</div>
-					<div class="modal">
+					<div>
 						<label for="patientId">Patient Id</label>
-						<div class="modal__inner">
+						<div>
 							<form:input path="patientId" readonly="true" style="width: 300px;height: 25px;"  />
 						</div>
 					</div>
-					<div class="modal">
+					<div>
 						<label for="staffId">Staff Id</label>
-						<div class="modal__inner ">
+						<div>
 							<form:input path="staffId" readonly="true" style="width: 300px;height: 25px;"  />
 						</div>
 					</div>
-					<div class="modal">
+					<div>
 						<label for="staffNature">Staff Nature</label>
-						<div class="modal__inner">
+						<div>
 							<form:input path="staffNature" readonly="true" style="width: 300px;height: 25px;"  />
 						</div>
 					</div>
-					<div class="modal">
+					<div>
 						<label for="addressLocate">Address</label>
-						<div class="modal__inner">
+						<div>
 							<form:input path="addressLocate" readonly="true"
 								style="width: 300px;height: 25px;"  />
 						</div>
 					</div>
-					<div class="modal">
+					<div>
 						<label for="patientComment">Patient Comment</label>
-						<div class="modal__inner" >
+						<div>
 							<form:input path="patientComment" readonly="true"
 								style="width: 300px;height: 25px;"  />
 						</div>
 					</div>
-					<div class="modal">
+					<div>
 						<label for="onregisterfeedback">Feedback</label>
-						<div class="modal__inner">
+						<div>
 							<form:input path="onregisterfeedback" readonly="true"
 								style="width: 300px;height: 25px;"  />
 						</div>
 					</div>
-					<div class="modal">
+					<div>
 						<label for="points">points</label>
-						<div class="modal__inner">
+						<div>
 							<form:input path="points" readonly="true" style="width: 300px;height: 25px;"  />
 						</div>
 					</div>
@@ -184,6 +183,5 @@
 			</div>
 		</div>
 		</div>
-		
 </body>
 </html>

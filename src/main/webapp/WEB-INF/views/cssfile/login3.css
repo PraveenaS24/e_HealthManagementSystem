@@ -2,16 +2,24 @@
 
 body {
 	background-image:
-		url("https://c4.wallpaperflare.com/wallpaper/933/647/603/heart-beautiful-backgrounds-desktop-wallpaper-preview.jpg");
+		url("https://www.pngkey.com/png/detail/400-4001145_social-health-clipart-our-health-our-care-our.png");
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 }
 
 h1 {
-	color: blue;
+	color: rgb(255, 0, 128);
 	float: center;
 	text-align: center;
+	background-color: black ;
+	height: 43px;
+    width: 289px;
+    margin-left: 500px;
+    border-radius: 10px;
+}
+h1:hover{
+	background-color: #37c8ab;
 }
 
 label {
@@ -74,6 +82,7 @@ label {
 	text-align: center;
 	float: center;
 	margin-top: 100px;
+	backdrop-filter: blur(10px);
 }
 
 #log {
@@ -84,3 +93,4 @@ label {
 #cont {
 	float: center;
 }
+

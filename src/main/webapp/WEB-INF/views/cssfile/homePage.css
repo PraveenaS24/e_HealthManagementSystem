@@ -7,12 +7,13 @@
 }
 
 nav {
+	margin-top: -8px;
 	width: 100%;
 	height: 80px;
 	Line-height: 80px;
 	padding: 0px 100px;
 	position: fixed;
-	background-image: linear-gradient(to right, pink, blue);
+	background-image: linear-gradient(to right, teal, #367589,teal, #1ABC9C,teal, #009192,teal, #388497);
 }
 
 nav .logo p {
@@ -49,7 +50,7 @@ nav li a:hover {
 
 body {
 	 background-image:
-		url("https://img.freepik.com/free-photo/doctor-with-stethoscope-hands-hospital-background_1423-1.jpg?w=2000"); 
+		url("https://www.isglobal.org/documents/10179/8750489/one+health+EN+portada/a7122d1c-9458-4bef-96e5-05ca9a5ffe5f?t=1617276763040"); 
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: center;
@@ -119,14 +120,15 @@ body {
 }
 	
 p{
-	color: purple;
+	color: rgb(234, 253, 2);
 	font-size: 25px;
 	font-weight: bolder;
 	line-height: 50px;
+	margin-top: 100px;
 }
 	
 h3{
-	color: black;
+	color: rgb(255, 255, 255);
 	font-weight: bolder;
 	float: right;
 }	
@@ -137,6 +139,21 @@ h1{
 h2{
 	text-align: center;
 }
-
+  
+  a.ex1:hover, a.ex1:active {
+  background: black;
+  }
+  
+  a.ex2:hover, a.ex1:active {
+  background: black;
+  }
+  
+  a.ex3:hover, a.ex1:active {
+  background: black;
+  }
+  
+ 
+  
+  
 	
 	

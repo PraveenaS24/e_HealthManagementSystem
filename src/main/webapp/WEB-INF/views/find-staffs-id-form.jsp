@@ -17,7 +17,7 @@
 	<div id="root">
 		<div id="form">
 			<div class="box">
-				<form:form action="" method="post" modelAttribute="findstaffsbyid">
+				<form:form action="" method="get" modelAttribute="findstaffsbyid">
 					<div>
 						<label for="staffId">Staffs Id</label>
 						<div>

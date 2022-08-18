@@ -1,59 +1,24 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="ISO-8859-1">
-<title>USERS</title>
+<title>Invoicing with GST</title>
+<style><%@include file="/WEB-INF/views/cssfile/listus.css"%></style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/fontawesome.min.css">
 </head>
-<style>
-<%@include file="/WEB-INF/views/cssfile/listus.css"%>
-</style>
 <body>
-	<!-- <h1>
-		Delighted Welcome!<br> Happy To Have You!!
-	</h1>
-
-		<h2>
-			Login Sucessfully! 
-		</h2>
- -->
-	<nav>
-	 <div class="navbar">
-   <div class="dropdown"> 
-		<button class="dropbtn">Patient
-		<em class= "fa fa-caret-down"></em>
-		</button>
-		<div class="dropdown-content">
-				<a href="/patient/patientlist">Patient List</a>
-				<a href="/patient/addpatientform">Add Patient</a>
-				<a href="/patient/updatepatientform">Update Patient</a>
-				<a href="/patient/getpatient">Find Patient</a>
-			</div>
-			</div>
-   <div class="dropdowns">
-			<button class="dropbtns">Staffs
-		<em class= "fa fa-caret-down"></em>
-		</button>
-	<div class="dropdown-contents">
-				<a href="/staffs/staffslist">Staff List</a>
-				<a href="/staffs/addstaffsform">Add Staff</a>
-				<a href="/staffs/updatestaffsform">Update Staff</a>
-				<a href="/staffs/getstaff">Find Staff</a>
-			</div>
-		</div>
-	<div class="dropsdown">
-			<button class="dropsbtn">FeedBack
-		<em class= "fa fa-caret-down"></em>
-		</button>
-	<div class="dropsdown-content">
-				<a href="/feedback/feedbacklist">FeedBack List</a>
-				<a href="/feedback/addfeedbackform">Add FeedBack</a>
-				<a href="/feedback/updatefeedbackform">Update FeedBack</a>
-			</div>
-		</div>
-	</div>
-	</nav> 
-	
-</body>
-</html>
+	<div class="hero-image">
+	<div class="menu-bar">
+	<ul>
+	<li class="active"> <a href="#"> Patient </a>
+		<div class="sub-menu-1">
+		<ul><li><a href="product/addform">Add Patient</a></li>
+			<li><a href="product/updatemainform">Update Patient</a></li>
+			<li><a href="product/findproductform">Find Patient By Id</a></li>
+			<li><a href="product/getallproducts">Patient List</a></li>
+			<li><a href="product/deleteform">Delete Product</a></li>
+			<li><a href="product/getproductinvoiceform">Find Patient FeedBack</a></li>
+			</ul>
+		

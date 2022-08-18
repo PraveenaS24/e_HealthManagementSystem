@@ -18,10 +18,10 @@
 		<div Class="logo">
 			<p>WELL BEING UPDATION</p>
 	</div>
-	
-		<ul>
-		<li><a href="/admin/adminlogin">Admin</a></li>
-			<li><a href="/users/userlogin">User</a></li>
+	 <ul>
+		<li><a class="ex1" href="/admin/adminlogin">Admin</a></li>
+			<li><a class="ex2" href="/users/userlogin">User</a></li>
+			<li><a class="ex3" href="/login/about">About</a></li>
 		</ul>
 	</nav>
 	<div class="com">

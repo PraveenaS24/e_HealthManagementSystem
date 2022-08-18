@@ -20,4 +20,8 @@ public class LoginController {
     public String begin() {
         return "homePage";
     }
+	@GetMapping("/about")
+    public String beginning() {
+        return "about";
+    }
 }

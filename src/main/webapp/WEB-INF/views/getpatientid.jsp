@@ -18,10 +18,10 @@
 					<div>
 						<label for="patientId">Enter PatientId</label>
 						<div>
-							<input type="text" id="patientId" name="patientId" />
+							<input type="text" id="patientId" name="patientId" required="true"/>
 						</div>
 					</div>
-					<input type="submit" value="get" />
+					<input id="log" type="submit" value="get" />
 				</form>
 			</div>
 		</div>

@@ -15,11 +15,22 @@ tr {
 }
 
 h1 {
-	color: blue;
+	color: #ff0080;
 	text-align: center;
+	background-color: black ;
+	height: 43px;
+    width: 289px;
+    margin-left: 500px;
+    border-radius: 10px;
 }
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 70%;
+h1:hover{
+	background-color: #37c8ab;
+}
+table, th, td {
+    border: 1px solid black;
+    padding: 25px;
+    text-align: left;
+}
+table{
+	margin-left: 339px;
 }

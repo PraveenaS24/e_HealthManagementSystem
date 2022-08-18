@@ -17,7 +17,7 @@
 	<div id="root">
 		<div id="form">
 			<div class="box">
-				<form:form action="" method="post" modelAttribute="findfeedbackbyid">
+				<form:form action="" method="get" modelAttribute="findfeedbackbyid">
 					<div>
 						<label for="feedbackId">FeedBack Id</label>
 						<div>

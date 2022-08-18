@@ -15,9 +15,23 @@ tr {
 }
 
 h1 {
-	color: blue;
+	color: #ff0080;
 	text-align: center;
+	background-color: black ;
+	height: 43px;
+    width: 289px;
+    margin-left: 500px;
+    border-radius: 10px;
+}
+h1:hover{
+	background-color: #37c8ab;
 }
 .box{
    text-align: center;
  }
+ 
+ table, th, td {
+    border: 1px solid black;
+    padding: 25px;
+    text-align: left;
+}

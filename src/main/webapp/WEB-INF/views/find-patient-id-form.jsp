@@ -16,7 +16,7 @@
 	<div id="root">
 		<div id="form" class="box">
 			<div>
-				<form:form action="" method="post" modelAttribute="findpatientbyid">
+				<form:form action="" method="get" modelAttribute="findpatientbyid">
 					<div>
 						<label for="patientId">Patient ID</label>
 						<div>

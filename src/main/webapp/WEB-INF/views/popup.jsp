@@ -1,81 +1,26 @@
-@charset "ISO-8859-1";
-
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
 body {
-	background-image:
-		url("https://thumbs.dreamstime.com/b/healthy-lettering-typography-art-vector-stock-word-custom-90915681.jpg");
-	background-repeat: no-repeat;
-	background-size: 100% 100%;
+	font-family: Arial, sans-serif;
+	background:
+		url(http://www.shukatsu-note.com/wp-content/uploads/2014/12/computer-564136_1280.jpg)
+		no-repeat;
+	background-size: cover;
+	height: 100vh;
 }
 
 h1 {
-	color: black;
-	float: center;
 	text-align: center;
-}
-
-tr {
-	color: white;
-}
-
-tr:hover {
-	background-color: orange;
-}
-
-label {
-	color: maroon;
-	font-size: 1.3em;
-	display: flex;
-	margin: 5px;
-	font-weight: bold;
-	cursor: pointer;
-	transition: .5s ease-in-out;
-	text-align: center;
-}
-
-#log {
-	width: 150px;
-	height: 30px;
-	border: black;
-	border-radius: 3px;
-	padding-left: 8px;
-	color: white;
-	background-color: maroon;
-	display: inline-block;
-	margin: 4px 2px;
-	cursor: pointer;
-	-webkit-transition-duration: 0.4s;
-	transition-duration: 0.4s;
-	text-align:  center;
+	font-family: Tahoma, Arial, sans-serif;
+	color: #06D85F;
+	margin: 80px 0;
 }
 
 .box {
-	overflow: hidden;
-	border-radius: 10px;
-	box-shadow: 5px 20px 50px #000;
-	margin: auto;
-	padding: 10px;
-	text-align: center;
-	float: center;
-	font-weight: 900;
-	width: 600px;
-}
-
-#log {
-	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0
-		rgba(0, 0, 0, 0.19);
-}
-
-.son {
-	color: yellow;
-	text-align: center;
-}
-
-body{
-	margin: 0;
-	padding: 0;
-}
-
-.boxs {
 	width: 40%;
 	margin: 0 auto;
 	background: rgba(255, 255, 255, 0.2);
@@ -162,10 +107,20 @@ body{
 		width: 70%;
 	}
 }
+</style>
+<meta charset="ISO-8859-1">
+<title>PopUp</title>
+</head>
+<body>
+	<h1>Popup/Modal Windows without JavaScript</h1>
+	<div class="box">
+		<a class="button" href="#popup1">Let me Pop up</a>
+	</div>
 
-h2 {
-	text-align: center;
-	font-family: Tahoma, Arial, sans-serif;
-	color: #06D85F;
-	margin: 80px 0;
-}
+	<div id="popup1" class="overlay">
+		<div class="popup">
+			<a class="close" href="/users/userlist">&times;</a>
+		</div>
+	</div>
+</body>
+</html>
