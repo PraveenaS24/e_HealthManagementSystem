@@ -37,29 +37,30 @@ public class UsersController {
 	}
 
 	@PostMapping("/adduser")
-	public String addNewUsers(@Valid @ModelAttribute("addusers") Users theuser,Errors error) {
-		if(error.hasErrors()){
+	public String addNewUsers(@Valid @ModelAttribute("addusers") Users theuser, Errors error) {
+		if (error.hasErrors()) {
 			return "add-users-form";
+		} else {
+			userservice.save(theuser);
+			return "redirect:/users/userlist";
 		}
-		else {
-		userservice.save(theuser);
-		return "redirect:/users/userlist";}
 	}
+
 	@GetMapping("/userlogin")
-    public String useraccessform(Model model) {
-        Users theuser = new Users();
-        model.addAttribute("users", theuser);
-        return "login2";
-    }                   
+	public String useraccessform(Model model) {
+		Users theuser = new Users();
+		model.addAttribute("users", theuser);
+		return "login2";
+	}
 
-    @PostMapping("/checkuserlogin")
-    public String checkingAccess(@ModelAttribute("users") Users users) {
-        Users user = userservice.getUserByIdAndSecretword(users.getUserId(),users.getSecretword());
-        if (user!= null){
+	@PostMapping("/checkuserlogin")
+	public String checkingAccess(@ModelAttribute("users") Users users) {
+		Users user = userservice.getUserByIdAndSecretword(users.getUserId(), users.getSecretword());
+		if (user != null) {
 
-            return "listus";
-        } else
-            return "invalid-user-error";
+			return "listus";
+		} else
+			return "invalid-user-error";
 
-    }
+	}
 }

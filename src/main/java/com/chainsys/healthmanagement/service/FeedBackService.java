@@ -28,5 +28,8 @@ public class FeedBackService {
 	public void deleteFeedBack(int id) {
 		feedbackrepo.deleteById(id);
 	}
+	public List<FeedBack>getFeedBackByPatient(int id){
+		return feedbackrepo.findByPatientId(id);
+	}
 	
 }

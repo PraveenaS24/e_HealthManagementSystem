@@ -14,8 +14,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.chainsys.healthmanagement.dto.FeedBackAndPatientDTO;
+import com.chainsys.healthmanagement.model.FeedBack;
 import com.chainsys.healthmanagement.model.Patient;
+import com.chainsys.healthmanagement.service.FeedBackService;
 import com.chainsys.healthmanagement.service.PatientService;
 
 @Controller
@@ -23,6 +24,8 @@ import com.chainsys.healthmanagement.service.PatientService;
 public class PatientController {
 	@Autowired
 	PatientService patientservice;
+	@Autowired
+	FeedBackService FeedbackService;
 
 	@GetMapping("/patientlist")
 	public String getAllPatient(Model model) {
@@ -47,10 +50,11 @@ public class PatientController {
 			return "redirect:/patient/patientlist";
 		}
 	}
+
 	@GetMapping("/updatepatientid")
-    public String updatepatientid() {
-  	return "updatepatientid";
-  }
+	public String updatepatientid() {
+		return "updatepatientid";
+	}
 
 	@GetMapping("/updatepatientform")
 	public String showUpdateForm(@RequestParam("patientId") int id, Model model) {
@@ -58,14 +62,13 @@ public class PatientController {
 		model.addAttribute("updatepatient", thepatient);
 		return "update-patient-form";
 	}
-	
-    @GetMapping("/getpatient")
-      public String getpatient() {
-    	return "getpatientid";
-    }
-	
-    
-    @GetMapping("/findpatientid")
+
+	@GetMapping("/getpatient")
+	public String getpatient() {
+		return "getpatientid";
+	}
+
+	@GetMapping("/findpatientid")
 	public String findPatientById(@RequestParam("patientId") int id, Model model) {
 		Patient thepatient = patientservice.findPatientById(id);
 		model.addAttribute("findpatientbyid", thepatient);
@@ -95,9 +98,16 @@ public class PatientController {
 
 	@GetMapping("/getpatientfeedback")
 	public String getPatientAndFeedback(@RequestParam("patientId") int id, Model model) {
-		FeedBackAndPatientDTO dto = patientservice.getFeedBackAndPatientDTO(id);
-		model.addAttribute("getpatient", dto.getPatient());
-		model.addAttribute("getfeedback", dto.getFeedBack());
+		Patient thepatient = patientservice.findPatientById(id);
+		model.addAttribute("getpatient", thepatient);
 		return "list-patient-feedback";
 	}
+
+	@GetMapping("/feedback")
+	public String getFeedBackByPatientId(@RequestParam("patientId") int id, Model model) {
+		List<FeedBack> feedbackList = FeedbackService.getFeedBackByPatient(id);
+		model.addAttribute("allfeedback", feedbackList);
+		return "list-feedback";
+	}
+
 }

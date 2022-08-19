@@ -15,7 +15,7 @@
 	<li class="active"> <a href="#">Patient</a>
 		<div class="sub-menu-1">
 		<ul><li><a href="/patient/addpatientform">Add Patient</a></li>
-			<li><a href="/patient/updatepatientform">Update Patient</a></li>
+			<li><a href="/patient/updatepatientid">Update Patient</a></li>
 			<li><a href="/patient/getpatient">Find Patient By Id</a></li>
 			<li><a href="/patient/patientlist">Patient List</a></li>
 			<li><a href="/patient/getpatientfeedbackform">Find Patient FeedBack</a></li>

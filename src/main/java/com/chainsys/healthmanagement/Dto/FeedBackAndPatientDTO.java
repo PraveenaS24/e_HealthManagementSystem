@@ -25,6 +25,5 @@ public class FeedBackAndPatientDTO {
 	public void setFeedBack(FeedBack feedBack) {
 		this.feedBack = feedBack;
 	}
-	
-	
+
 }

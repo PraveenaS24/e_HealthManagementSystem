@@ -12,10 +12,11 @@
 <%@include file="/WEB-INF/views/cssfile/listpatientfeed.css"%>
 </style>
 <body>
-	<h1>PATIENT</h1>	
+		<h1>PATIENT</h1>
 	<div id="root">
 		<div id="form">
 			<div class="box">
+			
 				<form:form action="" method="post" modelAttribute="getpatient">
 					<div>
 						<label for="patientId">Patient Id</label>
@@ -122,66 +123,8 @@
 			</div>
 		</div>
 	</div>
-	
-     <div class="box">
-		<div class="son">
-			<h1>FEEDBACK</h1>
-			<div>
-				<form:form action="" method="post" modelAttribute="getfeedback">
-					<div>
-						<label for="feedbackId">FeedBack Id</label>
-						<div>
-							<form:input path="feedbackId" readonly="true" style="width: 300px;height: 25px;"  />
-						</div>
-					</div>
-					<div>
-						<label for="patientId">Patient Id</label>
-						<div>
-							<form:input path="patientId" readonly="true" style="width: 300px;height: 25px;"  />
-						</div>
-					</div>
-					<div>
-						<label for="staffId">Staff Id</label>
-						<div>
-							<form:input path="staffId" readonly="true" style="width: 300px;height: 25px;"  />
-						</div>
-					</div>
-					<div>
-						<label for="staffNature">Staff Nature</label>
-						<div>
-							<form:input path="staffNature" readonly="true" style="width: 300px;height: 25px;"  />
-						</div>
-					</div>
-					<div>
-						<label for="addressLocate">Address</label>
-						<div>
-							<form:input path="addressLocate" readonly="true"
-								style="width: 300px;height: 25px;"  />
-						</div>
-					</div>
-					<div>
-						<label for="patientComment">Patient Comment</label>
-						<div>
-							<form:input path="patientComment" readonly="true"
-								style="width: 300px;height: 25px;"  />
-						</div>
-					</div>
-					<div>
-						<label for="onregisterfeedback">Feedback</label>
-						<div>
-							<form:input path="onregisterfeedback" readonly="true"
-								style="width: 300px;height: 25px;"  />
-						</div>
-					</div>
-					<div>
-						<label for="points">points</label>
-						<div>
-							<form:input path="points" readonly="true" style="width: 300px;height: 25px;"  />
-						</div>
-					</div>
-				</form:form>
-			</div>
-		</div>
-		</div>
+	         <div>
+				  <a href="/patient/feedback?patientId=${getpatient.patientId}"><button class="button2">FeedBack</button></a>
+				</div>
 </body>
 </html>

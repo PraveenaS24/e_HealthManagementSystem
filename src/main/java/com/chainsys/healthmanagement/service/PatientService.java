@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 
 import com.chainsys.healthmanagement.dao.FeedBackRepository;
 import com.chainsys.healthmanagement.dao.PatientRepository;
-import com.chainsys.healthmanagement.dto.FeedBackAndPatientDTO;
 import com.chainsys.healthmanagement.model.FeedBack;
 import com.chainsys.healthmanagement.model.Patient;
 
@@ -35,13 +34,8 @@ public class PatientService {
 		patientrepo.deleteById(id);
 	}
 
-	public FeedBackAndPatientDTO getFeedBackAndPatientDTO(int id) {
-		Patient patient = patientrepo.findById(id);
-		FeedBackAndPatientDTO dto = new FeedBackAndPatientDTO();
-		dto.setPatient(patient);
-		FeedBack feedBack = feedBackRepository.findByPatientId(id);
-		dto.setFeedBack(feedBack);
-		return dto;
+	public List<FeedBack> feedBackByPatientId(int id) {
+		return feedBackRepository.findByPatientId(id);
 	}
 
 }

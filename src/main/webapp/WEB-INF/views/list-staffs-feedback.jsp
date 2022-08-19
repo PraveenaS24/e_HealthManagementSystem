@@ -20,73 +20,73 @@
 					<div>
 						<label for="staffId">Staff Id</label>
 						<div>
-							<form:input path="staffId" style="width: 300px;height: 25px;"/>
+							<form:input path="staffId" readonly="true" style="width: 300px;height: 25px;"/>
 						</div>
 					</div>
 					<div>
 						<label for="firstName">First Name</label>
 						<div>
-							<form:input path="firstName" style="width: 300px;height: 25px;"/>
+							<form:input path="firstName" readonly="true" style="width: 300px;height: 25px;"/>
 						</div>
 					</div>
 					<div>
 						<label for="lastName">Last Name</label>
 						<div>
-							<form:input path="lastName" style="width: 300px;height: 25px;"/>
+							<form:input path="lastName" readonly="true" style="width: 300px;height: 25px;"/>
 						</div>
 					</div>
 					<div>
 						<label for="gender">Gender</label>
 						<div>
-							<form:input path="gender" style="width: 300px;height: 25px;"/>
+							<form:input path="gender" readonly="true" style="width: 300px;height: 25px;"/>
 						</div>
 					</div>
 					<div>
 						<label for="contactNo">Contact No</label>
 						<div>
-							<form:input path="contactNo" style="width: 300px;height: 25px;"/>
+							<form:input path="contactNo" readonly="true"  style="width: 300px;height: 25px;"/>
 						</div>
 					</div>
 					<div>
 						<label for="dob">DOB</label>
 						<div>
-							<form:input path="dob" type="date" style="width: 300px;height: 25px;"/>
+							<form:input path="dob" readonly="true" style="width: 300px;height: 25px;"/>
 						</div>
 					</div>
 					<div>
 						<label for="email">Email</label>
 						<div>
-							<form:input path="email" style="width: 300px;height: 25px;"/>
+							<form:input path="email" readonly="true" style="width: 300px;height: 25px;"/>
 						</div>
 					</div>
 					<div>
 						<label for="role">Role</label>
 						<div>
-							<form:input path="role" style="width: 300px;height: 25px;"/>
+							<form:input path="role" readonly="true" style="width: 300px;height: 25px;"/>
 						</div>
 					</div>
 					<div>
 						<label for="qualification">Qualification</label>
 						<div>
-							<form:input path="qualification" style="width: 300px;height: 25px;"/>
+							<form:input path="qualification" readonly="true" style="width: 300px;height: 25px;"/>
 						</div>
 					</div>
 					<div>
 						<label for="speciality">Speciality</label>
 						<div>
-							<form:input path="speciality" style="width: 300px;height: 25px;"/>
+							<form:input path="speciality" readonly="true" style="width: 300px;height: 25px;"/>
 						</div>
 					</div>
 					<div>
 						<label for="intime">Intime</label>
 						<div>
-							<form:input path="intime" style="width: 300px;height: 25px;"/>
+							<form:input path="intime" readonly="true" style="width: 300px;height: 25px;"/>
 						</div>
 					</div>
 					<div>
 						<label for="outtime">Outtime</label>
 						<div>
-							<form:input path="outtime" style="width: 300px;height: 25px;"/>
+							<form:input path="outtime" readonly="true" style="width: 300px;height: 25px;"/>
 						</div>
 						<br>
 					</div>

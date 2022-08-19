@@ -70,7 +70,7 @@ label {
 
 h1 {
 	color: #ff0080;
-	text-align: center;
+	text-align: left;
 	background-color: #c0c0c0 ;
 	height: 43px;
     width: 289px;
@@ -88,10 +88,10 @@ h1:hover{
 	margin: auto;
 	padding: 10px;
 	text-align: center;
-	float: center;
 	font-weight: 900;
 	width: 600px;
 	backdrop-filter: blur(5px);
+	margin-left: 10px;
 }
 
 
