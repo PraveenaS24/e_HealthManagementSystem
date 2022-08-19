@@ -58,7 +58,7 @@
 				</div>
 				
 				<div>
-				  <a href="/admin/login"><button class="button3">Logout</button></a>
+				  <a href="/admin/adminlogin"><button class="button3">Logout</button></a>
 				</div>
 </body>
 </html>

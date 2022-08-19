@@ -64,10 +64,10 @@
 		</div>
 	</div>
 	<div>
-				  <a href="/login/home"><button class="button2"><i class="fa fa-home"></i></button></a>
+				  <a href="/login/home"><button class="button2"><em class="fa fa-home"></em></button></a>
 				</div>
 				<div>
-				  <a href="/login/home"><button class="button3"><i class="gg-arrow-left-r"></i>
+				  <a href="/login/home"><button class="button3"><em class="gg-arrow-left-r"></em>
 
 				  </button></a>
 				</div>
