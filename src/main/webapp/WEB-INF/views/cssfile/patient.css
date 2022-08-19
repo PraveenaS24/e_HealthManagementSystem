@@ -41,6 +41,8 @@ label {
 	-webkit-transition-duration: 0.4s;
 	transition-duration: 0.4s;
 	text-align: center;
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0
+		rgba(0, 0, 0, 0.19);
 }
 
 .box {
@@ -56,10 +58,6 @@ label {
 	backdrop-filter: blur(10px);
 }
 
-#log {
-	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0
-		rgba(0, 0, 0, 0.19);
-}
 
 .button2 {
     position: absolute;
@@ -94,6 +92,7 @@ h1 {
     width: 289px;
     margin-left: 500px;
     border-radius: 10px;
+    
 }
 h1:hover{
 	background-color: #37c8ab;

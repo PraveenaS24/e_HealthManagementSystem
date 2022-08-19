@@ -5,6 +5,8 @@ body {
 		url("https://thumbs.dreamstime.com/b/healthy-lettering-typography-art-vector-stock-word-custom-90915681.jpg");
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
+	margin: 0;
+	padding: 0;
 }
 
 h1 {
@@ -46,6 +48,8 @@ label {
 	-webkit-transition-duration: 0.4s;
 	transition-duration: 0.4s;
 	text-align:  center;
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0
+		rgba(0, 0, 0, 0.19);
 }
 
 .box {
@@ -60,20 +64,12 @@ label {
 	width: 600px;
 }
 
-#log {
-	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0
-		rgba(0, 0, 0, 0.19);
-}
 
 .son {
 	color: yellow;
 	text-align: center;
 }
 
-body{
-	margin: 0;
-	padding: 0;
-}
 
 .boxs {
 	width: 40%;

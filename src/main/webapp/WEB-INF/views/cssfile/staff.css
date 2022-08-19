@@ -64,7 +64,8 @@ h1:hover{
 	cursor: pointer;
 	-webkit-transition-duration: 0.4s;
 	transition-duration: 0.4s;
-	
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0
+		rgba(0, 0, 0, 0.19);
 	
 }
 
@@ -78,9 +79,4 @@ h1:hover{
 	float: right;
 	font-weight: 900;
 	width: 800px;
-}
-
-#log {
-	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0
-		rgba(0, 0, 0, 0.19);
 }
