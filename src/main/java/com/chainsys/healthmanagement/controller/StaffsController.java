@@ -21,6 +21,8 @@ import com.chainsys.healthmanagement.service.StaffsService;
 public class StaffsController {
 	@Autowired
 	StaffsService staffservice;
+	
+	private static final String LIST = "redirect:/staffs/staffslist";
 
 	@GetMapping("/staffslist")
 	public String getAllStaffs(Model model) {
@@ -54,7 +56,7 @@ public class StaffsController {
 			return "add-staffs-form";
 		} else {
 			staffservice.save(thestaff);
-			return "redirect:/staffs/staffslist";
+			return LIST;
 		}
 	}
 	
@@ -77,14 +79,14 @@ public class StaffsController {
 			return "update-staffs-form";
 		} else {
 			staffservice.save(thestaff);
-			return "redirect:/staffs/staffslist";
+			return LIST;
 		}
 	}
 
 	@GetMapping("/deletestaff")
 	public String deleteStaffs(@RequestParam("staffId") int id) {
 		staffservice.deleteStaffs(id);
-		return "redirect:/staffs/staffslist";
+		return LIST;
 	}
 	
     @GetMapping("/getstafffeedbackform")

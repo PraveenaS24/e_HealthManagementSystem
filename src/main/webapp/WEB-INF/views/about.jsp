@@ -41,7 +41,7 @@ function myFunction() {
 </script>
 <div class="parell">
 	<div>Contact-Us : 9994723796  <br>
-	Email: wellbeing@yahoo.com</div>
+	Email: wellbeing@gmail.com</div>
 	
 	</div>
 	

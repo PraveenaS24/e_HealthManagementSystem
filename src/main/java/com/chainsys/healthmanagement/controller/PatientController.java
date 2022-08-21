@@ -26,6 +26,8 @@ public class PatientController {
 	PatientService patientservice;
 	@Autowired
 	FeedBackService FeedbackService;
+	
+	private static final String LIST = "redirect:/patient/patientlist";
 
 	@GetMapping("/patientlist")
 	public String getAllPatient(Model model) {
@@ -47,7 +49,7 @@ public class PatientController {
 			return "add-patient-form";
 		} else {
 			patientservice.save(thepatient);
-			return "redirect:/patient/patientlist";
+			return LIST;
 		}
 	}
 
@@ -81,14 +83,14 @@ public class PatientController {
 			return "update-patient-form";
 		} else {
 			patientservice.save(thepatient);
-			return "redirect:/patient/patientlist";
+			return LIST;
 		}
 	}
 
 	@GetMapping("/deletepatient")
 	public String deletePatient(@RequestParam("patientId") int id) {
 		patientservice.deletePatient(id);
-		return "redirect:/patient/patientlist";
+		return LIST;
 	}
 
 	@GetMapping("/getpatientfeedbackform")

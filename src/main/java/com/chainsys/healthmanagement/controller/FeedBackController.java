@@ -20,6 +20,7 @@ import com.chainsys.healthmanagement.service.FeedBackService;
 public class FeedBackController {
 	@Autowired
 	FeedBackService feedbackservice;
+	
 	private static final String LIST = "redirect:/feedback/feedbacklist";
 
 	@GetMapping("/feedbacklist")

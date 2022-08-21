@@ -12,7 +12,7 @@
 </style>
 <body>
  <h2>Invalid Admin</h2>
- <div> Check your Admin id and password</div>
+ <div class="bot"> Check your Admin id and password</div>
  <a href="/admin/adminlogin"><button class="button1">Return to Admin login</button></a>
  
  <div>
