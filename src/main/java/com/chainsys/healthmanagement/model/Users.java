@@ -4,10 +4,7 @@ import java.sql.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
@@ -20,10 +17,9 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 @Table(name = "USERS")
 public class Users {
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO,generator="USER_ID_REF")
-    @SequenceGenerator(name="USER_ID_REF",sequenceName ="USER_ID_REF",allocationSize = 1)
 	@Column(name = "USER_ID")
-	private int userId;
+	@NotBlank(message="*Id must be in String and Integer")
+	private String userId;
 	@Column(name = "USER_TYPE")
 	@Size(max=20, min=3, message="*Name length should be 3 to 20")
 	@NotBlank(message="*Name can't be Empty")
@@ -38,11 +34,13 @@ public class Users {
 	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy")
 	private Date register;
 
-	public int getUserId() {
+	
+
+	public String getUserId() {
 		return userId;
 	}
 
-	public void setUserId(int userId) {
+	public void setUserId(String userId) {
 		this.userId = userId;
 	}
 

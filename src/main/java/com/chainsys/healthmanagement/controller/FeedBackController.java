@@ -52,6 +52,11 @@ public class FeedBackController {
 			return LIST;
 		}
 	}
+	
+	@GetMapping("/updatefeedbackid")
+	public String updatefeedbackid() {
+		return "updatefeedbackid";
+	}
 
 	@GetMapping("/updatefeedbackform")
 	public String showUpdateForm(@RequestParam("feedbackId") int id, Model model) {

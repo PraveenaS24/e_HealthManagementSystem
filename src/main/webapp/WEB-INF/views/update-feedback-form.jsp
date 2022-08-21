@@ -7,6 +7,8 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Update FeedBack</title>
+<link href='https://css.gg/arrow-left-r.css' rel='stylesheet'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <style>
 <%@include file="/WEB-INF/views/cssfile/updatefeed.css"%>
@@ -91,7 +93,7 @@ var patientCommentCheck = function() {
 
 </script>
 <body>
-	<h1>UPDATED LIST</h1>
+	<h1>UPDATE HERE</h1>
 	<div id="root" class="box">
 		<div id="form">
 			<div>
@@ -156,7 +158,7 @@ var patientCommentCheck = function() {
 					<div>
 						<label for="onregisterfeedback">Feedback</label>
 						<div>
-							<form:input path="onregisterfeedback" required="true" />
+							<form:input path="onregisterfeedback" required="true" type="date" style="width: 300px;height: 25px;"/>
 						</div>
 						<form:errors path="onregisterfeedback" cssClass="text-danger" />
 					</div>
@@ -182,11 +184,10 @@ var patientCommentCheck = function() {
 		</div>
 	</div>
 	<div>
-				  <a href="/login/home"><button class="button2">Home</button></a>
+		    <a href="/login/home"><button class="button2"><em class="fa fa-home"></em></button></a>
 				</div>
-				
-				<div>
-				  <a href="/admin/login"><button class="button3">Logout</button></a>
+		<div>
+		    <a href="/admin/adminlogin"><button class="button3"><em class="gg-arrow-left-r"></em></button></a>
 				</div>
 </body>
 </html>

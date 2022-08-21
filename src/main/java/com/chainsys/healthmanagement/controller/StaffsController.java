@@ -57,6 +57,12 @@ public class StaffsController {
 			return "redirect:/staffs/staffslist";
 		}
 	}
+	
+	@GetMapping("/updatestaffid")
+	public String updatestaffid() {
+		return "updatestaffid";
+	}
+
 
 	@GetMapping("/updatestaffsform")
 	public String showUpdateForm(@RequestParam("staffId") int id, Model model) {

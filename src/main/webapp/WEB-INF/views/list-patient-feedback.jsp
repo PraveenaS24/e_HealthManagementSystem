@@ -7,6 +7,8 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Add Patient</title>
+<link href='https://css.gg/arrow-left-r.css' rel='stylesheet'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <style>
 <%@include file="/WEB-INF/views/cssfile/listpatientfeed.css"%>
@@ -14,6 +16,7 @@
 <body>
 		<h1>PATIENT</h1>
 	<div id="root">
+	
 		<div id="form">
 			<div class="box">
 			
@@ -123,8 +126,17 @@
 			</div>
 		</div>
 	</div>
-	         <div>
-				  <a href="/patient/feedback?patientId=${getpatient.patientId}"><button class="button2">FeedBack</button></a>
+	     
+	      <div class="boxs">
+				  <a href="/patient/feedback?patientId=${getpatient.patientId}"><button class="button2">Click to view FeedBack</button></a>
+				</div> 
+				
+				<div>
+				  <a href="/login/home"><button class="button3"><em class="fa fa-home"></em></button></a>
 				</div>
+				
+				<div>
+				  <a href="/admin/adminlogin"><button class="button4"><em class="gg-arrow-left-r"></em></button></a>
+				</div>   
 </body>
 </html>

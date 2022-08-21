@@ -2,23 +2,18 @@
 
 body {
 	background-image:
-		url("https://images.unsplash.com/photo-1612537785055-e226dae15987?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80");
+		url("https://st.depositphotos.com/1092019/3271/i/600/depositphotos_32716505-stock-photo-wealth-business-background.jpg");
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 }
 
-h1 {
-	color: blue;
-	float: center;
-	text-align: center;
-}
 
 tr {
 	color: red;
 }
 
 label {
-	color:blue;
+	color: gold;
 	font-size: 1.3em;
 	display: flex;
 	margin: 5px;
@@ -63,14 +58,48 @@ label {
     position: absolute;
     top: 8px;
     left: 16px;
-    font-size: 20px;
+    font-size: 30px;
     color: crimson;
-    margin-top: 30px;
-    background-color: white;
-    margin-left: 23px;
-     border-radius: 10px; 
+    margin-top: 11px;
+    background-color: rgb(0, 0, 0);
+    margin-left: 118px;
+    border-radius: 10px;
+    cursor: pointer;
+    height: 41px;
+    width: 43px; 
 }
-
+.gg-arrow-left-r {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    width: 22px;
+    height: 22px;
+    border: 2px solid;
+    transform: scale(var(--ggs,1));
+    border-radius: 4px
+}
+.gg-arrow-left-r::after,
+.gg-arrow-left-r::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    left: 4px
+}
+.gg-arrow-left-r::after {
+    width: 6px;
+    height: 6px;
+    border-bottom: 2px solid;
+    border-left: 2px solid;
+    transform: rotate(45deg);
+    bottom: 6px
+}
+.gg-arrow-left-r::before {
+    width: 10px;
+    height: 2px;
+    bottom: 8px;
+    background: currentColor
+}
 
 .button3 {
     position: absolute;
@@ -78,10 +107,13 @@ label {
     left: 16px;
     font-size: 20px;
     color: crimson;
-    margin-top: 35px;
-    background-color: white;
-    margin-left: 1209px;
+    margin-top:12px;
+    background-color: black;
+    margin-left: 2px;
     border-radius: 10px;
+    height: 41px;
+    width: 38px;
+     
 }
 
 h1 {

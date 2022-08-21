@@ -21,9 +21,9 @@ public class UsersService {
 		return userservicerepo.save(user);
 	}
 
-	public Users getUserByIdAndSecretword(int id, String secretword) {
+	public Users getUserByIdAndSecretword(String string, String secretword) {
 
-		return userservicerepo.findByUserIdAndSecretword(id, secretword);
+		return userservicerepo.findByUserIdAndSecretword(string, secretword);
 	}
 
 }

@@ -34,3 +34,28 @@ table, th, td {
 table{
 	margin-left: 339px;
 }
+
+.button2 {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    font-size: 20px;
+    color: crimson;
+    margin-top: 30px;
+    background-color:white;
+    margin-left: 23px;
+     border-radius: 10px; 
+}
+
+
+.button3 {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    font-size: 20px;
+    color: crimson;
+    margin-top: 35px;
+    background-color:white;
+    margin-left: 1209px;
+    border-radius: 10px;
+}

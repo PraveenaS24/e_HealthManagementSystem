@@ -12,6 +12,36 @@
 <style type="text/css">
 <%@include file="/WEB-INF/views/cssfile/login3.css"%>
 </style>
+<script type="text/javascript">
+var adminIdCheck = function() {
+	 if(document.myForm.adminId.value == ""){
+			if(alert("Id cannot be blank")){ 
+				 document.myForm.adminId.focus();
+		    }
+			else
+				document.activeElement.blur();
+		}
+	 else{
+	    	return false;
+	    }
+}
+
+var passwordCheck = function() {
+    var rg = new RegExp("^(?=.[A-Za-z])(?=.\\d)(?=.[@$!%#?&])[A-Za-z\\d@$!%*#?&]{8,}$");
+    if(!document.form.password.value.match(rg)){
+        if(alert("password must begin with letter and contain atleast one number and must have atleast 8 characters")){
+            document.form.password.focus();
+        }
+        else
+            document.activeElement.blur();
+    }
+    else{
+        return false;
+    }
+}
+
+
+</script>
 </head>
 <body>
 	<h1>ADMIN LOGIN</h1>
@@ -19,11 +49,11 @@
 	<div id="root" class="box">
 		<div id="form">
 			<form:form action="checkadminlogin" method="post"
-				modelAttribute="admin">
+				modelAttribute="admin" name="myForm">
 				<div>
 					<label for="adminId">Admin Id</label>
 					<div>
-						<form:input path="adminId" class="form-control"
+						<form:input path="adminId" onblur="adminIdCheck();" id="adminId" name="adminId"
 							title="Id must be number" pattern="^[0-9]+$" required="true"
 							placeholder="Enter AdminId" style="width: 200px;height: 25px;" />
 					</div>
@@ -32,10 +62,10 @@
 				<div>
 					<label for="password">Password</label>
 					<div>
-						<form:input type="password" path="password" class="form-control"
+						<form:input  path="password" onblur="passwordCheck();" id="password" name="password"
 							title='password must begin with letter and contain atleast one number and must have atleast 8 characters'
 							pattern="^(?=.*[A-Za-z])(?=.*\\d)(?=.*[@$!%*#?&])[A-Za-z\\d@$!%*#?&]{8,}$"
-							required="true" placeholder="Enter PassWord"
+							required="true" placeholder="Enter Password"  type="password"
 							style="width: 200px;height: 25px;" />
 					</div>
 					<form:errors path="password" cssClass="text-danger" />

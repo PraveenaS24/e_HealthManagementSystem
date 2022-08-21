@@ -9,7 +9,17 @@ body {
 }
 
 h1 {
-	color: blue;
+	color: #ff0080;
+	text-align: center;
+	background-color: black ;
+	height: 43px;
+    width: 289px;
+    margin-left: -46px;
+    border-radius: 10px;
+    
+}
+h1:hover{
+	background-color: #37c8ab;
 }
 
 label {
@@ -92,9 +102,9 @@ label {
     margin-top: 11px;
     background-color: rgb(0, 0, 0);
     margin-left: 0px;
-     border-radius: 10px;
-     cursor: pointer;
-     height: 41px;
+    border-radius: 10px;
+    cursor: pointer;
+    height: 41px;
     width: 43px; 
 }
 .gg-arrow-left-r {
