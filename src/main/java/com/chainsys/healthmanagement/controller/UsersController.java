@@ -52,6 +52,11 @@ public class UsersController {
 		model.addAttribute("users", theuser);
 		return "login2";
 	}
+	
+	@GetMapping("/userli")
+	public String check(Model model) {
+		return "listus";
+	}
 
 	@PostMapping("/checkuserlogin")
 	public String checkingAccess(@ModelAttribute("users") Users users) {

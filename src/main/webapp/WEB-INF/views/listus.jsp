@@ -50,7 +50,7 @@
 		    <a href="/login/home"><button class="button2"><em class="fa fa-home"></em></button></a>
 				</div>
 		<div>
-		    <a href="/admin/adminlogin"><button class="button3"><em class="gg-arrow-left-r"></em></button></a>
+		    <a href="/users/userlogin"><button class="button3"><em class="gg-arrow-left-r"></em></button></a>
 				</div>
 </body>
 </html>
