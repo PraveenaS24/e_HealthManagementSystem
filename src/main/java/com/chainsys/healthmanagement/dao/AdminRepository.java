@@ -7,6 +7,7 @@ import com.chainsys.healthmanagement.model.Admin;
 
 @Repository
 public interface AdminRepository extends JpaRepository<Admin, Integer> {
+	@SuppressWarnings("unchecked")
 	Admin save(Admin admin);
 
 	Admin findByAdminIdAndPassword(int id, String password);

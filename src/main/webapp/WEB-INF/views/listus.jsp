@@ -38,7 +38,6 @@
 	<div class="sub-menu-1">
 	<ul>
 		<li><a href="/feedback/addfeedbackform">Add FedBack</a></li>
-		<li><a href="/feedback/updatefeedbackid">Update FeedBack</a></li>
 		<li><a href="/feedback/feedbacklist">List FeedBack</a></li>
 	</ul>
 	</div>

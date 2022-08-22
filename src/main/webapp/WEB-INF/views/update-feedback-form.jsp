@@ -16,44 +16,34 @@
 <script type="text/javascript">
 var feedbackIdCheck = function() {
 	if (document.myForm.feedbackId.value == "") {
-
 		if (alert("Patient Id cannot be blank")) {
 			document.myForm.feedbackId.focus();
 		} else
 			document.activeElement.blur();
-
 	} else {
 		return false;
 	}
 }
-
-
 var patientIdCheck = function() {
 	if (document.myForm.patientId.value == "") {
-
 		if (alert("Patient Id cannot be blank")) {
 			document.myForm.patientId.focus();
 		} else
 			document.activeElement.blur();
-
 	} else {
 		return false;
 	}
 }
-
 var staffIdCheck = function() {
 	if (document.myForm.staffId.value == "") {
-
 		if (alert("Staff Id cannot be blank")) {
 			document.myForm.staffId.focus();
 		} else
 			document.activeElement.blur();
-
 	} else {
 		return false;
 	}
 }
-
 var staffNatureCheck = function() {
 	var nameRegex = new RegExp("^[a-zA-Z]+$");
 	if (!document.myForm.staffNature.value.match(nameRegex)) {
@@ -64,9 +54,7 @@ var staffNatureCheck = function() {
 	} else {
 		return false;
 	}
-
 }
-
 var addressLocateCheck = function() {
 	if (document.myForm.addressLocate.value == "") {
 		if (alert("Address cannot be blank")) {
@@ -77,7 +65,6 @@ var addressLocateCheck = function() {
 		return false;
 	}
 }
-
 var patientCommentCheck = function() {
 	var nameRegex = new RegExp("^[a-zA-Z]+$");
 	if (!document.myForm.patientComment.value.match(nameRegex)) {
@@ -88,9 +75,7 @@ var patientCommentCheck = function() {
 	} else {
 		return false;
 	}
-
 }
-
 </script>
 <body>
 	<h1>UPDATE HERE</h1>

@@ -23,6 +23,7 @@
 						</div>
 					</div>
 					<input type="submit" value="get" id="log"/>
+					${result}
 				</form>
 			</div>
 		</div>

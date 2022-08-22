@@ -40,7 +40,13 @@ public class StaffsController {
 	public String findStaffsById(@RequestParam("staffId") int id, Model model) {
 		Staffs thestaff = staffservice.findStaffsById(id);
 		model.addAttribute("findstaffsbyid", thestaff);
-		return "find-staffs-id-form";
+		if(thestaff!=null) {
+			return "find-staffs-id-form";
+		}
+		else {
+			model.addAttribute("result", "Id not found");
+			return "getstaffid";		
+			}
 	}
 
 	@GetMapping("/addstaffsform")
@@ -70,7 +76,13 @@ public class StaffsController {
 	public String showUpdateForm(@RequestParam("staffId") int id, Model model) {
 		Staffs thestaff = staffservice.findStaffsById(id);
 		model.addAttribute("updatestaffs", thestaff);
+		if(thestaff!=null) {
 		return "update-staffs-form";
+	}
+		else {
+			model.addAttribute("result", "Id not found");
+			return("getstaffid");
+		}
 	}
 
 	@PostMapping("/updatestaff")
@@ -97,8 +109,9 @@ public class StaffsController {
 	@GetMapping("/getstaffsfeedback")
 	public String getStaffsAndFeedback(@RequestParam("staffId") int id, Model model) {
 		FeedBackAndStaffsDTO dto = staffservice.getFeedBackAndStaffsDTO(id);
-		model.addAttribute("getstaffs", dto.getStaffs());
-		model.addAttribute("getfeedback", dto.getFeedbacklist());
-		return "list-staffs-feedback";
+			model.addAttribute("getstaffs", dto.getStaffs());
+			model.addAttribute("getfeedback", dto.getFeedbacklist());
+			return "list-staffs-feedback";
+		
 	}
 }

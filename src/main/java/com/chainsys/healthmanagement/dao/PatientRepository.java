@@ -3,12 +3,15 @@ package com.chainsys.healthmanagement.dao;
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 import com.chainsys.healthmanagement.model.Patient;
 
+@Repository
 public interface PatientRepository extends JpaRepository<Patient, Integer> {
 	Patient findById(int id);
 
+	@SuppressWarnings("unchecked")
 	Patient save(Patient patient);
 
 	void deleteById(int patientid);

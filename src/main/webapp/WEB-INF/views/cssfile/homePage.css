@@ -14,6 +14,7 @@ nav {
 	padding: 0px 100px;
 	position: fixed;
 	background-image: linear-gradient(to right, teal, #367589,teal, #1ABC9C,teal, #009192,teal, #388497);
+	overflow: auto;
 }
 
 nav .logo p {
@@ -57,10 +58,6 @@ nav li a:hover {
     padding-top: 20px;
 }
 
-nav {
-	overflow: auto;
-}
-
   .button{
     position: absolute;
 	padding: 16px;
@@ -84,7 +81,7 @@ nav {
    .con1{   
        width: 300px;
     margin-left: 78px;
-    background-image: linear-gradient(#033747, #012733);
+    background-image: linear-gradient(teal, #1ABC9C);
     height: 275px;
    }
    
@@ -120,7 +117,7 @@ nav {
   }
   .service{
   margin-top: 40px;
-    background-color: #f2f2f2;
+   background-color: #f2f2f2;
     }
     
   
@@ -145,8 +142,7 @@ nav {
 	Line-height: 80px;
 	bottom:0px;
 	padding: 0px 100px;
-	
-	background-image: linear-gradient(#033747, #012733);
+	background-image: linear-gradient(to right, teal, #367589,teal, #1ABC9C,teal, #009192,teal, #388497);
 }
    
    .footer .logo p{
@@ -177,10 +173,10 @@ nav {
   .footer ul {
 	float: right
 }
-  .footer li a:hover {
-	color: #ff8c69;
+  
+h2{
+	color: blue;
 }
-
 
 
  a.ex1:hover, a.ex1:active {
@@ -193,4 +189,8 @@ nav {
   
   a.ex3:hover, a.ex1:active {
   background: black;
+  }
+  
+  .h1{
+     color: teal;
   }

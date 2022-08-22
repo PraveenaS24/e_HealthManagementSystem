@@ -7,6 +7,7 @@ import com.chainsys.healthmanagement.model.Users;
 
 @Repository
 public interface UsersRepository extends JpaRepository<Users, Integer> {
+	@SuppressWarnings("unchecked")
 	Users save(Users user);
 
 	Users findByUserIdAndSecretword(String userId, String secretword);

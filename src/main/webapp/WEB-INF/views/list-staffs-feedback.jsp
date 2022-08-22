@@ -96,7 +96,7 @@
 			</div>
 		</div>
 		<div class="son">
-			<h1>FEEDBACK</h1>
+			<h2>FEEDBACK</h2>
 			<div>
 				<table>
 				<caption></caption>

@@ -4,7 +4,7 @@ body {
 	background-image:
 		url("https://wallpaperaccess.com/full/51360.jpg");
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: 100% 100%;
 	
 }
 
@@ -69,6 +69,8 @@ label {
 	text-align:center;
 	margin-left: 292px;
 	height: 1032px;
+	width: 650px;
+	backdrop-filter: blur(15px);
 }
  
 

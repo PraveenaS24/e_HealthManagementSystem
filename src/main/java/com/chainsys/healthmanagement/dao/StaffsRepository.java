@@ -9,6 +9,7 @@ import com.chainsys.healthmanagement.model.Staffs;
 public interface StaffsRepository extends JpaRepository<Staffs, Integer> {
 	Staffs findById(int id);
 
+	@SuppressWarnings("unchecked")
 	Staffs save(Staffs staff);
 
 	void deleteById(int staffid);

@@ -125,6 +125,7 @@
 							<form:input path="status" readonly="true" style="width: 300px;height: 25px;" />
 						</div>
 					</div>
+					${result}
 				</form:form>
 			</div>
 		</div>

@@ -74,7 +74,13 @@ public class PatientController {
 	public String findPatientById(@RequestParam("patientId") int id, Model model) {
 		Patient thepatient = patientservice.findPatientById(id);
 		model.addAttribute("findpatientbyid", thepatient);
+		if(thepatient!=null) {
 		return "find-patient-id-form";
+		}
+		else {
+			model.addAttribute("result", "Id not found ");
+			return "getpatientid";
+		}
 	}
 
 	@PostMapping("/updatepatient")
@@ -102,7 +108,13 @@ public class PatientController {
 	public String getPatientAndFeedback(@RequestParam("patientId") int id, Model model) {
 		Patient thepatient = patientservice.findPatientById(id);
 		model.addAttribute("getpatient", thepatient);
+		if(thepatient!=null) {
 		return "list-patient-feedback";
+	}
+		else {
+			model.addAttribute("result", "Id not found ");
+			return "getpatientidfeedback";
+		}
 	}
 
 	@GetMapping("/feedback")

@@ -9,6 +9,7 @@ import com.chainsys.healthmanagement.model.FeedBack;
 public interface FeedBackRepository extends JpaRepository<FeedBack, Integer> {
 	FeedBack findById(int id);
 
+	@SuppressWarnings("unchecked")
 	FeedBack save(FeedBack feedback);
 
 	void deleteById(int feedbackid);
