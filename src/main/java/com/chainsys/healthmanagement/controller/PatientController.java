@@ -62,7 +62,13 @@ public class PatientController {
 	public String showUpdateForm(@RequestParam("patientId") int id, Model model) {
 		Patient thepatient = patientservice.findPatientById(id);
 		model.addAttribute("updatepatient", thepatient);
+		if(thepatient!=null) {
 		return "update-patient-form";
+	}
+		else {
+			model.addAttribute("result" , "Id not found");
+			return "getpatientid";
+		}
 	}
 
 	@GetMapping("/getpatient")

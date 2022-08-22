@@ -79,6 +79,7 @@ h1:hover{
 	float: right;
 	font-weight: 900;
 	width: 800px;
+    backdrop-filter: blur(10px);
 }
 
 

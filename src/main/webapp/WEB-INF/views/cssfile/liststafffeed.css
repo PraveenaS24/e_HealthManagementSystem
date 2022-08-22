@@ -92,8 +92,9 @@ table, th, td {
     border: 1px solid #00ff00;
     padding: 25px;
     text-align: left;
-    color: blue;
+    color: red;
     border-color: black;
+    font-size: 18px;
 }
 
 .button2 {
