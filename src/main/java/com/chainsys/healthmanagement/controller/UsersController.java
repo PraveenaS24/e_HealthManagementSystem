@@ -59,13 +59,14 @@ public class UsersController {
 	}
 
 	@PostMapping("/checkuserlogin")
-	public String checkingAccess(@ModelAttribute("users") Users users) {
+	public String checkingAccess(@ModelAttribute("users") Users users,Model model) {
 		Users user = userservice.getUserByIdAndSecretword(users.getUserId(), users.getSecretword());
 		if (user != null) {
 
 			return "listus";
 		} else
-			return "invalid-user-error";
+			model.addAttribute("result", "Warning !: Username or Password Mismatch");
+			return "login2";
 
 	}
 }

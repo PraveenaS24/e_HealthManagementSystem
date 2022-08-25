@@ -17,6 +17,8 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+import org.hibernate.validator.constraints.Range;
+
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 @Entity
@@ -29,9 +31,11 @@ public class FeedBack {
 	private int feedbackId;
 	@Column(name = "PATIENT_ID")
 	@NotNull(message="*Id must be required")
+	@Range(min = 1, message = "*Greater than zero")
 	private int patientId;
 	@Column(name = "STAFF_ID")
 	@NotNull(message="*Id must be required")
+	@Range(min = 1, message = "*Greater than zero")
 	private int staffId;
 	@Column(name = "STAFF_NATURE")
 	@Size(max = 30, min = 3, message = "*Staff Nature length should be 3 to 30")

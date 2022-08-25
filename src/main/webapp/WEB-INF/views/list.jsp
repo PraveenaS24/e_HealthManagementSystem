@@ -15,37 +15,30 @@
 	<ul>
 	<li class="active"> <a href="#">Patient</a>
 		<div class="sub-menu-1">
-		<ul><li><a href="/patient/addpatientform">Add Patient</a></li>
-			<li><a href="/patient/updatepatientid">Update Patient</a></li>
-			<li><a href="/patient/getpatient">Find Patient By Id</a></li>
-			<li><a href="/patient/patientlist">Patient List</a></li>
+			<ul><li><a href="/patient/patientlist">Patient List</a></li>
 			<li><a href="/patient/getpatientfeedbackform">Find Patient FeedBack</a></li>
 			</ul>
 			</div>
 			</li>
-			<li><a href="#">Users</a>
-	<div class="sub-menu-1">
+	<li><a href="#">Users</a>
+	    <div class="sub-menu-1">
 	<ul>
 		<li><a href="/users/adduserform">Add User</a></li>
 		<li><a href="/users/userlist">List User</a></li>
 	</ul>
 	</div>
 	</li>
-			<li><a href="#">Staffs</a>
-	<div class="sub-menu-1">
+	<li><a href="#">Staffs</a>
+	    <div class="sub-menu-1">
 	<ul>
 		<li><a href="/staffs/addstaffsform">Add Staff</a></li>
-		<li><a href="/staffs/updatestaffsform">Update Staff</a></li>
-		<li><a href="/staffs/getstaff">Find Staff By Id</a></li>
 		<li><a href="/staffs/staffslist">All Staff List</a></li>
-		<li><a href="/staffs/getstafffeedbackform">Find Staff FeedBack</a></li>
 	</ul>
 	</div>
 	</li>
 	<li><a href="#">FeedBack</a>
 	<div class="sub-menu-1">
 	<ul>
-		<li><a href="/feedback/addfeedbackform">Add FedBack</a></li>
 		<li><a href="/feedback/feedbacklist">List FeedBack</a></li>
 	</ul>
 	</div>

@@ -147,5 +147,9 @@ label {
     background: currentColor
 }
 
+.err{
+	color: red;
+	font-size: 116%;
+}
 
 

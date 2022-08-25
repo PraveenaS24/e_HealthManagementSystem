@@ -12,7 +12,6 @@
 		<div id="form">
 			<form:form action="checkadminlogin" method="post"
 				modelAttribute="admin">
-
 				<div>
 					<label for="adminId">Admin Id</label>
 					<div>

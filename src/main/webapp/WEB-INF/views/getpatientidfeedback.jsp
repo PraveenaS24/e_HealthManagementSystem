@@ -15,7 +15,7 @@
 	<div>
 		<div id="form">
 			<div class="box">
-				<form action="getpatientfeedback">
+				<form action="feedback">
 					<div>
 						<label for="patientId">Enter PatientId</label>
 						<div>

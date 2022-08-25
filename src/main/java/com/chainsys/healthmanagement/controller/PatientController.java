@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.chainsys.healthmanagement.dto.PatientPrescriptionDetailsDTO;
 import com.chainsys.healthmanagement.model.FeedBack;
 import com.chainsys.healthmanagement.model.Patient;
 import com.chainsys.healthmanagement.service.FeedBackService;
@@ -22,6 +23,7 @@ import com.chainsys.healthmanagement.service.PatientService;
 @Controller
 @RequestMapping("/patient")
 public class PatientController {
+	
 	@Autowired
 	PatientService patientservice;
 	@Autowired
@@ -127,7 +129,55 @@ public class PatientController {
 	public String getFeedBackByPatientId(@RequestParam("patientId") int id, Model model) {
 		List<FeedBack> feedbackList = FeedbackService.getFeedBackByPatient(id);
 		model.addAttribute("allfeedback", feedbackList);
+		if(feedbackList!=null) {
 		return "list-feedback";
 	}
+		else {
+			model.addAttribute("result", "Id not found");
+			return "getpatientidfeedback";
+		}
+	}
+	@GetMapping("/patientpres")
+	public String getPatientPrescription(@RequestParam("patientId") int id, Model model) {
+		PatientPrescriptionDetailsDTO dto=patientservice.getPatientPrescriptionDetailsDTO(id);
+		model.addAttribute("patient", dto.getPatient());
+		model.addAttribute("patientpres", dto.getPatientpreslist());
+		return "list-patient-prescription";
+	}
+	
+	@GetMapping("/patientlogin")
+	public String patientaccessform(Model model) {
+		Patient thepatient = new Patient();
+		model.addAttribute("patient",thepatient);
+		return "login4";
+	}
+	
+	@GetMapping("/patli")
+	public String check(Model model) {
+		return "listpat";
+	}
 
+	@PostMapping("/checkpatientlogin")
+	public String checkingAccess(@ModelAttribute("patient") Patient patients,Model model) {
+		Patient patient = patientservice.getPatientByNameAndPassword(patients.getPatientName(), patients.getPassword());
+		if (patient != null) {
+
+			return "listpat";
+		} else {
+			model.addAttribute("result", "Warning !: Patientname or Password Mismatch");
+			return "login4";
+
+	   }
+	}
+	@GetMapping("/getpatientcontactno")
+    public String getPatientContactNo() {
+        return "list-patient-contactno";
+    }
+	
+	 @GetMapping("/contactNo")
+     public String getAllPatient(@RequestParam("contactNo") long contactNo, Model model) {
+         List<Patient> patientcontact = patientservice.getContactNo(contactNo);
+         model.addAttribute("allpatient", patientcontact);
+         return "list-patient";
+     }
 }

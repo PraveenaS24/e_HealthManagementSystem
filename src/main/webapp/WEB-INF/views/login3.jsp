@@ -72,6 +72,7 @@ var passwordCheck = function() {
 				</div>
 				<br>
 				<br>
+				<div class="err">${result}</div>
 				<div>
 					<form:button id="log">Login</form:button>
 				</div>

@@ -34,10 +34,18 @@
 	</ul>
 	</div>
 	</li>
+	<li><a href="#">PrescriptionDetails</a>
+	<div class="sub-menu-1">
+	<ul>
+		<li><a href="/prescriptiondetails/addprescriptiondetailsform">Add Prescription</a></li>
+		<li><a href="/prescriptiondetails/getpatientprescription">Find Prescription</a></li>
+		<li><a href="/prescriptiondetails/prescriptiondetailslist">Prescription List</a></li>
+	</ul>
+	</div>
+	</li>
 	<li><a href="#">FeedBack</a>
 	<div class="sub-menu-1">
 	<ul>
-		<li><a href="/feedback/addfeedbackform">Add FedBack</a></li>
 		<li><a href="/feedback/feedbacklist">List FeedBack</a></li>
 	</ul>
 	</div>

@@ -20,6 +20,7 @@
 		<ul>
 			<li><a class="ex1" href="/admin/adminlogin">Admin</a></li>
 			<li><a class="ex2" href="/users/userlogin">User</a></li>
+			<li><a class="ex3" href="/patient/patientlogin">Patient</a></li>
 			<li><a class="ex3" href="/login/about">About</a></li>
 		</ul>
 	</nav>

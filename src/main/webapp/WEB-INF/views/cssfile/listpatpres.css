@@ -1,0 +1,55 @@
+@charset "ISO-8859-1";
+
+
+body{
+	background-image: url("https://cdn.sanity.io/images/0vv8moc6/pharmtech/966bbeea23b230aaeb5fc7bfc5c74f4f15159199-1280x720.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 350%;
+}
+
+h3{
+	color: #ff0080;
+	text-align: center;
+	background-color: black ;
+	height: 43px;
+    width: 289px;
+    margin-left: 500px;
+    border-radius: 10px;
+    font-size: 210%;
+}
+
+.box{
+	text-align: center;
+}
+label{
+	color: black;
+    font-size: 142%;
+}
+
+#log {
+	width: 46px;
+	height: 38px;
+	border: black;
+	border-radius: 3px;
+	padding-left: 8px;
+	color: white;
+	background-color: maroon;
+	display: inline-block;
+	margin: 4px 2px;
+	cursor: pointer;
+	-webkit-transition-duration: 0.4s;
+	transition-duration: 0.4s;
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0
+		rgba(0, 0, 0, 0.19);
+		margin-top: 43px;
+}
+
+
+input[type=number]{
+	height: 29px;
+	margin-top: 27px;
+}
+
+h3:hover{
+	background-color: #37c8ab;
+}

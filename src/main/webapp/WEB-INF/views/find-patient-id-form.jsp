@@ -20,111 +20,91 @@
 			<div>
 				<form:form action="" method="get" modelAttribute="findpatientbyid">
 					<div>
-						<label for="patientId">Patient ID</label>
+						<label for="patientId"></label>
+
 						<div>
-							<form:input path="patientId" readonly="true" style="width:300px;height: 25px;" />
+							<form:input path="patientId" readonly="true" style="width: 300px;height: 25px;"
+								title="Name can't be empty And Patient Name must be in String"
+								required="true" placeholder="Enter Name" onblur="patientIdCheck();"  name="patientId" id="patientId" type="hidden"/>
 						</div>
+
+						<form:errors path="patientId" cssClass="text-danger" />
 					</div>
+					
+					
 					<div>
-						<label for="firstName">First Name</label>
+						<label for="patientName">Patient Name</label>
+
 						<div>
-							<form:input path="firstName" readonly="true" style="width: 300px;height: 25px;" />
+							<form:input path="patientName" readonly="true" style="width: 300px;height: 25px;"
+								title="Name can't be empty And Patient Name must be in String"
+								required="true" placeholder="Enter Name" onblur="patientNameCheck();"  name="patientName" id="patientName"/>
 						</div>
+
+						<form:errors path="patientName" cssClass="text-danger" />
 					</div>
+					
 					<div>
-						<label for="lastName">Last Name</label>
+						<label for="password">PassWord</label>
 						<div>
-							<form:input path="lastName" readonly="true" style="width: 300px;height: 25px;" />
+							<form:input path="password" onblur="passwordCheck();" readonly="true" name="password" id="password" type="password"
+								title='password must begin with letter and contain atleast one number and must have atleast 8 characters'
+								pattern="^(?=.*[A-Za-z])(?=.*\\d)(?=.*[@$!%*#?&])[A-Za-z\\d@$!%*#?&]{8,}$"
+								required="true" placeholder="Enter PassWord" style="width: 300px;height: 25px;"/>
 						</div>
+						<form:errors path="password" cssClass="text-danger" />
 					</div>
+					
 					<div>
-						<label for="gender">Gender</label>
-						<div>
-							<form:input path="gender" readonly="true" style="width: 300px;height: 25px;" />
-						</div>
+					<label for="contactNo">Contact No</label>
+					<div>
+						<form:input path="contactNo" readonly="true" placeholder="Enter PhoneNumber"
+							style="width: 300px;height: 25px;" onblur="contactNoCheck();" id="contactNo" name="contactNo" required="true" />
 					</div>
-					<div>
-						<label for="contactNo">Contact No</label>
-						<div>
-							<form:input path="contactNo" readonly="true" style="width: 300px;height: 25px;" />
-						</div>
+					<form:errors path="contactNo" cssClass="text-danger" />
 					</div>
 					<div>
 						<label for="dob">DOB</label>
 						<div>
-							<form:input path="dob" readonly="true" style="width: 300px;height: 25px;" />
+							<form:input path="dob" type="date" readonly="true" placeholder="Enter Date"
+								style="width: 300px;height: 25px;" required="true" />
 						</div>
+						<form:errors path="dob" cssClass="text-danger" />
 					</div>
 					<div>
 						<label for="email">Email</label>
 						<div>
-							<form:input path="email" readonly="true" style="width: 300px;height: 25px;" />
+							<form:input path="email" readonly="true" style="width: 300px;height: 25px;"
+								title="Mail Id is not in correct formet"
+								pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$" onblur="emailCheck();" id="email" name="email" required="true"
+								placeholder="Enter Email" />
 						</div>
+						<form:errors path="email" cssClass="text-danger" />
 					</div>
+
 					<div>
 						<label for="bloodgroup">Blood Group</label>
+
 						<div>
-							<form:input path="bloodgroup" readonly="true" style="width: 300px;height: 25px;" />
+							<form:input path="bloodgroup" readonly="true" style="width: 300px;height: 25px;"
+								title="BloodGroup can't be empty And BloodGroup must be in String" onblur="bloodgroupCheck();" id="bloodgroup" name="bloodgroup"
+								required="true" placeholder="Enter BloodGroup" />
 						</div>
+
 					</div>
+
 					<div>
 						<label for="address">Address</label>
-						<div>
-							<form:input path="address" readonly="true" style="width: 300px;height: 25px;" />
-						</div>
-					</div>
-					<div>
-						<label for="staffId">Staff Id</label>
-						<div>
-							<form:input path="staffId" readonly="true" style="width: 300px;height: 25px;" />
-						</div>
-					</div>
-					<div>
-						<label for="observation">Observation</label>
-						<div>
-							<form:input path="observation" readonly="true" style="width: 300px;height: 25px;" />
-						</div>
-					</div>
-					<div>
-						<label for="report">Report</label>
-						<div>
-							<form:input path="report" readonly="true" style="width: 300px;height: 25px;" />
-						</div>
-					</div>
-					<div>
-						<label for="prescription">Prescription</label>
-						<div>
-							<form:input path="prescription" readonly="true"
-								style="width: 300px;height: 25px;" />
-						</div>
-					</div>
-					<div>
-						<label for="fees">Fees</label>
-						<div>
-							<form:input path="fees" readonly="true" style="width: 300px;height: 25px;" />
-						</div>
-					</div>
-					<div>
-						<label for="foodmaintenance">FoodMaintenance</label>
-						<div>
-							<form:input path="foodmaintenance" readonly="true"
-								style="width: 300px;height: 25px;" />
-						</div>
-					</div>
-
-					<div>
-						<label for="revisit">Revisit</label>
-						<div>
-							<form:input path="revisit" readonly="true" style="width: 300px;height: 25px;" />
-						</div>
-					</div>
-					<div>
-						<label for="status">Status</label>
 
 						<div>
-							<form:input path="status" readonly="true" style="width: 300px;height: 25px;" />
+							<form:input path="address" readonly="true" style="width: 300px;height: 25px;"
+								title="Address can't be empty And Address must be in String"
+								required="true" placeholder="Enter Address" onblur="addressCheck();" id="address" name="address"/>
 						</div>
+
+						<form:errors path="address" cssClass="text-danger" />
 					</div>
+
 					${result}
 				</form:form>
 			</div>

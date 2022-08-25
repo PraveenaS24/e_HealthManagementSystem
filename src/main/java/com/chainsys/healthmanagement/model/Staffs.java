@@ -17,8 +17,6 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
-
-
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 @Entity
@@ -71,6 +69,17 @@ public class Staffs {
 
 	@OneToMany(mappedBy = "staffs", fetch = FetchType.LAZY)
 	private List<FeedBack> feedback;
+	
+	@OneToMany(mappedBy = "staffs", fetch = FetchType.LAZY)
+	private List<PrescriptionDetails> prescriptiondetails;
+
+	public List<PrescriptionDetails> getPrescriptiondetails() {
+		return prescriptiondetails;
+	}
+
+	public void setPrescriptiondetails(List<PrescriptionDetails> prescriptiondetails) {
+		this.prescriptiondetails = prescriptiondetails;
+	}
 
 	public List<FeedBack> getFeedback() {
 		return feedback;

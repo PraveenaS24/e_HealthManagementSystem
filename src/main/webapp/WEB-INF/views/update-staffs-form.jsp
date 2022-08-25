@@ -112,9 +112,9 @@ else{
 				<form:form action="updatestaff" method="post"
 					modelAttribute="updatestaffs" name="myForm">
 					<div>
-						<label for="staffId">Staff Id</label>
+						<label for="staffId"></label>
 						<div>
-							<form:input path="staffId" readonly="true" style="width: 300px;height: 25px;"
+							<form:input path="staffId" readonly="true" style="width: 300px;height: 25px;" type="hidden"
 								title="Id can't be empty And ID must be in String"
 								required="true" placeholder="Enter StaffId" onblur="staffIdCheck();" name="staffId" id="staffId" />
 						</div>
@@ -142,11 +142,9 @@ else{
 					</div>
 
 					<div>
-						<label for="gender">Gender</label> Male:
-						<form:radiobutton path="gender" readonly="true" value="Male" />
-						Female:
-						<form:radiobutton path="gender" readonly="true" value="Female" />
-
+						<label for="gender">Gender</label>
+						<form:input path="gender" readonly="true" required="true" style="width: 300px;height: 25px;"/>
+						
 					</div>
 
 					<div>

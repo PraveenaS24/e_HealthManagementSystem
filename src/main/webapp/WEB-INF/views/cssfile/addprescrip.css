@@ -2,24 +2,14 @@
 
 body {
 	background-image:
-		url("https://media.istockphoto.com/photos/stethoscope-doctor-with-red-heart-on-black-wooden-table-background-picture-id1222435595?k=20&m=1222435595&s=170667a&w=0&h=JFZJsl4-nfh3e5QWupqxEpcb9XFnRNiqjrYPWhtsCMs=");
+		url("https://www.verywellhealth.com/thmb/K64bUly7txmkqmMTdCRqttx_c4c=/3870x2575/filters:no_upscale():max_bytes(150000):strip_icc()/prescription-56ad9f2a5f9b58b7d00b43f8.jpg");
 	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: 100% 100%;
+	background-size: cover;
 }
 
-h1 {
-	color: #ff0080;
-	text-align: center;
-	background-color: black ;
-	height: 43px;
-    width: 289px;
-    margin-left: -46px;
-    border-radius: 10px;
-    
-}
-h1:hover{
-	background-color: #37c8ab;
+
+tr {
+	color: red;
 }
 
 label {
@@ -30,30 +20,6 @@ label {
 	font-weight: bold;
 	cursor: pointer;
 	transition: .5s ease-in-out;
-}
-
-#userId {
-	width: 250px;
-	height: 30px;
-	border: none;
-	border-radius: 3px;
-	padding-left: 8px;
-}
-
-#secretword {
-	width: 250px;
-	height: 30px;
-	border: none;
-	border-radius: 3px;
-	padding-left: 8px;
-}
-
-#userType {
-	width: 260px;
-	height: 30px;
-	border: none;
-	border-radius: 3px;
-	padding-left: 8px;
 }
 
 #log {
@@ -75,23 +41,18 @@ label {
 }
 
 .box {
-	width: 400px;
-	height: 280px;
 	overflow: hidden;
 	border-radius: 10px;
 	box-shadow: 5px 20px 50px #000;
 	margin: auto;
 	padding: 10px;
 	text-align: center;
-	float: left;
-	margin-top: 20px;
+	float: center;
+	font-weight: 900;
+	width: 600px;
+	backdrop-filter: blur(10px);
 }
 
-
-#cont {
-	position: relative;
-	left: 100px;
-}
 
 .button2 {
     position: absolute;
@@ -101,7 +62,7 @@ label {
     color: crimson;
     margin-top: 11px;
     background-color: rgb(0, 0, 0);
-    margin-left: 0px;
+    margin-left: 118px;
     border-radius: 10px;
     cursor: pointer;
     height: 41px;
@@ -146,7 +107,7 @@ label {
     left: 16px;
     font-size: 20px;
     color: crimson;
-    margin-top:505px;
+    margin-top:12px;
     background-color: black;
     margin-left: 2px;
     border-radius: 10px;
@@ -155,18 +116,16 @@ label {
      
 }
 
-.btn {
-  background-color: DodgerBlue;
-  border: none;
-  color: white;
-  padding: 12px 16px;
-  font-size: 16px;
-  cursor: pointer;
+h1 {
+	color: #ff0080;
+	text-align: center;
+	background-color: black ;
+	height: 43px;
+    width: 332px;
+    margin-left: 500px;
+    border-radius: 10px;
+    
 }
-.err{
-	color: red;
-	font-size: 116%;
-	
+h1:hover{
+	background-color: #37c8ab;
 }
-
-

@@ -54,11 +54,12 @@ public class AdminController {
 	}
 
 	@PostMapping("/checkadminlogin")
-	public String checkingAccess(@ModelAttribute("admin") Admin admins) {
+	public String checkingAccess(@ModelAttribute("admin") Admin admins,Model model) {
 		Admin admin = adminservice.getAdminByIdAndPassword(admins.getAdminId(), admins.getPassword());
 		if (admin != null) {
 			return "list";
 		} else
-			return "invalid-admin-error";
+			model.addAttribute("result", "Warning !: Username or Password Mismatch");
+			return "login3";
 	}
 }

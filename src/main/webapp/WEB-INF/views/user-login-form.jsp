@@ -30,6 +30,5 @@
 			</form:form>
 		</div>
 	</div>
-	</table>
 </body>
 </html>
